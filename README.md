@@ -1,19 +1,26 @@
-# Next.js Example
-
-This directory is a brief example of a [Next.js](https://nextjs.org) app that can be deployed to ZEIT Now with zero configuration.
+# Highgarden Landing Website
 
 ## How we created this example
 
-To get started with Next.js on Now, you can use [npm create](https://www.npmjs.com/package/create-next-app) to initialize the project:
+This website has been built using Next.js and Now serverless services.
 
-```shell
-$ npm create next-app my-app
+## Development
+
+To develop a new branch please create a new branch with the following format `new/feature-to-include`, if it's a fix use `fix/this-needed-to-be-fixed` and so on.
+To run the local environment run:
+
+```
+$ npm run dev
 ```
 
-## Deploying this Example
+or just:
 
-Once initialized, you can deploy the Next.js example with just a single command:
-
-```shell
-$ now
 ```
+$ now dev
+```
+
+in order to run serverless functions in the local environment
+
+## Deployment
+
+Each Pull Request creates a new instance on `now`, each merge to `master` will be automatically deployed to `production`
