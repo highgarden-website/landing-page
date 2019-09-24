@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("/static/fonts/Gilroy-Bold.woff2") format("woff2"),
+    url("/static/fonts/Gilroy-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/static/fonts/Gilroy-Medium.woff2") format("woff2"),
+    url("/static/fonts/Gilroy-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/static/fonts/Gilroy-Light.woff2") format("woff2"),
+    url("/static/fonts/Gilroy-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+:root {
+  /* Grayscale */
+  --gray-1: #eeeff2;
+  --gray-2: #8991a3;
+  --gray-3: #57627b;
+  --gray-4: #464e62;
+
+  /* Yellow accents */
+  --yellow: #fff9a3;
+  --yellow-light: #fffeec;
+
+  /* Green accents */
+  --green: #41dab8;
+  --green-light: #ecfbf8;
+}
+
+*::-moz-selection {
+  color: var(--gray-4);
+  background-color: rgba(65, 218, 184, 0.99);
+}
+
+*::selection {
+  color: var(--gray-4);
+  background-color: rgba(65, 218, 184, 0.99);
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0 1000px #000 inset;
+  box-shadow: 0 0 0 1000px #000 inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  font-family: "Gilroy";
+  background-color: var(--gray-4);
+  color: #fff;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--gray-4);
+}
+
+a:visited {
+  color: var(--gray-4);
+}
+
+p {
+  font-family: "Gilroy";
+  font-size: 2rem;
+  line-height: 1.718em;
+  margin-top: 0;
+}
+
+p.large {
+  font-size: 2.75rem;
+  line-height: 1.7em;
+  letter-spacing: -2px;
+}
+
+p.small {
+  font-size: 1.125rem;
+  line-height: 2em;
+  letter-spacing: -0.5px;
+}
