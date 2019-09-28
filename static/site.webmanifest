@@ -1,21 +1,20 @@
 {
-    "name": "Highgarden",
-    "short_name": "Highgarden",
-    "icons": [
-        {
-            "src": "/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ],
-    "theme_color": "#ecfbf8",
-    "background_color": "#ecfbf8",
-    "start_url": "https://highgarden.capital",
-    "display": "standalone",
-    "orientation": "portrait"
+  "name": "Highgarden",
+  "short_name": "Highgarden",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ecfbf8",
+  "background_color": "#ecfbf8",
+  "display": "standalone",
+  "orientation": "portrait"
 }
