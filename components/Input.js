@@ -1,4 +1,4 @@
-export default function Input({ label, children }) {
+export default function Input({ label }) {
   return (
     <div className="wrapper">
       <input name={`${label}-field`} type="text" />

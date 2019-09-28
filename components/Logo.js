@@ -1,4 +1,4 @@
-export default function Logo({ children }) {
+export default function Logo() {
   return (
     <svg viewBox="0 0 250 59" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -54,7 +54,8 @@ export default function Logo({ children }) {
       <style jsx>{`
         svg {
           margin: 2.5rem 0;
-          width: 215px;
+          width: 100%;
+          max-width: 215px;
         }
       `}</style>
     </svg>

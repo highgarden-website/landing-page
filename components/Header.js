@@ -41,6 +41,10 @@ export default function Header() {
         li {
           margin: 0 1rem;
         }
+
+        a {
+          font-size: calc(18px + (20 - 18) * (100vw - 1024px) / (1920 - 1024));
+        }
       `}</style>
     </header>
   )

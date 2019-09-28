@@ -1,8 +1,8 @@
-export default function Section({ children, columns = 1, noMargin }) {
+export default function Section({ id, children, columns = 1, noMargin }) {
   const columnsInt = parseInt(columns, 10)
 
   return (
-    <section className="section">
+    <section className="section" id={id}>
       {children}
       <style jsx>{`
         .section {
