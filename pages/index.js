@@ -15,18 +15,19 @@ const Home = () => {
 
   return (
     <main>
-      <Section>
-        <Header></Header>
-        <Input label="Nombre"></Input>
-        <Select label=""></Select>
-        <Text h1>Testing h1</Text>
-        <Text>Testing - P</Text>
-        <Text large>Testing - P large </Text>
-        <Button>Test-Button</Button>
-        <Button secondary>Test-Button-Secondary</Button>
-        <Button isInverted>Test-Button-Inverterd</Button>
+      <Header></Header>
+      <Section columns="2">
+        <p>test</p>
+        <p>test</p>
       </Section>
-
+      <Section columns="2">
+        <p>test</p>
+        <p>test</p>
+      </Section>
+      <Section columns="2">
+        <p>test</p>
+        <p>test</p>
+      </Section>
       <Footer></Footer>
     </main>
   )

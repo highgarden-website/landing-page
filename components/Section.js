@@ -13,12 +13,13 @@ export default function Section({ children, columns = 1, noMargin }) {
           );
           grid-column-gap: 20px;
           grid-row-gap: 40px;
-          margin: ${noMargin ? "0" : "40px 0"};
-          margin-bottom: ${noMargin ? "0" : "80px"};
+          padding: 80px 0;
+          max-width: var(--inner-width);
+          margin: 0 auto;
         }
 
         .section + .section {
-          margin-top: 0;
+          padding-top: 0;
         }
 
         @media (max-width: 1050px) {
