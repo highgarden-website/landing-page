@@ -7,6 +7,7 @@ export default function Button({ isInverted, secondary, children }) {
       <style jsx>{`
         button {
           appearance: none;
+          cursor: pointer;
           border: none;
           padding: 15px 50px;
           font-family: "Gilroy";
@@ -14,16 +15,18 @@ export default function Button({ isInverted, secondary, children }) {
           color: var(--gray-3);
           background: var(--green);
           border-radius: 5px;
+          transition: box-shadow 300ms ease;
           ${secondary && "background: var(--yellow);"}
         }
+
+        button:hover {
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+            0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+
         button.inverted {
           color: var(--green);
           background: var(--gray-3);
-        }
-
-        button.inverted :hover {
-          outline: none;
-          box-shadow: inset 0 0 0 2px var(--green);
         }
       `}</style>
     </button>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import Section from "../components/Section"
 import Text from "../components/Text"
 import Button from "../components/Button"
+import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Input from "../components/Input"
 import Select from "../components/Select"
@@ -15,6 +16,7 @@ const Home = () => {
   return (
     <main>
       <Section>
+        <Header></Header>
         <Input label="Nombre"></Input>
         <Select label=""></Select>
         <Text h1>Testing h1</Text>
