@@ -9,6 +9,7 @@ export default function Button({ isInverted, secondary, children }) {
           appearance: none;
           cursor: pointer;
           border: none;
+          outline: none;
           padding: 15px 50px;
           font-family: "Gilroy";
           font-size: 20px;

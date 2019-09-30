@@ -8,20 +8,14 @@ import Footer from "../components/Footer"
 import Input from "../components/Input"
 import Select from "../components/Select"
 import CircleDownDbutton from "../components/CircleDownButton"
+import Hero from "../components/Hero"
 
 const Home = () => {
   return (
     <main>
       <Header></Header>
-      <Section>
-        <Panel>
-          <p>test</p>
-        </Panel>
-        <Panel highlight>
-          <p>test</p>
-        </Panel>
-      </Section>
-      <Footer></Footer>
+      <Hero></Hero>
+      <Section></Section>
     </main>
   )
 }
