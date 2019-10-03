@@ -16,6 +16,8 @@ export default function Section({ id, children, columns = 1, noMargin }) {
           padding: 80px 0;
           max-width: var(--inner-width);
           margin: 0 auto;
+          height: calc(100vh - 131px);
+          align-items: center;
         }
 
         .section + .section {

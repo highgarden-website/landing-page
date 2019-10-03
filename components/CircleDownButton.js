@@ -26,6 +26,9 @@ export default function CircleDownButton() {
         </svg>
       </button>
       <style jsx>{`
+        a {
+          opacity: 1;
+        }
         button {
           height: 65px;
           width: 65px;
@@ -33,6 +36,7 @@ export default function CircleDownButton() {
           outline: none;
           cursor: pointer;
           transition: box-shadow 300ms ease;
+          background-color: #fff;
         }
         button:hover {
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),

@@ -396,11 +396,12 @@ export default function Brands() {
       <style jsx>{`
         .wrapper {
           position: relative;
+          margin: 0 aut0Ñ;
         }
         .points {
           position: absolute;
           bottom: -180px;
-          right: -50px;
+          right: 0;
         }
 
         .arrows {
