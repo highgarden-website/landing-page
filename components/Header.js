@@ -11,7 +11,7 @@ export default function Header() {
             <a href="">Cómo Funciona</a>
           </li>
           <li>
-            <a href="">Estrategias de Inversión</a>
+            <a href="#section3">Estrategias de Inversión</a>
           </li>
           <li>
             <a href="">Quiénes Somos</a>

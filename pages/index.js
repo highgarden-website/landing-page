@@ -20,9 +20,7 @@ const Home = () => {
       <Header></Header>
       <Hero id="section1"></Hero>
       <HowToStart id="section2"></HowToStart>
-      <InvestmentStrategies></InvestmentStrategies>
-      <AboutUs></AboutUs>
-      <Footer></Footer>
+      <InvestmentStrategies id="section3"></InvestmentStrategies>
     </main>
   )
 }
