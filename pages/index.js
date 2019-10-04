@@ -7,7 +7,7 @@ const Home = () => {
 
   return (
     <main>
-      <h1>Basic deployment</h1>
+      <h1>Basic test</h1>
       <style jsx>{`
         main {
           display: flex;
