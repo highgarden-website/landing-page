@@ -20,12 +20,15 @@ export default function Input({ label }) {
           line-height: 48px;
           transition: box-shadow 200ms ease;
           padding: 0 10px;
+          margin-top: 20px;
+          margin-bottom: 10px;
         }
         label {
           font-family: "Gilroy";
           font-size: 14px;
           line-height: 24px;
           outline: none;
+          font-weight: 700;
         }
         input:focus + label,
         input:hover + label {

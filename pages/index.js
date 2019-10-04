@@ -13,6 +13,7 @@ import HowToStart from "../components/HowToStart"
 import InvestmentStrategies from "../components/InvestmentStrategies"
 import AboutUs from "../components/AboutUs"
 import Brands from "../components/Brands"
+import Contact from "../components/Contact"
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <Hero id="section1"></Hero>
       <HowToStart id="section2"></HowToStart>
       <InvestmentStrategies id="section3"></InvestmentStrategies>
+      <Contact id="contact"></Contact>
     </main>
   )
 }
