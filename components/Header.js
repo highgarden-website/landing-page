@@ -8,16 +8,18 @@ export default function Header() {
       <nav>
         <ul>
           <li>
-            <a href="">Cómo Funciona</a>
+            <a href="#section2">Cómo Funciona</a>
           </li>
           <li>
             <a href="#section3">Estrategias de Inversión</a>
           </li>
           <li>
-            <a href="">Quiénes Somos</a>
+            <a href="#section4">Quiénes Somos</a>
           </li>
           <li>
-            <Button secondary>Contactános</Button>
+            <a href="#section5">
+              <Button secondary>Contactános</Button>
+            </a>
           </li>
         </ul>
       </nav>
@@ -44,6 +46,12 @@ export default function Header() {
 
         a {
           font-size: calc(18px + (20 - 18) * (100vw - 1024px) / (1920 - 1024));
+        }
+
+        @media (max-width: 1050px) {
+          .header {
+            grid-template-columns: 1fr;
+          }
         }
       `}</style>
     </header>

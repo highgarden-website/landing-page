@@ -310,7 +310,6 @@ export default function InvestmentStrategies({ id }) {
         .inner-container {
           display: grid;
           grid-template-columns: 1fr 2fr;
-          margin-bottom: 15%;
         }
         .left {
           position: relative;

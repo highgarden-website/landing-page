@@ -273,9 +273,9 @@ export default function HowToStart({ id }) {
         .inner-container {
           display: grid;
           grid-template-columns: 1fr 2fr;
-          margin-bottom: 35%;
-
+          padding-bottom: 80px;
         }
+
         .left {
           position: relative;
         }
