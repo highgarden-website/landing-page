@@ -1,25 +1,27 @@
 import Text from "./Text"
 import Section from "./Section"
-import Input from "../components/Input"
+import Input from "./Input"
+import TextArea from "./TextArea"
 
 export default function Contact({ id }) {
   return (
-    <div className="wrapper">
-      <Section id={id} columns="2">
-        <aside className="left">
-          <div className="line"></div>
-          <Text h2>Contactanos</Text>
-          <Text p>
-            Estamos acá para que sepas cómo y <br />
-            dónde invertir tu dinero de la manera <br /> más segura.
-          </Text>
-        </aside>
-        <aside className="right">
-          <Text h2>Dejanos tus datos y nos comunicaremos a la brevedad.</Text>
-          <Input label="Nombre"></Input>
-          <Input label="E-Mail"></Input>
-        </aside>
-      </Section>
+    <Section id={id} columns="2">
+      <aside className="left">
+        <div className="line"></div>
+        <Text h2>Contactanos</Text>
+        <Text p>
+          Estamos acรก para que sepas cรณmo y <br />
+          dรณnde invertir tu dinero de la manera <br /> mรกs segura.
+        </Text>
+      </aside>
+      <aside className="right">
+        <Text h2>Dejanos tus datos y nos comunicaremos a la brevedad.</Text>
+        <Input label="Nombre"></Input>
+        <Input label="E-Mail"></Input>
+        <Input label="Estrategias de inversion"></Input>
+        <TextArea></TextArea>
+      </aside>
+
       <style jsx>
         {`
           .left {
@@ -38,13 +40,8 @@ export default function Contact({ id }) {
             top: 0;
             background: #ffffff;
           }
-
-          .wrapper {
-            position: relative;
-            top: 50%;
-          }
         `}
       </style>
-    </div>
+    </Section>
   )
 }

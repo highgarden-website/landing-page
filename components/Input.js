@@ -1,4 +1,4 @@
-export default function Input({ label }) {
+export default function Input({ label, type }) {
   return (
     <div className="wrapper">
       <input name={`${label}-field`} type="text" />
@@ -20,7 +20,7 @@ export default function Input({ label }) {
           line-height: 48px;
           transition: box-shadow 200ms ease;
           padding: 0 10px;
-          margin-top: 20px;
+          margin-top: 10px;
           margin-bottom: 10px;
         }
         label {
@@ -29,6 +29,7 @@ export default function Input({ label }) {
           line-height: 24px;
           outline: none;
           font-weight: 700;
+          margin-top: 20px;
         }
         input:focus + label,
         input:hover + label {
