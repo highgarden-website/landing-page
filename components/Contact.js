@@ -19,7 +19,7 @@ export default function Contact({ id }) {
         <Input label="Nombre"></Input>
         <Input label="E-Mail"></Input>
         <Input label="Estrategias de inversion"></Input>
-        <TextArea></TextArea>
+        <TextArea />
       </aside>
 
       <style jsx>

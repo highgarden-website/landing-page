@@ -1,8 +1,8 @@
 import Button from "./Button"
-import CircleDownDbutton from "./CircleDownButton"
 import Text from "./Text"
 import Section from "./Section"
 import Header from "./Header"
+import LogosGrid from "./LogosGrid"
 
 export default function Hero({ id }) {
   return (
@@ -12,22 +12,16 @@ export default function Hero({ id }) {
           <Text h1 noMargin>
             Invertir profesionalmente
           </Text>
-          <Text h3>
-            Descrubrí la mejor manera de hacer <br />
-            crecer tu capital.
-          </Text>
-          <Text p>
-            Basados en la transparencia, la <br />
-            seguridad, y pensando en el mediano <br />
-            y largo plazo, creamos tres estrategias <br />
-            de inversión para ayudarte a <br />
-            multiplicar tu capital.
-          </Text>
+          <Text h3>Descrubrí la mejor manera de hacer crecer tu capital.</Text>
+          <div className="p">
+            <Text p>
+              Basados en la transparencia, la seguridad, y pensando en el
+              mediano y largo plazo, creamos tres estrategias de inversión para
+              ayudarte a multiplicar tu capital.
+            </Text>
+          </div>
           <div className="button">
             <Button>Contactanos</Button>
-          </div>
-          <div className="buttonDown">
-            <CircleDownDbutton></CircleDownDbutton>
           </div>
 
           <svg
@@ -445,9 +439,15 @@ export default function Hero({ id }) {
             />
           </svg>
         </aside>
+        <span className="logos">
+          <LogosGrid></LogosGrid>
+        </span>
       </div>
 
       <style jsx>{`
+        .p {
+          max-width: 350px;
+        }
         .inner-container {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -462,8 +462,8 @@ export default function Hero({ id }) {
 
         .green-border {
           position: absolute;
-          width: 450px;
-          height: 466px;
+          width: 557px;
+          height: 403px;
           border: 5px solid var(--green);
           border-radius: 10px;
           right: 0;
@@ -473,12 +473,6 @@ export default function Hero({ id }) {
           margin-top: 50px;
         }
 
-        .buttonDown {
-          position: absolute;
-          bottom: -40%;
-          right: 0;
-          transform: translateX(20%);
-        }
         .arrows {
           position: absolute;
           left: -150px;
@@ -497,8 +491,8 @@ export default function Hero({ id }) {
           width: 350px;
           text-align: center;
           position: absolute;
-          top: 325px;
-          left: 175px;
+          top: 250px;
+          left: 240px;
           padding: 10px;
         }
 
@@ -515,13 +509,17 @@ export default function Hero({ id }) {
           align-items: center;
           justify-content: center;
           background: #000000;
-          width: 480px;
-          height: 360px;
+          width: 556.44px;
+          height: 313px;
           box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
           border-radius: 10px;
           position: absolute;
           left: -60px;
           top: 30px;
+        }
+
+        .logos {
+          grid-column: 1 / -1;
         }
 
         @media (max-width: 1050px) {

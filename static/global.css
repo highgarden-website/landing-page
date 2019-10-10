@@ -39,7 +39,7 @@
   --green-light: #ecfbf8;
 
   /* Layout */
-  --inner-width: 1400px;
+  --inner-width: 1300px;
   --full-width: 100vw;
   --full-height: 100vh;
   --gap: 80px;
@@ -64,6 +64,7 @@ body {
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
   background-color: var(--gray-4);
+  overflow-x: hidden;
 }
 
 input:-webkit-autofill,

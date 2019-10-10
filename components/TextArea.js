@@ -1,18 +1,13 @@
 export default function TextArea() {
   return (
-    <div className="wrapper">
-      <textarea></textarea>
+    <>
+      <textarea name="" id="" cols="30" rows="10" />
       <style jsx>{`
-        .textarea {
-          background: var(--gray-5);
-          border-radius: 5px;
-          resize: none;
-          box-sizing: border-box;
-          border-radius: 5px;
+        textarea {
           border: none;
-          font-family: "Gilroy";
-
+          background-color: red;
+        }
       `}</style>
-    </div>
+    </>
   )
 }

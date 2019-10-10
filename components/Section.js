@@ -19,6 +19,10 @@ export default function Section({ id, children, columns = 1, noMargin }) {
           align-items: center;
         }
 
+        .section:first-of-type {
+          padding-top: 131px;
+        }
+
         .section + .section {
           padding-top: 0;
         }

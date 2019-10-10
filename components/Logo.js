@@ -1,4 +1,4 @@
-export default function Logo() {
+export default function Logo({ scrolled }) {
   return (
     <svg viewBox="0 0 250 59" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -53,9 +53,10 @@ export default function Logo() {
       />
       <style jsx>{`
         svg {
-          margin: 2.5rem 0;
           width: 100%;
           max-width: 215px;
+          transition: margin 400ms ease;
+          ${scrolled ? "margin: 1.3rem 0;" : "margin: 2.5rem 0;"};
         }
       `}</style>
     </svg>

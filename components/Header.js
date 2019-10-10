@@ -1,29 +1,53 @@
+import { useState, useEffect } from "react"
 import Logo from "./Logo"
 import Button from "./Button"
 
 export default function Header() {
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      setScrolled(window.scrollY > 0)
+    })
+  }, [])
+
   return (
-    <header>
-      <Logo></Logo>
-      <nav>
-        <ul>
-          <li>
-            <a href="#section2">Cómo Funciona</a>
-          </li>
-          <li>
-            <a href="#section3">Estrategias de Inversión</a>
-          </li>
-          <li>
-            <a href="#section4">Quiénes Somos</a>
-          </li>
-          <li>
-            <a href="#section5">
-              <Button secondary>Contactános</Button>
-            </a>
-          </li>
-        </ul>
-      </nav>
+    <div className="wrapper">
+      <header>
+        <Logo scrolled={scrolled}></Logo>
+        <nav>
+          <ul>
+            <li>
+              <a href="#section1">Inicio</a>
+            </li>
+            <li>
+              <a href="#section2">Cómo Funciona</a>
+            </li>
+            <li>
+              <a href="#section3">Estrategias de Inversión</a>
+            </li>
+            <li>
+              <a href="#section4">Quiénes Somos</a>
+            </li>
+            <li>
+              <a href="#section5">
+                <Button secondary>Contactános</Button>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
       <style jsx>{`
+        .wrapper {
+          position: fixed;
+          width: 100vw;
+          max-width: 100%;
+          z-index: 1000;
+          transition: background 300ms ease;
+          ${scrolled
+            ? "background: var(--gray-4);"
+            : "background: transparent;"};
+        }
         header {
           display: flex;
           justify-content: space-between;
@@ -44,6 +68,10 @@ export default function Header() {
           margin: 0 1rem;
         }
 
+        li:last-child {
+          margin-right: 0;
+        }
+
         a {
           font-size: calc(18px + (20 - 18) * (100vw - 1024px) / (1920 - 1024));
         }
@@ -54,6 +82,6 @@ export default function Header() {
           }
         }
       `}</style>
-    </header>
+    </div>
   )
 }

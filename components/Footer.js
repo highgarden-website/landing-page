@@ -1,5 +1,7 @@
-import Text from "../components/Text"
-import Logo from "../components/Logo"
+import Text from "./Text"
+import Logo from "./Logo"
+import Input from "./Input"
+import Button from "./Button"
 
 export default function Footer() {
   return (
@@ -42,20 +44,18 @@ export default function Footer() {
               </li>
             </ul>
           </nav>
-          <nav>
-            <Text h5>Socieles</Text>
-            <ul className="social">
-              <li>
-                <a href="#">Linkedin</a>
-              </li>
-              <li>
-                <a href="#">Facebook</a>
-              </li>
-              <li>
-                <a href="#">Twitter</a>
-              </li>
-            </ul>
-          </nav>
+          <div className="social">
+            <Text h5>Subscribite a nuestro newsletter</Text>
+            <Input label="E-Mail"></Input>
+            <Button>Subscribirse</Button>
+            <Text h5>Seguinos en nuestras redes sociales</Text>
+
+            <a href="#">Linkedin</a>
+
+            <a href="#">Facebook</a>
+
+            <a href="#">Twitter</a>
+          </div>
         </aside>
       </footer>
       <div className="copyright">
@@ -64,6 +64,9 @@ export default function Footer() {
         </Text>
       </div>
       <style jsx>{`
+        .social {
+        }
+
         .wrapper {
           background: var(--gray-3);
         }
@@ -83,7 +86,8 @@ export default function Footer() {
           width: 1185px;
           margin: 0 auto;
           margin-bottom: 50px;
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: 1fr 2fr;
+          grid-gap: 60px;
           font-family: "Gilroy";
           font-size: 20px;
           line-height: 100%;
@@ -95,14 +99,15 @@ export default function Footer() {
 
         .footer-links {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: 1fr 1fr 3fr;
+          grid-gap: 20px;
         }
 
         .copyright {
           background: var(--gray-4);
           text-align: center;
           grid-column: -1/1;
-          padding: 30px 0;
+          padding: 20px 0;
         }
       `}</style>
     </div>
