@@ -109,7 +109,7 @@ export default function Footer() {
 
         footer {
           display: grid;
-          width: 1185px;
+          width: 1250px;
           margin: 0 auto;
           margin-bottom: 50px;
           grid-template-columns: 1fr 2fr;

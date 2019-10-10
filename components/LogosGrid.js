@@ -22,9 +22,11 @@ export default function LogosGrid() {
         .wrapper {
           display: grid;
           grid-template-areas: "mariva santander lynx bdv" "ucema quiron usal napoli";
-          max-width: 870px;
+          align-items: center;
+          justify-items: center;
+          max-width: 850px;
           margin: 0 auto;
-          margin-top: 50px;
+          margin-top: 100px;
           grid-row-gap: 50px;
         }
       `}</style>

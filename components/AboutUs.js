@@ -6,7 +6,7 @@ import Panel from "./Panel"
 
 export default function AboutUs({ id }) {
   return (
-    <div className="outer-wrapper">
+    <div className="outerWrapper">
       <svg
         width="1135"
         height="797"
@@ -565,112 +565,112 @@ export default function AboutUs({ id }) {
         <path
           d="M102.353 59.2021V38.4292"
           stroke="#8991A3"
-          stroke-width="4"
+          strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M98.0884 41.8913L102.353 38.4292L106.618 41.8913"
           stroke="#8991A3"
-          stroke-width="4"
+          strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M58 59.2021V38.4292"
           stroke="#8991A3"
-          stroke-width="4"
+          strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M53.7354 41.8913L58.0001 38.4292L62.2648 41.8913"
           stroke="#8991A3"
-          stroke-width="4"
+          strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M58 23.1957V2.42285"
           stroke="#8991A3"
-          stroke-width="4"
+          strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M53.7354 5.88499L58.0001 2.42285L62.2648 5.88499"
           stroke="#8991A3"
-          stroke-width="4"
+          strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M13.647 59.2021V38.4292"
           stroke="#8991A3"
-          stroke-width="4"
+          strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M9.38232 41.8913L13.647 38.4292L17.9117 41.8913"
           stroke="#8991A3"
-          stroke-width="4"
+          strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M102.353 95.2084V74.4353"
           stroke="#8991A3"
-          stroke-width="4"
+          strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M98.0884 77.8975L102.353 74.4353L106.618 77.8975"
           stroke="#8991A3"
-          stroke-width="4"
+          strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M58 95.2084V74.4353"
           stroke="#8991A3"
-          stroke-width="4"
+          strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M53.7354 77.8975L58.0001 74.4353L62.2648 77.8975"
           stroke="#8991A3"
-          stroke-width="4"
+          strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M13.647 95.2082V74.4353"
           stroke="#8991A3"
-          stroke-width="4"
+          strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M9.38232 77.8974L13.647 74.4353L17.9117 77.8974"
           stroke="#8991A3"
-          stroke-width="4"
+          strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M13.647 131.215V110.442"
           stroke="#8991A3"
-          stroke-width="4"
+          strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M9.38232 113.904L13.647 110.442L17.9117 113.904"
           stroke="#8991A3"
-          stroke-width="4"
+          strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
@@ -703,7 +703,7 @@ export default function AboutUs({ id }) {
         </aside>
       </Section>
       <style jsx>{`
-        .outer-wrapper {
+        .outerWrapper {
           position: relative;
         }
 
