@@ -1,13 +1,14 @@
-export default function Input({ label, type }) {
+export default function Input({ label }) {
   return (
     <div className="wrapper">
       <input name={`${label}-field`} type="text" />
-      <label htmlFor={`${label}-tag`}>{label}</label>
+      {label && <label htmlFor={`${label}-tag`}>{label}</label>}
 
       <style jsx>{`
         .wrapper {
           display: flex;
           flex-direction: column-reverse;
+          width: 100%;
         }
         input {
           background: var(--gray-5);

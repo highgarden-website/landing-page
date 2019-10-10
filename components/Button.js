@@ -1,6 +1,6 @@
 import cn from "classnames"
 
-export default function Button({ isInverted, secondary, children }) {
+export default function Button({ isInverted, secondary, children, small }) {
   return (
     <button className={cn({ inverted: isInverted })}>
       {children}
@@ -11,7 +11,7 @@ export default function Button({ isInverted, secondary, children }) {
           cursor: pointer;
           border: none;
           outline: none;
-          padding: 15px 50px;
+          padding: ${small ? "15px 20px;" : "15px 50px;"};
           font-family: "Gilroy";
           font-size: 20px;
           color: var(--gray-4);

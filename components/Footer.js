@@ -2,6 +2,10 @@ import Text from "./Text"
 import Logo from "./Logo"
 import Input from "./Input"
 import Button from "./Button"
+import SegmentedInput from "./SegmentedInput"
+import LinkedinLogo from "./LinkedinLogo"
+import FacebookLogo from "./FacebookLogo"
+import TwitterLogo from "./TwitterLogo"
 
 export default function Footer() {
   return (
@@ -46,15 +50,26 @@ export default function Footer() {
           </nav>
           <div className="social">
             <Text h5>Subscribite a nuestro newsletter</Text>
-            <Input label="E-Mail"></Input>
-            <Button>Subscribirse</Button>
+            <SegmentedInput></SegmentedInput>
             <Text h5>Seguinos en nuestras redes sociales</Text>
 
-            <a href="#">Linkedin</a>
-
-            <a href="#">Facebook</a>
-
-            <a href="#">Twitter</a>
+            <ul className="social-list">
+              <li>
+                <a href="#" className="social-link">
+                  <LinkedinLogo></LinkedinLogo> Linkedin
+                </a>
+              </li>
+              <li>
+                <a href="#" className="social-link">
+                  <FacebookLogo></FacebookLogo> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" className="social-link">
+                  <TwitterLogo></TwitterLogo> Twitter
+                </a>
+              </li>
+            </ul>
           </div>
         </aside>
       </footer>
@@ -65,6 +80,17 @@ export default function Footer() {
       </div>
       <style jsx>{`
         .social {
+        }
+
+        .social-list {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .social-link {
+          display: flex;
+          align-items: center;
         }
 
         .wrapper {
@@ -99,7 +125,7 @@ export default function Footer() {
 
         .footer-links {
           display: grid;
-          grid-template-columns: 1fr 1fr 3fr;
+          grid-template-columns: 1fr 1fr 2fr;
           grid-gap: 20px;
         }
 
