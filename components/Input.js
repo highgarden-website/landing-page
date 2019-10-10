@@ -1,7 +1,7 @@
-export default function Input({ label }) {
+export default function Input({ label, type }) {
   return (
     <div className="wrapper">
-      <input name={`${label}-field`} type="text" />
+      <input name={`${label}-field`} type={`${type}`} />
       {label && <label htmlFor={`${label}-tag`}>{label}</label>}
 
       <style jsx>{`

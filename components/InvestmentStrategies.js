@@ -313,6 +313,7 @@ export default function InvestmentStrategies({ id }) {
         }
         .left {
           position: relative;
+          height: 80%;
         }
 
         .right {
@@ -321,6 +322,7 @@ export default function InvestmentStrategies({ id }) {
           grid-template-columns: repeat(3, 1fr);
           grid-gap: 30px;
           align-items: center;
+          height: 100%;
         }
         a {
           color: #ffffff;
