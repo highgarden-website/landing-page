@@ -13,7 +13,7 @@ export default function Hero({ id }) {
             Invertir profesionalmente
           </Text>
           <Text h3>Descrubrí la mejor manera de hacer crecer tu capital.</Text>
-          <div className="p">
+          <div className="paragraph">
             <Text p>
               Basados en la transparencia, la seguridad, y pensando en el
               mediano y largo plazo, creamos tres estrategias de inversión para
@@ -24,131 +24,36 @@ export default function Hero({ id }) {
             <Button>Contactanos</Button>
           </div>
 
-          <svg
-            className="arrows"
-            width="102"
-            height="164"
-            viewBox="0 0 102 164"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M95.353 72.6351V47.1032"
-              stroke="#8991A3"
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M91.0883 51.3584L95.353 47.1031L99.6177 51.3584"
-              stroke="#8991A3"
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M51 72.6351V47.1032"
-              stroke="#8991A3"
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M46.7352 51.3584L50.9999 47.1031L55.2646 51.3584"
-              stroke="#8991A3"
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M51 28.3797V2.84781"
-              stroke="#8991A3"
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M46.7352 7.10305L50.9999 2.84773L55.2646 7.10305"
-              stroke="#8991A3"
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M6.64709 72.635V47.1031"
-              stroke="#8991A3"
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M2.38232 51.3584L6.64703 47.103L10.9117 51.3584"
-              stroke="#8991A3"
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M95.353 116.89V91.3586"
-              stroke="#8991A3"
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M91.0883 95.6138L95.353 91.3585L99.6177 95.6138"
-              stroke="#8991A3"
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M51 116.89V91.3586"
-              stroke="#8991A3"
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M46.7352 95.6138L50.9999 91.3585L55.2646 95.6138"
-              stroke="#8991A3"
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M6.64709 116.89V91.3584"
-              stroke="#8991A3"
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M2.38232 95.6137L6.64703 91.3584L10.9117 95.6137"
-              stroke="#8991A3"
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M6.64709 161.146V135.614"
-              stroke="#8991A3"
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M2.38232 139.869L6.64703 135.614L10.9117 139.869"
-              stroke="#8991A3"
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
         </aside>
+       <div className="decoration"> <svg
 
+          width="1310"
+          height="799"
+          viewBox="0 0 1310 799"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 -80H1310V532.145C1310 602.011 1257.43 660.685 1187.98 668.324L0 799V-80Z"
+            fill="#57627B"
+          />
+        </svg></div>
         <aside className="right">
-          <div className="green-border">
+          <div className="decoration-green-border">
+            <svg
+              width="557"
+              height="403"
+              viewBox="0 0 557 403"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.5 10C2.5 5.85786 5.85786 2.5 10 2.5H547C551.142 2.5 554.5 5.85787 554.5 10V328.908C554.5 348.663 539.174 365.031 519.461 366.327L10.4922 399.805C6.16574 400.089 2.5 396.656 2.5 392.321V10Z"
+                stroke="#41DAB8"
+                stroke-width="5"
+              />
+            </svg>
+
             <div className="video">
               <svg
                 className="playButton"
@@ -710,8 +615,8 @@ export default function Hero({ id }) {
       </div>
 
       <style jsx>{`
-        .p {
-          max-width: 350px;
+        .paragraph {
+          max-width: 320px;
         }
         .inner-container {
           display: grid;
@@ -720,17 +625,15 @@ export default function Hero({ id }) {
 
         .left {
           position: relative;
+          z-index: 2;
         }
         .right {
           position: relative;
+          z-index: 2;
         }
 
-        .green-border {
+        .decoration-green-border {
           position: absolute;
-          width: 557px;
-          height: 403px;
-          border: 5px solid var(--green);
-          border-radius: 10px;
           right: 0;
         }
 
@@ -738,14 +641,16 @@ export default function Hero({ id }) {
           margin-top: 50px;
         }
 
-        .arrows {
+        .decoration {
           position: absolute;
-          left: -150px;
-          bottom: -40%;
+          left: -3%;
+          top: 0;
         }
+
         .miniPoints {
           position: absolute;
-          top: -55px;
+          top: 0;
+          z-index: 3;
         }
         .points {
           position: absolute;
@@ -788,6 +693,7 @@ export default function Hero({ id }) {
 
         .logos {
           grid-column: 1 / -1;
+          z-index: 1;
         }
 
         @media (max-width: 1050px) {

@@ -6,9 +6,9 @@ import TextArea from "./TextArea"
 import Button from "./Button"
 
 const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" }
+  { value: "hg-fixed", label: "HG fixed Income" },
+  { value: "hg-propietary", label: "HG Propietary Model" },
+  { value: "hg-propietary-hr", label: "HG Propietary Model High Return" }
 ]
 
 export default function Contact({ id }) {
@@ -293,7 +293,12 @@ export default function Contact({ id }) {
         <Text h3>Dejanos tus datos y nos comunicaremos a la brevedad.</Text>
         <Input type="text" label="Nombre"></Input>
         <Input type="email" label="E-Mail"></Input>
-        <Select classNamePrefix="select" options={options} />
+        <label htmlFor="Select">Estrategias de inversion</label>
+        <Select
+          placeholder={<div>Eleji entre los 3 tipos de inversion</div>}
+          classNamePrefix="select"
+          options={options}
+        />
         <TextArea label="Mensaje (Opcional)" />
         <div className="sendButton">
           <Button secondary>Enviar</Button>
@@ -305,9 +310,9 @@ export default function Contact({ id }) {
           font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
             Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
             sans-serif;
-          font-size: 0.75rem;
+          font-size: 18px;
           font-weight: 600;
-          color: #2479ff;
+          color: red;
           letter-spacing: 0.7px;
           left: 1.5em;
           text-transform: capitalize;
@@ -324,8 +329,10 @@ export default function Contact({ id }) {
 
         .select__control {
           height: 100%;
+          margin-top: 12px;
           border: none;
           border-radius: 3px;
+          background-color: var(--gray-5);
         }
 
         .select__placeholder {
@@ -338,16 +345,17 @@ export default function Contact({ id }) {
           position: relative;
         }
 
-        .select__indicator-separator {
+        .select__input .select__indicator-separator {
           display: none;
         }
 
         .select__dropdown-indicator {
-          color: #2479ff;
+          color: var(--gray-1);
         }
 
         .select__value-container .select__option {
           position: absolute;
+          background-color: var(--gray-5);
         }
 
         .select__menu {
@@ -364,11 +372,10 @@ export default function Contact({ id }) {
           display: inline-block;
           width: 30px;
           margin-right: 1em;
-          background-color: #fff;
+          background-color: var(--gray-5);
         }
 
         .select__placeholder {
-          color: hsl(0, 0%, 20%);
           margin-left: 2px;
           margin-right: 2px;
           max-width: calc(100% - 8px);
@@ -383,6 +390,19 @@ export default function Contact({ id }) {
       `}</style>
       <style jsx>
         {`
+          label {
+            font-family: "Gilroy";
+            font-size: 14px;
+            line-height: 24px;
+            outline: none;
+            font-weight: 700;
+            margin-top: 30px;
+          }
+          label:focus,
+          label:hover {
+            color: var(--green);
+          }
+
           .paragraph {
             width: 300px;
           }

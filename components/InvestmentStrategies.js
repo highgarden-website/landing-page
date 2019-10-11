@@ -21,6 +21,26 @@ export default function InvestmentStrategies({ id }) {
             </a>
           </Text>
           <Button>Contactanos</Button>
+
+          <svg
+            className="lateral-decoration"
+            width="134"
+            height="351"
+            viewBox="0 0 134 351"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M65.471 196.934C71.3286 199.438 75 204.393 75 209.795L75 336.149C75 347.055 60.8337 354.065 49.009 349.011L-137.471 269.3C-143.329 266.797 -147 261.841 -147 256.439V130.085C-147 119.179 -132.834 112.169 -121.009 117.224L65.471 196.934Z"
+              fill="#57627B"
+              fill-opacity="0.5"
+            />
+            <path
+              d="M-79.4281 81.4015C-85.3121 83.9053 -89 88.8607 -89 94.2632L-89 220.617C-89 231.523 -74.7699 238.533 -62.8919 233.478L124.428 153.768C130.312 151.264 134 146.309 134 140.906V14.5531C134 3.64716 119.77 -3.36305 107.892 1.69138L-79.4281 81.4015Z"
+              fill="#57627B"
+              fill-opacity="0.5"
+            />
+          </svg>
         </aside>
 
         <aside className="right">
@@ -324,6 +344,13 @@ export default function InvestmentStrategies({ id }) {
           align-items: center;
           height: 100%;
         }
+
+        .lateral-decoration {
+          position: absolute;
+          left: -70%;
+          top: 0;
+        }
+
         a {
           color: #ffffff;
           font-weight: 700;
