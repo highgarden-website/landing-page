@@ -292,7 +292,7 @@ export default function HowToStart({ id }) {
 
         .right-bars {
           position: absolute;
-          right: -256px;
+          right: -270px;
           bottom: -280px;
         }
         .card,

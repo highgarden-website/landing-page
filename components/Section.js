@@ -6,6 +6,7 @@ export default function Section({ id, children, columns = 1, noMargin }) {
       {children}
       <style jsx>{`
         .section {
+          position: relative;
           display: grid;
           grid-template-columns: repeat(
             ${columnsInt},

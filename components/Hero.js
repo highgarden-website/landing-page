@@ -23,21 +23,22 @@ export default function Hero({ id }) {
           <div className="button">
             <Button>Contactanos</Button>
           </div>
-
         </aside>
-       <div className="decoration"> <svg
-
-          width="1310"
-          height="799"
-          viewBox="0 0 1310 799"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0 -80H1310V532.145C1310 602.011 1257.43 660.685 1187.98 668.324L0 799V-80Z"
-            fill="#57627B"
-          />
-        </svg></div>
+        <div className="decoration">
+          {" "}
+          <svg
+            width="1310"
+            height="799"
+            viewBox="0 0 1310 799"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 -80H1310V532.145C1310 602.011 1257.43 660.685 1187.98 668.324L0 799V-80Z"
+              fill="#57627B"
+            />
+          </svg>
+        </div>
         <aside className="right">
           <div className="decoration-green-border">
             <svg
@@ -643,7 +644,7 @@ export default function Hero({ id }) {
 
         .decoration {
           position: absolute;
-          left: -3%;
+          left: -28%;
           top: 0;
         }
 
