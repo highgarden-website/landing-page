@@ -6,10 +6,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.16",
     "classnames": "^2.2.6",
     "next": "^9.1.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "react-page-scroller": "^1.5.1",
     "react-remove-scroll": "^2.0.4",
     "react-select": "^3.0.8"
   }

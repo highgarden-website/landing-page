@@ -16,7 +16,7 @@ export default function Section({ id, children, columns = 1, noMargin }) {
           grid-row-gap: 20px;
           max-width: var(--inner-width);
           margin: 0 auto;
-          height: calc(100vh - 131px);
+          height: calc(100vh - 230px);
           align-items: center;
         }
 
