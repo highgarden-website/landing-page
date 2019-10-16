@@ -18,19 +18,19 @@ export default function Header() {
         <nav>
           <ul>
             <li>
-              <a href="#section1">Inicio</a>
+              <a href="#inicio">Inicio</a>
             </li>
             <li>
-              <a href="#section2">Cómo Funciona</a>
+              <a href="#ComoFunciona">Cómo Funciona</a>
             </li>
             <li>
-              <a href="#section3">Estrategias de Inversión</a>
+              <a href="#EstrategiasDeInversion">Estrategias de Inversión</a>
             </li>
             <li>
-              <a href="#section4">Quiénes Somos</a>
+              <a href="#quieneSomos">Quiénes Somos</a>
             </li>
             <li>
-              <a href="#section5">
+              <a href="#contactanos">
                 <Button secondary>Contactános</Button>
               </a>
             </li>

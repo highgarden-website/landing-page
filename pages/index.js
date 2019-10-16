@@ -9,9 +9,11 @@ import Contact from "../components/Contact"
 import Footer from "../components/Footer"
 
 const handleScroll = event => {
+  const body = document.querySelector("main")
   if (event.keyCode == "38") {
     // UP arrow key pressed
   } else if (event.keyCode == "40") {
+    body.style.transformY = "-100vh"
     // DOWN arrow key pressed
   } else if (event.type === "wheel") {
     // WHEEL event triggered
@@ -33,22 +35,22 @@ const Home = () => {
     document.addEventListener("touchmove", handleScroll)
 
     return () => {
-      document.addEventListener("wheel", handleScroll)
-      document.addEventListener("touchmove", handleScroll)
-      document.addEventListener("mousewheel", handleScroll)
-      document.addEventListener("DOMMouseScroll", handleScroll)
-      document.addEventListener("keydown", handleScroll)
+      document.removeEventListener("wheel", handleScroll)
+      document.removeEventListener("touchmove", handleScroll)
+      document.removeEventListener("mousewheel", handleScroll)
+      document.removeEventListener("DOMMouseScroll", handleScroll)
+      document.removeEventListener("keydown", handleScroll)
     }
   }, [])
 
   return (
     <main ref={main}>
       <Header></Header>
-      <Hero id="section1"></Hero>
-      <HowToStart id="section2"></HowToStart>
-      <InvestmentStrategies id="section3"></InvestmentStrategies>
-      <AboutUs></AboutUs>
-      <Contact id="section5"></Contact>
+      <Hero id="inicio"></Hero>
+      <HowToStart id="ComoFunciona"></HowToStart>
+      <InvestmentStrategies id="EstrategiasDeInversion"></InvestmentStrategies>
+      <AboutUs id="quieneSomos"></AboutUs>
+      <Contact id="contactanos"></Contact>
       <Footer></Footer>
       <style jsx>{`
         main {
