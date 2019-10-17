@@ -13,7 +13,7 @@ const options = [
 
 export default function Contact({ id }) {
   return (
-    <Section id={id} columns="2">
+    <Section id={id} columns="2" tight>
       <aside className="left">
         <div className="line"></div>
         <Text h2>Contactanos</Text>

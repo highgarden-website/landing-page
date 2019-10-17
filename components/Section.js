@@ -1,4 +1,10 @@
-export default function Section({ id, children, columns = 1, noMargin }) {
+export default function Section({
+  id,
+  children,
+  columns = 1,
+  noMargin,
+  tight = false
+}) {
   const columnsInt = parseInt(columns, 10)
 
   return (
@@ -14,7 +20,9 @@ export default function Section({ id, children, columns = 1, noMargin }) {
           );
           grid-column-gap: 20px;
           grid-row-gap: 20px;
-          max-width: var(--inner-width);
+          max-width: ${tight
+            ? "var(--inner-width-small)"
+            : "var(--inner-width)"};
           margin: 0 auto;
           height: calc(100vh - 230px);
           align-items: center;

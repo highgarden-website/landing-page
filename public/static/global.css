@@ -39,7 +39,8 @@
   --green-light: #ecfbf8;
 
   /* Layout */
-  --inner-width: 1300px;
+  --inner-width: 1400px;
+  --inner-width-small: 1200px;
   --full-width: 100vw;
   --full-height: 100vh;
   --gap: 80px;
