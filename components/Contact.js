@@ -4,7 +4,34 @@ import Section from "./Section"
 import Input from "./Input"
 import TextArea from "./TextArea"
 import Button from "./Button"
+const styleSelect = {
+  option: (provided, state) => ({
+    ...provided,
+    color: "color: #fff)",
+    background: state.isFocused ? "var(--gray-3)" : "var(--gray-5)"
+  }),
+  control: styles => ({
+    ...styles,
+    color: "color: #fff)",
+    backgroundColor: "var(--gray-5)",
+    border: "none"
+  }),
+  menu: styles => ({
+    ...styles,
+    backgroundColor: "var(--gray-5)",
+    border: "none"
+  }),
 
+  singleValue: styles => ({
+    ...styles,
+    color: " #fff"
+  }),
+
+  indicatorSeparator: styles => ({
+    ...styles,
+    color: "red"
+  })
+}
 const options = [
   { value: "hg-fixed", label: "HG fixed Income" },
   { value: "hg-propietary", label: "HG Propietary Model" },
@@ -295,99 +322,20 @@ export default function Contact({ id }) {
         <Input type="email" label="E-Mail"></Input>
         <label htmlFor="Select">Estrategias de inversion</label>
         <Select
-          placeholder={<div>Eleji entre los 3 tipos de inversion</div>}
+          placeholder={
+            <div style={{ color: "rgba(255, 255, 255, 0.7)" }}>
+              Elegi entre los 3 tipos de inversion
+            </div>
+          }
           classNamePrefix="select"
           options={options}
+          styles={styleSelect}
         />
         <TextArea label="Mensaje (Opcional)" />
         <div className="sendButton">
           <Button secondary>Enviar</Button>
         </div>
       </aside>
-      <style jsx global>{`
-        .select__label {
-          pointer-events: none;
-          font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
-            Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-            sans-serif;
-          font-size: 18px;
-          font-weight: 600;
-          color: red;
-          letter-spacing: 0.7px;
-          left: 1.5em;
-          text-transform: capitalize;
-          z-index: 11;
-        }
-
-        .select__wrapper {
-          position: relative;
-          height: 3.75rem;
-          width: 100%;
-          max-width: 350px;
-          margin: 0.5rem auto;
-        }
-
-        .select__control {
-          height: 100%;
-          margin-top: 12px;
-          border: none;
-          border-radius: 3px;
-          background-color: var(--gray-5);
-        }
-
-        .select__placeholder {
-          color: #000;
-          font-weight: 700;
-        }
-
-        .select__value-container {
-          padding: 0 1em;
-          position: relative;
-        }
-
-        .select__input .select__indicator-separator {
-          display: none;
-        }
-
-        .select__dropdown-indicator {
-          color: var(--gray-1);
-        }
-
-        .select__value-container .select__option {
-          position: absolute;
-          background-color: var(--gray-5);
-        }
-
-        .select__menu {
-          z-index: 1000 !important;
-        }
-
-        .select__option {
-          display: flex !important;
-          align-items: center;
-          font-weight: 700;
-        }
-
-        .select__option-icon {
-          display: inline-block;
-          width: 30px;
-          margin-right: 1em;
-          background-color: var(--gray-5);
-        }
-
-        .select__placeholder {
-          margin-left: 2px;
-          margin-right: 2px;
-          max-width: calc(100% - 8px);
-          overflow: hidden;
-          position: absolute;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          top: 50%;
-          transform: translateY(-50%);
-          box-sizing: border-box;
-        }
-      `}</style>
       <style jsx>
         {`
           label {
@@ -431,8 +379,8 @@ export default function Contact({ id }) {
           }
           .points {
             position: absolute;
-            bottom: -150px;
-            left: -307px;
+            bottom: -37%;
+            left: -60%;
           }
         `}
       </style>

@@ -13,10 +13,6 @@ const Home = () => {
     <main>
       <Header></Header>
       <ReactPageScroller>
-        <Hero id="inicio"></Hero>
-        <HowToStart id="ComoFunciona"></HowToStart>
-        <InvestmentStrategies id="EstrategiasDeInversion"></InvestmentStrategies>
-        <AboutUs id="quieneSomos"></AboutUs>
         <Contact id="contactanos"></Contact>
         <Footer></Footer>
       </ReactPageScroller>
