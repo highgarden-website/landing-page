@@ -5,32 +5,43 @@ import Input from "./Input"
 import TextArea from "./TextArea"
 import Button from "./Button"
 const styleSelect = {
-  option: (provided, state) => ({
-    ...provided,
-    color: "color: #fff)",
-    background: state.isFocused ? "var(--gray-3)" : "var(--gray-5)"
-  }),
-  control: styles => ({
-    ...styles,
-    color: "color: #fff)",
-    backgroundColor: "var(--gray-5)",
-    border: "none"
-  }),
-  menu: styles => ({
-    ...styles,
-    backgroundColor: "var(--gray-5)",
-    border: "none"
-  }),
+  control: (styles, { isDisabled, isFocused, isSelected }) => {
+    return {
+      ...styles,
+      fontFamily: "Gilroy",
+      borderColor: "var(--gray-5)",
+      backgroundColor: "var(--gray-5)",
+      border: "none",
+      outline: "none",
+      boxShadow: isFocused ? "inset 0 0 0 2px var(--green)" : "none",
+      ":hover": {
+        ...styles[":hover"],
+        boxSizing: "borderBox",
+        borderRadius: "5px",
+        boxShadow: "inset 0 0 0 2px var(--green)"
+      }
+    }
+  },
+  indicatorSeparator: styles => ({ ...styles, display: "none" }),
+  menuList: styles => ({ ...styles, backgroundColor: "var(--gray-5)" }),
+  singleValue: styles => ({ ...styles, color: "#fff" }),
+  option: (styles, { isDisabled, isFocused, isSelected }) => {
+    return {
+      ...styles,
+      backgroundColor: isDisabled
+        ? "var(--gray-5)"
+        : isFocused
+        ? "var(--gray-3)"
+        : "var(--gray-5)",
 
-  singleValue: styles => ({
-    ...styles,
-    color: " #fff"
-  }),
+      cursor: isDisabled ? "not-allowed" : "pointer",
 
-  indicatorSeparator: styles => ({
-    ...styles,
-    color: "red"
-  })
+      ":active": {
+        ...styles[":active"],
+        backgroundColor: !isDisabled && "var(--gray-3)"
+      }
+    }
+  }
 }
 const options = [
   { value: "hg-fixed", label: "HG fixed Income" },
