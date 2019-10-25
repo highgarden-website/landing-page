@@ -13,6 +13,10 @@ const Home = () => {
     <main>
       <Header></Header>
       <ReactPageScroller>
+        <Hero></Hero>
+        <HowToStart></HowToStart>
+        <InvestmentStrategies></InvestmentStrategies>
+        <AboutUs></AboutUs>
         <Contact id="contactanos"></Contact>
         <Footer></Footer>
       </ReactPageScroller>

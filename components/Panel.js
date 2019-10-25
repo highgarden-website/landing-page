@@ -56,16 +56,16 @@ export default function Panel({
           left: 50%;
           bottom: -10px;
           border-radius: 10px;
-          background-color: var(--green);
-          opacity: 0.7;
+          background-color: #43948d;
           transform: translateX(-50%);
+          z-index: -1;
         }
 
-        .highlight:after {
+        .highlight:before {
           height: 30px;
           width: 80%;
           bottom: -20px;
-          opacity: 0.5;
+          background-color: #44787c;
         }
 
         @media (max-width: 1050px) {

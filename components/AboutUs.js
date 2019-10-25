@@ -4,9 +4,9 @@ import Avatar from "./Avatar"
 import Section from "./Section"
 import Panel from "./Panel"
 
-export default function AboutUs({ id }) {
+export default function AboutUs() {
   return (
-    <div className="outerWrapper">
+    <div className="outerWrapper" id="quienes-somos">
       <svg
         width="1135"
         height="797"

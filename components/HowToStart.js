@@ -3,9 +3,9 @@ import Text from "./Text"
 import Section from "./Section"
 import Panel from "./Panel"
 
-export default function HowToStart({ id }) {
+export default function HowToStart() {
   return (
-    <Section id={id}>
+    <Section id="como-funciona">
       <div className="inner-container">
         <aside className="left">
           <div className="line"></div>

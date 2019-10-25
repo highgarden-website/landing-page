@@ -9,77 +9,86 @@ import TwitterLogo from "./TwitterLogo"
 
 export default function Footer() {
   return (
-    <div className="wrapper">
-      <footer>
-        <aside className="slogan">
-          <Logo></Logo>
-          <Text h5>
-            Descrubrí la mejor manera de hacer <br />
-            crecer tu capital.
+    <section>
+      <Text h1 style={{ transform: "translateY(250%)" }}>
+        Invertí Profesionalmente.
+      </Text>
+      <div className="inner">
+        <footer>
+          <aside className="slogan">
+            <Logo></Logo>
+            <Text h5 style={{ fontWeight: "400" }} noMargin>
+              Descrubrí la mejor manera de hacer <br />
+              crecer tu capital.
+            </Text>
+          </aside>
+
+          <aside className="footer-links">
+            <nav>
+              <Text h5>Sitemap</Text>
+              <ul className="navegation">
+                <li>
+                  <a href="#">Inicio</a>
+                </li>
+                <li>
+                  <a href="#como-invertir">Como Invertir</a>
+                </li>
+                <li>
+                  <a href="#como-funciona">Como Funciona</a>
+                </li>
+                <li>
+                  <a href="#quienes-somos">Quienes Somos</a>
+                </li>
+              </ul>
+            </nav>
+            <nav>
+              <Text h5>Legales</Text>
+              <ul className="legales">
+                <li>
+                  <a href="#">FAQs</a>
+                </li>
+                <li>
+                  <a href="#">Terminos</a>
+                </li>
+              </ul>
+            </nav>
+            <div className="social">
+              <Text h5>Subscribite a nuestro newsletter</Text>
+              <SegmentedInput></SegmentedInput>
+              <Text h5>Seguinos en nuestras redes sociales</Text>
+
+              <ul className="social-list">
+                <li>
+                  <a href="#" className="social-link">
+                    <LinkedinLogo></LinkedinLogo> Linkedin
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="social-link">
+                    <FacebookLogo></FacebookLogo> Facebook
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="social-link">
+                    <TwitterLogo></TwitterLogo> Twitter
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </footer>
+        <div className="copyright">
+          <Text p large>
+            2019 Highgarden. All rights reserved
           </Text>
-        </aside>
-
-        <aside className="footer-links">
-          <nav>
-            <Text h5>Navegacion</Text>
-            <ul className="navegation">
-              <li>
-                <a href="#">Inicio</a>
-              </li>
-              <li>
-                <a href="#">Como Invertir</a>
-              </li>
-              <li>
-                <a href="#">Como Funciona</a>
-              </li>
-              <li>
-                <a href="#">Quienes Somos</a>
-              </li>
-            </ul>
-          </nav>
-          <nav>
-            <Text h5>Legales</Text>
-            <ul className="legales">
-              <li>
-                <a href="#">FAQs</a>
-              </li>
-              <li>
-                <a href="#">Terminos</a>
-              </li>
-            </ul>
-          </nav>
-          <div className="social">
-            <Text h5>Subscribite a nuestro newsletter</Text>
-            <SegmentedInput></SegmentedInput>
-            <Text h5>Seguinos en nuestras redes sociales</Text>
-
-            <ul className="social-list">
-              <li>
-                <a href="#" className="social-link">
-                  <LinkedinLogo></LinkedinLogo> Linkedin
-                </a>
-              </li>
-              <li>
-                <a href="#" className="social-link">
-                  <FacebookLogo></FacebookLogo> Facebook
-                </a>
-              </li>
-              <li>
-                <a href="#" className="social-link">
-                  <TwitterLogo></TwitterLogo> Twitter
-                </a>
-              </li>
-            </ul>
-          </div>
-        </aside>
-      </footer>
-      <div className="copyright">
-        <Text p large>
-          2019 Highgarden. All rights reserved
-        </Text>
+        </div>
       </div>
       <style jsx>{`
-        .social {
+        section {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          height: 100vh;
         }
 
         .social-list {
@@ -93,11 +102,12 @@ export default function Footer() {
           align-items: center;
         }
 
-        .wrapper {
+        .inner {
+          margin-top: auto;
           background: var(--gray-3);
         }
 
-        .wrapper:before {
+        .inner:before {
           content: "";
           width: 0;
           height: 0;
@@ -136,6 +146,6 @@ export default function Footer() {
           padding: 20px 0;
         }
       `}</style>
-    </div>
+    </section>
   )
 }

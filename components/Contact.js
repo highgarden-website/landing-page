@@ -6,9 +6,9 @@ import TextArea from "./TextArea"
 import Button from "./Button"
 import SelectCustom from "./SelectCustom"
 
-export default function Contact({ id }) {
+export default function Contact() {
   return (
-    <Section id={id} columns="2" tight>
+    <Section id="contacto" columns="2" tight>
       <aside className="left">
         <div className="line"></div>
         <Text h2>Contactanos</Text>

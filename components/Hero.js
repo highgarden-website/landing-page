@@ -4,9 +4,9 @@ import Section from "./Section"
 import Header from "./Header"
 import LogosGrid from "./LogosGrid"
 
-export default function Hero({ id }) {
+export default function Hero() {
   return (
-    <Section id={id}>
+    <Section>
       <div className="inner-container">
         <aside className="left">
           <Text h1 noMargin>

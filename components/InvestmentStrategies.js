@@ -3,9 +3,9 @@ import Text from "./Text"
 import Section from "./Section"
 import Panel from "./Panel"
 
-export default function InvestmentStrategies({ id }) {
+export default function InvestmentStrategies() {
   return (
-    <Section id={id}>
+    <Section id="estrategias-de-inversion">
       <div className="inner-container">
         <aside className="left">
           <div className="line"></div>
@@ -329,7 +329,7 @@ export default function InvestmentStrategies({ id }) {
       <style jsx>{`
         .inner-container {
           display: grid;
-          grid-template-columns: 1fr 2fr;
+          grid-template-columns: 1fr 1.5fr;
         }
         .left {
           position: relative;
@@ -343,6 +343,7 @@ export default function InvestmentStrategies({ id }) {
           grid-gap: 30px;
           align-items: center;
           height: 100%;
+          margin-top: 15%;
         }
 
         .lateral-decoration {
@@ -359,6 +360,7 @@ export default function InvestmentStrategies({ id }) {
         hr {
           border-color: var(--gray-4);
           margin: 20px;
+          opacity: 0.2;
         }
 
         .line {

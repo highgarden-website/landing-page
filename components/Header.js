@@ -1,16 +1,7 @@
-import { useState, useEffect } from "react"
 import Logo from "./Logo"
 import Button from "./Button"
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    document.addEventListener("scroll", () => {
-      setScrolled(window.scrollY > 0)
-    })
-  }, [])
-
   return (
     <div className="wrapper">
       <header>
@@ -18,20 +9,20 @@ export default function Header() {
         <nav>
           <ul>
             <li>
-              <a href="#inicio">Inicio</a>
+              <a href="#">Inicio</a>
             </li>
             <li>
-              <a href="#ComoFunciona">Cómo Funciona</a>
+              <a href="#como-funciona">Cómo Funciona</a>
             </li>
             <li>
-              <a href="#EstrategiasDeInversion">Estrategias de Inversión</a>
+              <a href="#estrategias-de-inversion">Estrategias de Inversión</a>
             </li>
             <li>
-              <a href="#quieneSomos">Quiénes Somos</a>
+              <a href="#quiene-somos">Quiénes Somos</a>
             </li>
             <li>
-              <a href="#contactanos">
-                <Button secondary>Contactános</Button>
+              <a href="#contacto" className="button">
+                <Button secondary>Contactanos</Button>
               </a>
             </li>
           </ul>
