@@ -4,50 +4,7 @@ import Section from "./Section"
 import Input from "./Input"
 import TextArea from "./TextArea"
 import Button from "./Button"
-const styleSelect = {
-  control: (styles, { isDisabled, isFocused, isSelected }) => {
-    return {
-      ...styles,
-      fontFamily: "Gilroy",
-      borderColor: "var(--gray-5)",
-      backgroundColor: "var(--gray-5)",
-      border: "none",
-      outline: "none",
-      boxShadow: isFocused ? "inset 0 0 0 2px var(--green)" : "none",
-      ":hover": {
-        ...styles[":hover"],
-        boxSizing: "borderBox",
-        borderRadius: "5px",
-        boxShadow: "inset 0 0 0 2px var(--green)"
-      }
-    }
-  },
-  indicatorSeparator: styles => ({ ...styles, display: "none" }),
-  menuList: styles => ({ ...styles, backgroundColor: "var(--gray-5)" }),
-  singleValue: styles => ({ ...styles, color: "#fff" }),
-  option: (styles, { isDisabled, isFocused, isSelected }) => {
-    return {
-      ...styles,
-      backgroundColor: isDisabled
-        ? "var(--gray-5)"
-        : isFocused
-        ? "var(--gray-3)"
-        : "var(--gray-5)",
-
-      cursor: isDisabled ? "not-allowed" : "pointer",
-
-      ":active": {
-        ...styles[":active"],
-        backgroundColor: !isDisabled && "var(--gray-3)"
-      }
-    }
-  }
-}
-const options = [
-  { value: "hg-fixed", label: "HG fixed Income" },
-  { value: "hg-propietary", label: "HG Propietary Model" },
-  { value: "hg-propietary-hr", label: "HG Propietary Model High Return" }
-]
+import SelectCustom from "./SelectCustom"
 
 export default function Contact({ id }) {
   return (
@@ -328,20 +285,133 @@ export default function Contact({ id }) {
         </svg>
       </aside>
       <aside className="right">
+        <svg
+          className="decoration-arrows"
+          width="116"
+          height="141"
+          viewBox="0 0 116 141"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M102.353 62.5526V40.5564"
+            stroke="#8991A3"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M98.0884 44.2224L102.353 40.5564L106.618 44.2224"
+            stroke="#8991A3"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M58 62.5526V40.5564"
+            stroke="#8991A3"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M53.7354 44.2224L58.0001 40.5564L62.2648 44.2224"
+            stroke="#8991A3"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M58 24.4257V2.4292"
+            stroke="#8991A3"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M53.7354 6.09528L58.0001 2.4292L62.2648 6.09528"
+            stroke="#8991A3"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M13.647 62.5526V40.5564"
+            stroke="#8991A3"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M9.38232 44.2224L13.647 40.5564L17.9117 44.2224"
+            stroke="#8991A3"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M102.353 100.68V78.6831"
+            stroke="#8991A3"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M98.0884 82.3492L102.353 78.6831L106.618 82.3492"
+            stroke="#8991A3"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M58 100.68V78.6831"
+            stroke="#8991A3"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M53.7354 82.3492L58.0001 78.6831L62.2648 82.3492"
+            stroke="#8991A3"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M13.647 100.68V78.6831"
+            stroke="#8991A3"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M9.38232 82.3492L13.647 78.6831L17.9117 82.3492"
+            stroke="#8991A3"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M13.647 138.807V116.81"
+            stroke="#8991A3"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M9.38232 120.476L13.647 116.81L17.9117 120.476"
+            stroke="#8991A3"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
         <Text h3>Dejanos tus datos y nos comunicaremos a la brevedad.</Text>
         <Input type="text" label="Nombre"></Input>
         <Input type="email" label="E-Mail"></Input>
-        <label htmlFor="Select">Estrategias de inversion</label>
-        <Select
-          placeholder={
-            <div style={{ color: "rgba(255, 255, 255, 0.7)" }}>
-              Elegi entre los 3 tipos de inversion
-            </div>
-          }
-          classNamePrefix="select"
-          options={options}
-          styles={styleSelect}
-        />
+
+        <SelectCustom label="Estrategias de inversion"></SelectCustom>
         <TextArea label="Mensaje (Opcional)" />
         <div className="sendButton">
           <Button secondary>Enviar</Button>
@@ -372,8 +442,12 @@ export default function Contact({ id }) {
 
           .right {
             position: relative;
-
             margin-top: 0;
+          }
+          .decoration-arrows {
+            position: absolute;
+            right: -12%;
+            top: -12%;
           }
           .sendButton {
             position: absolute;
