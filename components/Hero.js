@@ -22,7 +22,10 @@ export default function Hero() {
               ayudarte a multiplicar tu capital.
             </Text>
           </div>
-          <Button>Contactanos</Button>
+          <span className="cta">
+            {" "}
+            <Button>Contactanos</Button>
+          </span>
         </aside>
         <div className="decoration">
           <svg
@@ -39,7 +42,7 @@ export default function Hero() {
           </svg>
         </div>
         <aside className="right">
-          <div className="decoration-green-border">
+          <div className="wrapper">
             <svg
               className="miniPoints"
               width="100"
@@ -307,8 +310,7 @@ export default function Hero() {
             </svg>
 
             <svg
-              width="557"
-              height="403"
+              className="decoration-green-border"
               viewBox="0 0 557 403"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -898,15 +900,6 @@ export default function Hero() {
           z-index: 2;
         }
 
-        .decoration-green-border {
-          position: absolute;
-          right: 0;
-        }
-
-        .button {
-          margin-top: 50px;
-        }
-
         .decoration {
           position: absolute;
           left: -28%;
@@ -964,13 +957,46 @@ export default function Hero() {
           z-index: 1;
         }
 
+        .decoration-green-border {
+          width: 100%;
+          max-width: 100vh;
+        }
+
         @media (max-width: 1050px) {
           .inner-container {
             grid-template-columns: 1fr;
             margin: 3%;
           }
-          .button {
-            margin: 2%;
+          .cta {
+            display: none;
+          }
+
+          .video {
+            width: 285px;
+            height: 160px;
+          }
+
+          .card {
+            background: var(--gray-3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            width: 265px;
+            height: 116px;
+            text-align: center;
+            position: absolute;
+            bottom: 10;
+            left: 0;
+            padding: 10px;
+            z-index: 1;
+          }
+
+          .card p {
+            letter-spacing: -0.02em;
+            font-size: 35px;
+            line-height: 100%;
+            color: var(--green);
+            margin: 0 auto;
+            font-weight: 700;
           }
         }
       `}</style>
