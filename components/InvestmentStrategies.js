@@ -343,7 +343,7 @@ export default function InvestmentStrategies() {
           grid-gap: 30px;
           align-items: center;
           height: 100%;
-          margin-top: 15%;
+          margin-top: 5vh;
         }
 
         .lateral-decoration {

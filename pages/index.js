@@ -12,14 +12,12 @@ const Home = () => {
   return (
     <main>
       <Header />
-      <ReactPageScroller>
-        <Hero />
-        <HowToStart />
-        <InvestmentStrategies />
-        <AboutUs />
-        <Contact />
-        <Footer />
-      </ReactPageScroller>
+      <Hero />
+      <HowToStart />
+      <InvestmentStrategies />
+      <AboutUs />
+      <Contact />
+      <Footer />
     </main>
   )
 }

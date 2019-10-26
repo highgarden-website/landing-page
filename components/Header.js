@@ -1,11 +1,24 @@
+import { useState, useEffect } from "react"
 import Logo from "./Logo"
 import Button from "./Button"
 
 export default function Header() {
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      setScrolled(window.scrollY > 0)
+    })
+
+    return () => {
+      document.removeEventListener("scroll")
+    }
+  }, [])
+
   return (
     <div className="wrapper">
       <header>
-        <Logo></Logo>
+        <Logo scrolled={scrolled}></Logo>
         <nav>
           <ul>
             <li>
@@ -33,7 +46,9 @@ export default function Header() {
           max-width: 100%;
           z-index: 1000;
           transition: background 300ms ease;
-          background: transparent;
+          ${scrolled
+            ? "background: var(--gray-4);"
+            : "background: transparent;"};
         }
 
         header {
