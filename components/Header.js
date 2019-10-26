@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <div className="wrapper">
       <header>
-        <Logo scrolled={scrolled}></Logo>
+        <Logo></Logo>
         <nav>
           <ul>
             <li>
@@ -35,9 +35,7 @@ export default function Header() {
           max-width: 100%;
           z-index: 1000;
           transition: background 300ms ease;
-          ${scrolled
-            ? "background: var(--gray-4);"
-            : "background: transparent;"};
+          background: transparent;
         }
         header {
           display: flex;
