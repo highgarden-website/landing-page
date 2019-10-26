@@ -8,7 +8,7 @@ export default function HowToStart() {
     <Section id="como-funciona">
       <div className="inner-container">
         <aside className="left">
-          <div className="line"></div>
+          <div className="line" />
           <Text h2>Cómo Iniciar</Text>
           <Text p>
             Te ayudamos y asistimos para abrir tu <br />
@@ -17,9 +17,7 @@ export default function HowToStart() {
             vos, tanto para girar fondos como <br />
             para retirarlos.
           </Text>
-          <div className="button">
-            <Button>Contactanos</Button>
-          </div>
+          <Button>Contactanos</Button>
         </aside>
 
         <aside className="right">
@@ -45,7 +43,7 @@ export default function HowToStart() {
                 />
               </svg>
               <Text h5 noMargin>
-                Abri tu cuenta.
+                Abrí tu cuenta.
               </Text>
             </Panel>
           </div>
@@ -71,7 +69,7 @@ export default function HowToStart() {
                 />
               </svg>
               <Text h5 noMargin>
-                Transferi tus fondos.
+                Transferí tus fondos.
               </Text>
             </Panel>
           </div>
@@ -97,7 +95,7 @@ export default function HowToStart() {
                 />
               </svg>
               <Text h5 noMargin>
-                Elegi tu estrategia de inversion.
+                Elegí tu estrategia de inversion.
               </Text>
             </Panel>
           </div>

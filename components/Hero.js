@@ -6,7 +6,7 @@ import LogosGrid from "./LogosGrid"
 
 export default function Hero() {
   return (
-    <Section>
+    <Section id="home">
       <div className="inner-container">
         <aside className="left">
           <Text h1 noMargin>
@@ -22,12 +22,9 @@ export default function Hero() {
               ayudarte a multiplicar tu capital.
             </Text>
           </div>
-          <div className="button">
-            <Button>Contactanos</Button>
-          </div>
+          <Button>Contactanos</Button>
         </aside>
         <div className="decoration">
-          {" "}
           <svg
             width="1310"
             height="799"

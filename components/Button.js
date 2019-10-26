@@ -1,8 +1,20 @@
 import cn from "classnames"
+import ReactPageScroller from "react-page-scroller"
 
-export default function Button({ isInverted, secondary, children, small }) {
+const goToSection = () => {}
+
+export default function Button({
+  isInverted,
+  secondary,
+  children,
+  small,
+  linkTo = false
+}) {
   return (
-    <button className={cn({ inverted: isInverted })}>
+    <button
+      className={cn({ inverted: isInverted })}
+      onClick={linkTo ? goToSection : false}
+    >
       {children}
       <style jsx>{`
         button {

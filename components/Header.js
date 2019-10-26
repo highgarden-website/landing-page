@@ -9,7 +9,7 @@ export default function Header() {
         <nav>
           <ul>
             <li>
-              <a href="#">Inicio</a>
+              <a href="#home">Inicio</a>
             </li>
             <li>
               <a href="#como-funciona">Cómo Funciona</a>
@@ -18,12 +18,10 @@ export default function Header() {
               <a href="#estrategias-de-inversion">Estrategias de Inversión</a>
             </li>
             <li>
-              <a href="#quiene-somos">Quiénes Somos</a>
+              <a href="#quienes-somos">Quiénes Somos</a>
             </li>
             <li>
-              <a href="#contacto" className="button">
-                <Button secondary>Contactanos</Button>
-              </a>
+              <Button secondary>Contactanos</Button>
             </li>
           </ul>
         </nav>
@@ -37,12 +35,13 @@ export default function Header() {
           transition: background 300ms ease;
           background: transparent;
         }
+
         header {
           display: flex;
           justify-content: space-between;
           align-items: center;
           width: 100%;
-          max-width: 1400px;
+          max-width: var(--inner-width);
           margin: 0 auto;
         }
 

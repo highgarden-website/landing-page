@@ -11,20 +11,15 @@ import Footer from "../components/Footer"
 const Home = () => {
   return (
     <main>
-      <Header></Header>
+      <Header />
       <ReactPageScroller>
-        <Hero></Hero>
-        <HowToStart></HowToStart>
-        <InvestmentStrategies></InvestmentStrategies>
-        <AboutUs></AboutUs>
-        <Contact id="contactanos"></Contact>
-        <Footer></Footer>
+        <Hero />
+        <HowToStart />
+        <InvestmentStrategies />
+        <AboutUs />
+        <Contact />
+        <Footer />
       </ReactPageScroller>
-      <style jsx>{`
-        main {
-          max-height: 100vh;
-        }
-      `}</style>
     </main>
   )
 }

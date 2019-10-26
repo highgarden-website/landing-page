@@ -26,29 +26,20 @@ export default function Footer() {
           <aside className="footer-links">
             <nav>
               <Text h5>Sitemap</Text>
-              <ul className="navegation">
+              <ul className="navigations">
                 <li>
-                  <a href="#">Inicio</a>
+                  <a href="#home">Inicio</a>
                 </li>
                 <li>
-                  <a href="#como-invertir">Como Invertir</a>
+                  <a href="#como-funciona">Cómo Funciona</a>
                 </li>
                 <li>
-                  <a href="#como-funciona">Como Funciona</a>
+                  <a href="#estrategias-de-inversion">
+                    Estrategias de Inversión
+                  </a>
                 </li>
                 <li>
-                  <a href="#quienes-somos">Quienes Somos</a>
-                </li>
-              </ul>
-            </nav>
-            <nav>
-              <Text h5>Legales</Text>
-              <ul className="legales">
-                <li>
-                  <a href="#">FAQs</a>
-                </li>
-                <li>
-                  <a href="#">Terminos</a>
+                  <a href="#quienes-somos">Quiénes Somos</a>
                 </li>
               </ul>
             </nav>
@@ -56,24 +47,25 @@ export default function Footer() {
               <Text h5>Subscribite a nuestro newsletter</Text>
               <SegmentedInput></SegmentedInput>
               <Text h5>Seguinos en nuestras redes sociales</Text>
-
-              <ul className="social-list">
-                <li>
-                  <a href="#" className="social-link">
-                    <LinkedinLogo></LinkedinLogo> Linkedin
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="social-link">
-                    <FacebookLogo></FacebookLogo> Facebook
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="social-link">
-                    <TwitterLogo></TwitterLogo> Twitter
-                  </a>
-                </li>
-              </ul>
+              <nav>
+                <ul className="social-list">
+                  <li>
+                    <a href="#" className="social-link">
+                      <LinkedinLogo></LinkedinLogo> Linkedin
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="social-link">
+                      <FacebookLogo></FacebookLogo> Facebook
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="social-link">
+                      <TwitterLogo></TwitterLogo> Twitter
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </aside>
         </footer>
@@ -135,7 +127,7 @@ export default function Footer() {
 
         .footer-links {
           display: grid;
-          grid-template-columns: 1fr 1fr 2fr;
+          grid-template-columns: 1fr 2fr;
           grid-gap: 20px;
         }
 
