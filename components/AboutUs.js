@@ -6,7 +6,7 @@ import Panel from "./Panel"
 
 export default function AboutUs() {
   return (
-    <div className="outerWrapper" id="quienes-somos">
+    <div className="outerWrapper">
       <svg
         width="1135"
         height="797"
@@ -676,7 +676,7 @@ export default function AboutUs() {
         />
       </svg>
 
-      <Section id={id} columns="2">
+      <Section id="quienes-somos" columns="2">
         <aside className="left">
           <div className="line"></div>
           <Text h2>Quienes Somos</Text>
