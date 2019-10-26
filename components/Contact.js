@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react"
+import { Formik } from "formik"
 import Select from "react-select"
 import Text from "./Text"
 import Section from "./Section"
@@ -5,6 +7,75 @@ import Input from "./Input"
 import TextArea from "./TextArea"
 import Button from "./Button"
 import SelectCustom from "./SelectCustom"
+
+let contactEndpoint =
+  "https://script.google.com/macros/s/AKfycbzzw38S4tTv-Th1DoZkFSlnQXc04Bo0OAPo5I0Xx9T0xoxhKUrA/exec"
+
+export function Form() {
+  return (
+    <Formik
+      initialValues={{ name: "", email: "", message: "", strategy: "" }}
+      validate={values => {
+        let errors = {}
+        if (!values.email) {
+          errors.email =
+            "Email address is required, how are we supposed to contact you?"
+        } else if (
+          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+        ) {
+          errors.email =
+            'Email looks invalid, are you using "@" and a dot somewhere after?'
+        }
+        return errors
+      }}
+      onSubmit={(values, { setSubmitting, resetForm }) => {
+        console.log(values)
+        // fetch(contactEndpoint, {
+        //   method: "POST",
+        //   mode: "no-cors",
+        //   body: JSON.stringify(values),
+        //   headers: {
+        //     "Content-Type": "application/json"
+        //   }
+        // }).then(() => {
+        //   setSubmitting(false)
+        //   resetForm()
+        // })
+      }}
+    >
+      {({
+        values,
+        errors,
+        touched,
+        handleChange,
+        handleSubmit,
+        handleBlur,
+        isSubmitting
+      }) => (
+        <form onSubmit={handleSubmit} className="gform">
+          <Input type="text" label="Nombre" name="name"></Input>
+          <Input type="email" label="E-Mail" name="email"></Input>
+
+          <SelectCustom
+            label="Estrategias de inversion"
+            name="strategy"
+          ></SelectCustom>
+
+          <TextArea label="Mensaje (Opcional)" name="message" />
+          <div className="sendButton">
+            <Button
+              type="submit"
+              secondary
+              disabled={!values.email || errors.email}
+            >
+              Enviar
+            </Button>
+          </div>
+        </form>
+      )}
+    </Formik>
+  )
+}
 
 export default function Contact() {
   return (
@@ -296,126 +367,119 @@ export default function Contact() {
           <path
             d="M102.353 62.5526V40.5564"
             stroke="#8991A3"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M98.0884 44.2224L102.353 40.5564L106.618 44.2224"
             stroke="#8991A3"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M58 62.5526V40.5564"
             stroke="#8991A3"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M53.7354 44.2224L58.0001 40.5564L62.2648 44.2224"
             stroke="#8991A3"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M58 24.4257V2.4292"
             stroke="#8991A3"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M53.7354 6.09528L58.0001 2.4292L62.2648 6.09528"
             stroke="#8991A3"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M13.647 62.5526V40.5564"
             stroke="#8991A3"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M9.38232 44.2224L13.647 40.5564L17.9117 44.2224"
             stroke="#8991A3"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M102.353 100.68V78.6831"
             stroke="#8991A3"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M98.0884 82.3492L102.353 78.6831L106.618 82.3492"
             stroke="#8991A3"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M58 100.68V78.6831"
             stroke="#8991A3"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M53.7354 82.3492L58.0001 78.6831L62.2648 82.3492"
             stroke="#8991A3"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M13.647 100.68V78.6831"
             stroke="#8991A3"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M9.38232 82.3492L13.647 78.6831L17.9117 82.3492"
             stroke="#8991A3"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M13.647 138.807V116.81"
             stroke="#8991A3"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M9.38232 120.476L13.647 116.81L17.9117 120.476"
             stroke="#8991A3"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
 
         <Text h3>Dejanos tus datos y nos comunicaremos a la brevedad.</Text>
-        <Input type="text" label="Nombre"></Input>
-        <Input type="email" label="E-Mail"></Input>
-
-        <SelectCustom label="Estrategias de inversion"></SelectCustom>
-        <TextArea label="Mensaje (Opcional)" />
-        <div className="sendButton">
-          <Button secondary>Enviar</Button>
-        </div>
+        <Form />
       </aside>
       <style jsx>
         {`

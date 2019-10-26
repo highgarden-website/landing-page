@@ -20,7 +20,7 @@ export default function InvestmentStrategies() {
               <u>Nosotros te ayudamos</u>
             </a>
           </Text>
-          <Button>Contactanos</Button>
+          <Button contacto>Contactanos</Button>
 
           <svg
             className="lateral-decoration"

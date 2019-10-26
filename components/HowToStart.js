@@ -17,7 +17,7 @@ export default function HowToStart() {
             vos, tanto para girar fondos como <br />
             para retirarlos.
           </Text>
-          <Button>Contactanos</Button>
+          <Button contacto>Contactanos</Button>
         </aside>
 
         <aside className="right">

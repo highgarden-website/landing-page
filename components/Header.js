@@ -34,7 +34,9 @@ export default function Header() {
               <a href="#quienes-somos">Quiénes Somos</a>
             </li>
             <li>
-              <Button secondary>Contactanos</Button>
+              <Button secondary contacto>
+                Contactanos
+              </Button>
             </li>
           </ul>
         </nav>

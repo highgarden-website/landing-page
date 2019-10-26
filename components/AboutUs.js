@@ -9,14 +9,14 @@ export default function AboutUs() {
     <div className="outer-wrapper">
       <svg
         width="1135"
-        height="797"
-        viewBox="0 0 1135 797"
+        height="810"
+        viewBox="0 0 1135 810"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="decoration-line"
       >
         <path
-          d="M-5 -8H1130V582.995C1130 610.395 1109.83 633.617 1082.7 637.453L-5 791.243V-8Z"
+          d="M-5 5H1075C1105.38 5 1130 29.6243 1130 60V595.995C1130 623.395 1109.83 646.617 1082.7 650.453L-5 804.243V5Z"
           stroke="#57627B"
           strokeWidth="10"
         />
@@ -686,7 +686,7 @@ export default function AboutUs() {
             maximizar beneficios, protegiendo a nuestros clientes y realizando
             un trabajo profesional.
           </Text>
-          <Button>Contactanos</Button>
+          <Button contacto>Contactanos</Button>
         </aside>
 
         <aside className="right">
@@ -731,6 +731,8 @@ export default function AboutUs() {
 
         .decoration-line {
           left: 0;
+          top: 0;
+          opacity: 0.6;
         }
 
         .line {

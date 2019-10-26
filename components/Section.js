@@ -24,7 +24,7 @@ export default function Section({
             ? "var(--inner-width-small)"
             : "var(--inner-width)"};
           margin: 0 auto;
-          min-height: calc(100vh - 230px);
+          height: calc(100vh - 230px);
           align-items: center;
         }
 

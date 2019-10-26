@@ -1,19 +1,25 @@
 import cn from "classnames"
 import ReactPageScroller from "react-page-scroller"
 
-const goToSection = () => {}
+const goToSection = () => {
+  document.querySelector("#contacto").scrollIntoView({
+    behavior: "smooth"
+  })
+}
 
 export default function Button({
   isInverted,
   secondary,
   children,
   small,
-  linkTo = false
+  type = "",
+  contacto = false
 }) {
   return (
     <button
+      type={type}
       className={cn({ inverted: isInverted })}
-      onClick={linkTo ? goToSection : false}
+      onClick={contacto ? goToSection : false}
     >
       {children}
       <style jsx>{`
