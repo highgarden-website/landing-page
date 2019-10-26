@@ -359,7 +359,7 @@ export default function InvestmentStrategies() {
 
         hr {
           border-color: var(--gray-4);
-          margin: 20px;
+          margin: 20px 0;
           opacity: 0.2;
         }
 

@@ -78,6 +78,11 @@ export default function SelectCustom({ label, type }) {
           font-weight: 700;
           margin-top: 20px;
           margin-bottom: 10px;
+          transition: color 200ms ease;
+        }
+
+        .wrapper :global(> div:hover + label) {
+          color: var(--green);
         }
       `}</style>
     </div>
