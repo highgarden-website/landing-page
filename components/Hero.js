@@ -605,9 +605,9 @@ export default function Hero() {
 
             <div className="card">
               <p>+200</p>
-              <Text h5>
-                Oportunidades de inversión disponibles. Vos elegís <br />
-                según tu perfil de inversor.
+              <Text h5 style={{ maxWidth: "19ch", margin: "0 auto" }}>
+                Oportunidades de inversión disponibles. Vos elegís según tu
+                perfil de inversor.
               </Text>
             </div>
           </div>
@@ -965,7 +965,7 @@ export default function Hero() {
         @media (max-width: 1050px) {
           .inner-container {
             grid-template-columns: 1fr;
-            margin: 3%;
+            margin: 2%;
           }
           .cta {
             display: none;
@@ -974,29 +974,32 @@ export default function Hero() {
           .video {
             width: 285px;
             height: 160px;
-          }
-
-          .card {
-            background: var(--gray-3);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            width: 265px;
-            height: 116px;
-            text-align: center;
             position: absolute;
-            bottom: 10;
+            left: 35px;
+            top: 30px;
+          }
+          .card {
             left: 0;
-            padding: 10px;
-            z-index: 1;
+            top: 40%;
+            width: 265px;
+            letter-spacing: -0.05em;
           }
 
           .card p {
-            letter-spacing: -0.02em;
             font-size: 35px;
-            line-height: 100%;
-            color: var(--green);
-            margin: 0 auto;
-            font-weight: 700;
+          }
+          .paragraph {
+            display: none;
+          }
+
+          .decoration {
+            max-width: 100%;
+            top: -35%;
+          }
+          .miniPoints {
+            top: -9%;
+            left: -9%;
+            z-index: -1;
           }
         }
       `}</style>

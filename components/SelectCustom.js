@@ -13,6 +13,7 @@ const styleSelect = {
       backgroundColor: "var(--gray-5)",
       border: "none",
       outline: "none",
+
       boxShadow: isFocused ? "inset 0 0 0 2px var(--green)" : "none",
       ":hover": {
         ...styles[":hover"],
@@ -22,6 +23,7 @@ const styleSelect = {
       }
     }
   },
+  input: styles => ({ ...styles, color: "#fff" }),
   indicatorSeparator: styles => ({ ...styles, display: "none" }),
   menuList: styles => ({ ...styles, backgroundColor: "var(--gray-5)" }),
   singleValue: styles => ({ ...styles, color: "#fff" }),

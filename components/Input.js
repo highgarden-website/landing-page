@@ -40,7 +40,6 @@ export default function Input({ label, type, name = "" }) {
         input:hover {
           outline: none;
           box-shadow: inset 0 0 0 2px var(--green);
-          color: var(--green);
         }
       `}</style>
     </div>

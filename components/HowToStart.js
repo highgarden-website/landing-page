@@ -327,6 +327,7 @@ export default function HowToStart() {
           top: 0;
           background: #ffffff;
         }
+
       `}</style>
     </Section>
   )

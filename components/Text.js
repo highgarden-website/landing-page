@@ -25,39 +25,39 @@ const wrapModifiers = (
 
 const presets = {
   h1: `
-    font-size: calc(32px + (62  - 32) * (100vw - 320px) / (1920 - 320));
+    font-size: calc(32px + (62  - 32) * (100vw - 375px) / (1920 - 375));
     line-height: 100%;
     letter-spacing: -0.02em;
     `,
   h2: `
-    font-size: calc(28px + (50 - 28 ) * (100vw - 320px) / (1920 - 320));
+    font-size: calc(28px + (50 - 28 ) * (100vw - 375px) / (1920 - 375));
     line-height: 150%;
     margin-bottom: 0.5em;
     letter-spacing: -0.02em;
     `,
   h3: `
-    font-size: calc(24px + (40 - 24) * (100vw - 320px) / (1920 - 320));
+    font-size: calc(24px + (40 - 24) * (100vw - 375px) / (1920 - 375));
     line-height: 125%;
     letter-spacing: -0.02em;
   `,
   h4: `
-    font-size: calc(18px + (22 - 18) * (100vw - 320px) / (1920 - 320));
+    font-size: calc(18px + (22 - 18) * (100vw - 375px) / (1920 - 375));
     font-weight: normal;
     letter-spacing: -.020625rem;
   `,
   h5: `
-    font-size: calc(15px + (25  - 15) * (100vw - 320px) / (1920 - 320));
+    font-size: calc(15px + (25  - 15) * (100vw - 375px) / (1920 - 375));
     margin: 0;
     margin-bottom: 0.5em;
     letter-spacing: -0.05em;
-    line-height: 1.5em;
+    line-height: 150%
     `,
   p: `
     font-size: 16px;
     line-height: 1.5em;
   `,
   small: `
-    font-size: calc(14px + (15 - 14) * (100vw - 320px) / (1920 - 320));
+    font-size: calc(14px + (15 - 14) * (100vw - 375px) / (1920 - 375));
     line-height: 1.5em;
   `,
   description: `

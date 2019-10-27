@@ -19,7 +19,7 @@ export default function TextArea({ label, type, name }) {
           font-family: "Gilroy";
           color: #ffffff;
           font-size: 18px;
-
+          margin-bottom: 35px;
           transition: box-shadow 200ms ease;
         }
         label {
@@ -39,7 +39,6 @@ export default function TextArea({ label, type, name }) {
         textarea:hover {
           outline: none;
           box-shadow: inset 0 0 0 2px var(--green);
-          color: var(--green);
         }
       `}</style>
     </div>
