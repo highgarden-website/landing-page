@@ -21,6 +21,7 @@ export default function TextArea({ label, type, name }) {
           font-size: 18px;
           margin-bottom: 35px;
           transition: box-shadow 200ms ease;
+          padding: 10px 10px;
         }
         label {
           font-family: "Gilroy";
