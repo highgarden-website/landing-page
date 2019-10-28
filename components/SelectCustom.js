@@ -51,7 +51,7 @@ const options = [
   { value: "hg-propietary-hr", label: "HG Propietary Model High Return" }
 ]
 
-export default function SelectCustom({ label, type }) {
+export default function SelectCustom({ label, type, changeEvent }) {
   return (
     <div className="wrapper">
       <Select
@@ -60,6 +60,7 @@ export default function SelectCustom({ label, type }) {
             Elegi entre los 3 tipos de inversion
           </div>
         }
+        onChange={changeEvent}
         classNamePrefix="select"
         options={options}
         styles={styleSelect}

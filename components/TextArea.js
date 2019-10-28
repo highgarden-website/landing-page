@@ -1,7 +1,21 @@
-export default function TextArea({ label, type, name }) {
+export default function TextArea({
+  label,
+  type,
+  name,
+  onChange,
+  onBlur,
+  value
+}) {
   return (
     <div className="wrapper">
-      <textarea name={`${label}-field`} type="text" name={name} />
+      <textarea
+        name={`${label}-field`}
+        type="text"
+        name={name}
+        onChange={onChange}
+        onBlur={onBlur}
+        value={value}
+      />
       <label htmlFor={`${label}-field`}>{label}</label>
 
       <style jsx>{`

@@ -1,7 +1,20 @@
-export default function Input({ label, type, name = "" }) {
+export default function Input({
+  label,
+  type,
+  name = "",
+  onChange,
+  onBlur,
+  value
+}) {
   return (
     <div className="wrapper">
-      <input name={name} type={`${type}`} />
+      <input
+        name={name}
+        type={`${type}`}
+        onChange={onChange}
+        onBlur={onBlur}
+        value={value}
+      />
       {label && <label htmlFor={name}>{label}</label>}
 
       <style jsx>{`

@@ -15,19 +15,6 @@ export function Form() {
   return (
     <Formik
       initialValues={{ name: "", email: "", message: "", strategy: "" }}
-      validate={values => {
-        let errors = {}
-        if (!values.email) {
-          errors.email =
-            "Email address is required, how are we supposed to contact you?"
-        } else if (
-          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-        ) {
-          errors.email =
-            'Email looks invalid, are you using "@" and a dot somewhere after?'
-        }
-        return errors
-      }}
       onSubmit={(values, { setSubmitting, resetForm }) => {
         console.log(values)
         // fetch(contactEndpoint, {
@@ -48,30 +35,52 @@ export function Form() {
         errors,
         touched,
         handleChange,
-        handleSubmit,
         handleBlur,
+        handleSubmit,
         isSubmitting
       }) => (
-        <form onSubmit={handleSubmit} className="gform">
-          <Input type="text" label="Nombre" name="name"></Input>
-          <Input type="email" label="E-Mail" name="email"></Input>
+        <>
+          <Input
+            type="text"
+            label="Nombre"
+            name="name"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.name}
+          ></Input>
+          <Input
+            type="email"
+            label="E-Mail"
+            name="email"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.email}
+          ></Input>
 
           <SelectCustom
             label="Estrategias de inversion"
             name="strategy"
+            changeEvent={handleChange}
+            onBlur={handleBlur}
           ></SelectCustom>
 
-          <TextArea label="Mensaje (Opcional)" name="message" />
-          <div className="sendButton">
-            <Button
-              type="submit"
-              secondary
-              disabled={!values.email || errors.email}
-            >
-              Enviar
-            </Button>
-          </div>
-        </form>
+          <TextArea
+            label="Mensaje (Opcional)"
+            name="message"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.message}
+          />
+
+          <button
+            type="submit"
+            style={{ position: "relative", zIndex: "100" }}
+            onClick={handleSubmit}
+            disabled={isSubmitting}
+          >
+            Enviar
+          </button>
+        </>
       )}
     </Formik>
   )
