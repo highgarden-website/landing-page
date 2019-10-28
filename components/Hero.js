@@ -1001,6 +1001,10 @@ export default function Hero() {
             left: -9%;
             z-index: -1;
           }
+          .logos {
+            grid-column: 1;
+            z-index: 1;
+          }
         }
       `}</style>
     </Section>

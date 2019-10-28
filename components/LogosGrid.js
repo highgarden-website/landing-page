@@ -29,6 +29,13 @@ export default function LogosGrid() {
           margin-top: 100px;
           grid-row-gap: 50px;
         }
+
+        @media (max-width: 1050px) {
+          .wrapper {
+            display: grid;
+            grid-template-areas: "lynx bdv" "mariva santander" "ucema quiron " "usal napoli";
+          }
+        }
       `}</style>
     </div>
   )
