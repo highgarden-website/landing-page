@@ -12,13 +12,14 @@ export default function Button({
   secondary,
   children,
   small,
+  hidden = false,
   type = "",
   contacto = false
 }) {
   return contacto ? (
     <button
       type={type}
-      className={cn({ inverted: isInverted })}
+      className={cn({ inverted: isInverted, hidden: hidden })}
       onClick={goToSection}
     >
       {children}
@@ -47,6 +48,10 @@ export default function Button({
         button.inverted {
           color: var(--green);
           background: var(--gray-3);
+        }
+
+        button.hidden {
+          display: none;
         }
       `}</style>
     </button>

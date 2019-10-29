@@ -6,15 +6,17 @@ import Header from "./Header"
 import LogosGrid from "./LogosGrid"
 
 export default function Hero() {
+  const [isMobile, setIsMobile] = useState()
   const [decorationWidth, setDecorationWidth] = useState()
   const [decorationHeight, setDecorationHeight] = useState()
 
   const handleResize = () => {
-    console.log("tuvieja")
     if (window.innerWidth < 1050) {
+      setIsMobile(true)
       setDecorationWidth(window.innerWidth / 1.2)
       setDecorationHeight(window.innerHeight / 1.1)
     } else {
+      setIsMobile(false)
       setDecorationWidth(557)
       setDecorationHeight(403)
     }
@@ -48,8 +50,9 @@ export default function Hero() {
             </Text>
           </div>
           <span className="cta">
-            {" "}
-            <Button contacto>Contactanos</Button>
+            <Button contacto hidden={isMobile}>
+              Contactanos
+            </Button>
           </span>
         </aside>
         <div className="decoration">
