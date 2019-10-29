@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react"
 import Button from "./Button"
 import Text from "./Text"
 import Section from "./Section"
@@ -5,6 +6,29 @@ import Header from "./Header"
 import LogosGrid from "./LogosGrid"
 
 export default function Hero() {
+  const [decorationWidth, setDecorationWidth] = useState()
+  const [decorationHeight, setDecorationHeight] = useState()
+
+  const handleResize = () => {
+    if (window.innerWidth < 1050) {
+      setDecorationWidth(292)
+      setDecorationHeight(270)
+    } else {
+      setDecorationWidth(557)
+      setDecorationHeight(403)
+    }
+  }
+
+  useEffect(() => {
+    handleResize()
+
+    document.addEventListener("resize", handleResize)
+
+    return () => {
+      document.removeEventListener("resize")
+    }
+  }, [])
+
   return (
     <Section id="home">
       <div className="inner-container">
@@ -312,6 +336,8 @@ export default function Hero() {
             <svg
               className="decoration-green-border"
               viewBox="0 0 557 403"
+              width={decorationWidth}
+              height={decorationHeight}
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -958,8 +984,8 @@ export default function Hero() {
         }
 
         .decoration-green-border {
-          width: 100%;
-          max-width: 100vh;
+          display: block;
+          margin: 0 auto;
         }
 
         @media (max-width: 1050px) {
@@ -967,6 +993,7 @@ export default function Hero() {
             grid-template-columns: 1fr;
             margin: 2%;
           }
+
           .cta {
             display: none;
           }

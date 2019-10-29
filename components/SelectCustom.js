@@ -51,7 +51,13 @@ const options = [
   { value: "hg-propietary-hr", label: "HG Propietary Model High Return" }
 ]
 
-export default function SelectCustom({ label, type, changeEvent }) {
+export default function SelectCustom({
+  label,
+  type,
+  changeEvent,
+  blurEvent,
+  value
+}) {
   return (
     <div className="wrapper">
       <Select
@@ -61,10 +67,12 @@ export default function SelectCustom({ label, type, changeEvent }) {
           </div>
         }
         onChange={changeEvent}
+        onBlur={blurEvent}
         classNamePrefix="select"
         options={options}
         styles={styleSelect}
       />
+      {console.log(options)}
       {label && <label htmlFor={`${label}-tag`}>{label}</label>}
       <style jsx>{`
         .wrapper {

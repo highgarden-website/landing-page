@@ -61,7 +61,8 @@ export function Form() {
             label="Estrategias de inversion"
             name="strategy"
             changeEvent={handleChange}
-            onBlur={handleBlur}
+            blurEvent={handleBlur}
+            value={values.strategy}
           ></SelectCustom>
 
           <TextArea
