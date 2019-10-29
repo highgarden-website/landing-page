@@ -10,9 +10,10 @@ export default function Hero() {
   const [decorationHeight, setDecorationHeight] = useState()
 
   const handleResize = () => {
+    console.log("tuvieja")
     if (window.innerWidth < 1050) {
-      setDecorationWidth(292)
-      setDecorationHeight(270)
+      setDecorationWidth(window.innerWidth / 1.2)
+      setDecorationHeight(window.innerHeight / 1.1)
     } else {
       setDecorationWidth(557)
       setDecorationHeight(403)
@@ -22,12 +23,12 @@ export default function Hero() {
   useEffect(() => {
     handleResize()
 
-    document.addEventListener("resize", handleResize)
+    window.addEventListener("resize", handleResize)
 
     return () => {
-      document.removeEventListener("resize")
+      window.removeEventListener("resize", handleResize)
     }
-  }, [])
+  }, [decorationHeight, decorationWidth])
 
   return (
     <Section id="home">

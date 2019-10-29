@@ -11,7 +11,7 @@ export default function Header() {
     })
 
     return () => {
-      document.removeEventListener("scroll")
+      document.removeEventListener("scroll", () => {})
     }
   }, [])
 

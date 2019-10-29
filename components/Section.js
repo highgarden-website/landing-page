@@ -38,6 +38,7 @@ export default function Section({
 
         @media (max-width: 1050px) {
           .section {
+            height: auto;
             grid-template-columns: 1fr;
           }
         }
