@@ -24,7 +24,7 @@ export default function Hero() {
           </div>
           <span className="cta">
             {" "}
-            <Button>Contactanos</Button>
+            <Button contacto>Contactanos</Button>
           </span>
         </aside>
         <div className="decoration">
@@ -972,19 +972,22 @@ export default function Hero() {
           }
 
           .video {
-            width: 285px;
-            height: 160px;
+            width: 80%;
+            height: 60%;
             position: absolute;
-            left: 35px;
-            top: 30px;
+            left: 5%;
+            top: 5%;
           }
           .card {
             left: 0;
-            top: 40%;
+            top: 60%;
+
             width: 265px;
             letter-spacing: -0.05em;
           }
 
+          .decoration-green-border {
+          }
           .card p {
             font-size: 35px;
           }

@@ -21,7 +21,7 @@ export default function LogosGrid() {
       <style jsx>{`
         .wrapper {
           display: grid;
-          grid-template-areas: "mariva santander lynx bdv" "ucema quiron usal napoli";
+          grid-template-areas: "lynx bdv mariva santander " "ucema quiron usal napoli";
           align-items: center;
           justify-items: center;
           max-width: 850px;

@@ -371,6 +371,16 @@ export default function InvestmentStrategies() {
           top: 0;
           background: #ffffff;
         }
+        @media (max-width: 1050px) {
+          .inner-container {
+            grid-template-columns: 1fr;
+            margin: 2%;
+          }
+
+          .right {
+            grid-template-columns: 1fr;
+          }
+        }
       `}</style>
     </Section>
   )

@@ -17,7 +17,8 @@ export default function HowToStart() {
             vos, tanto para girar fondos como <br />
             para retirarlos.
           </Text>
-          <Button contacto>Contactanos</Button>
+
+          <Button  contacto>Contactanos</Button>
         </aside>
 
         <aside className="right">
@@ -271,7 +272,7 @@ export default function HowToStart() {
         .inner-container {
           display: grid;
           grid-template-columns: 1fr 2fr;
-          padding-bottom: 80px;
+
         }
 
         .left {
@@ -326,6 +327,18 @@ export default function HowToStart() {
           left: 0;
           top: 0;
           background: #ffffff;
+        }
+
+        @media (max-width: 1050px) {
+          .inner-container {
+            grid-template-columns: 1fr;
+            margin: 2%;
+          }
+
+          .right {
+          grid-template-columns: 1fr;
+
+        }
         }
 
       `}</style>
