@@ -6,14 +6,16 @@ export default function Panel({
   noBg,
   noShadow,
   highlight,
-  small
+  small,
+  responsive
 }) {
   return (
     <div
       className={cn("panel", {
         highlight: highlight,
         "no-background": noBg,
-        "no-shadow": noShadow
+        "no-shadow": noShadow,
+        responsive: responsive
       })}
     >
       {children}
@@ -69,6 +71,11 @@ export default function Panel({
         }
 
         @media (max-width: 1050px) {
+          .panel.responsive {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
         }
       `}</style>
     </div>

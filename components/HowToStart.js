@@ -10,6 +10,7 @@ export default function HowToStart() {
         <aside className="left">
           <div className="line" />
           <Text h2>Cómo Iniciar</Text>
+          <div className="paragraf">
           <Text p>
             Te ayudamos y asistimos para abrir tu <br />
             cuenta nominativa en el exterior en <br /> dólares a la cual solo
@@ -17,13 +18,15 @@ export default function HowToStart() {
             vos, tanto para girar fondos como <br />
             para retirarlos.
           </Text>
-
-          <Button  contacto>Contactanos</Button>
+          </div>
+        <span className="cta">
+          <Button  contacto secondary>Contactanos</Button>
+          </span>
         </aside>
 
         <aside className="right">
           <div className="card">
-            <Panel>
+            <Panel  responsive>
               <svg
                 width="45"
                 height="45"
@@ -49,7 +52,7 @@ export default function HowToStart() {
             </Panel>
           </div>
           <div className="card">
-            <Panel>
+            <Panel  responsive>
               <svg
                 width="45"
                 height="45"
@@ -75,7 +78,7 @@ export default function HowToStart() {
             </Panel>
           </div>
           <div className="card3">
-            <Panel highlight>
+            <Panel  responsive highlight>
               <svg
                 width="45"
                 height="45"
@@ -298,6 +301,8 @@ export default function HowToStart() {
         .card3 {
           position: relative;
           z-index: 1;
+          height: 100%;
+
         }
 
         .logoPoint {
@@ -332,13 +337,26 @@ export default function HowToStart() {
         @media (max-width: 1050px) {
           .inner-container {
             grid-template-columns: 1fr;
-            margin: 2%;
+            margin: 90px 0 ;
+            padding: 0 30px ;
+
           }
 
           .right {
           grid-template-columns: 1fr;
 
         }
+        .line {
+          left: 50%
+        }
+        .paragraf {
+          font-size: 16px;
+        }
+
+        svg {
+          margin: 0;
+        }
+
         }
 
       `}</style>

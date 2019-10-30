@@ -53,7 +53,7 @@ const presets = {
     line-height: 150%
     `,
   p: `
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.5em;
   `,
   small: `
