@@ -6,7 +6,6 @@ export default function Panel({
   noBg,
   noShadow,
   highlight,
-  small,
   responsive
 }) {
   return (
@@ -23,7 +22,7 @@ export default function Panel({
         .panel {
           background-color: var(--gray-3);
           border-radius: 10px;
-          padding: ${small ? "10px" : "20px"};
+          padding: calc(10px + (20 - 10) * (100vw - 375px) / (1920 - 375));
           box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.2);
           ${center ? "text-align: center;" : ""}
         }
@@ -74,7 +73,6 @@ export default function Panel({
           .panel.responsive {
             display: flex;
             align-items: center;
-            justify-content: space-between;
           }
         }
       `}</style>

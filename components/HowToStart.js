@@ -19,8 +19,8 @@ export default function HowToStart() {
             para retirarlos.
           </Text>
           </div>
-        <span className="cta">
-          <Button  contacto secondary>Contactanos</Button>
+        <span className="cta-off">
+          <Button contacto secondary>Contactanos</Button>
           </span>
         </aside>
 
@@ -102,7 +102,11 @@ export default function HowToStart() {
                 Elegí tu estrategia de inversion.
               </Text>
             </Panel>
+
           </div>
+          <span className="cta-on">
+          <Button contacto secondary>Contactanos</Button>
+          </span>
           <svg className="logoPoint"
           width="244" height="769" viewBox="0 0 244 769" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M147.333 6.66667C149.174 6.66667 150.667 5.17428 150.667 3.33333C150.667 1.49239 149.174 0 147.333 0C145.492 0 144 1.49239 144 3.33333C144 5.17428 145.492 6.66667 147.333 6.66667Z" fill="#8991A3"/>
@@ -334,6 +338,10 @@ export default function HowToStart() {
           background: #ffffff;
         }
 
+        .cta-on {
+          display:none
+        }
+
         @media (max-width: 1050px) {
           .inner-container {
             grid-template-columns: 1fr;
@@ -341,21 +349,42 @@ export default function HowToStart() {
             padding: 0 30px ;
 
           }
+          .left {
+            margin: 0 auto;
+            text-align: center;
+          }
 
           .right {
           grid-template-columns: 1fr;
 
         }
-        .line {
-          left: 50%
-        }
-        .paragraf {
-          font-size: 16px;
-        }
 
         svg {
           margin: 0;
         }
+
+        .cta-off {
+          display: none
+        }
+
+        .cta-on{
+          display: flex;
+          margin: 0 auto;
+        }
+        .arrows {
+          display: none;
+        }
+
+        svg {
+          padding-right: 20px;
+        }
+
+        .line{
+          text-align: center;
+
+        }
+
+
 
         }
 

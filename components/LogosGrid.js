@@ -42,7 +42,7 @@ export default function LogosGrid() {
           justify-items: center;
           max-width: 850px;
           margin: 0 auto;
-          margin-top: 100px;
+          margin-top: 50px;
           grid-row-gap: 50px;
         }
 

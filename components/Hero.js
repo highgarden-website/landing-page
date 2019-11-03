@@ -997,6 +997,7 @@ export default function Hero() {
         .logos {
           grid-column: 1 / -1;
           z-index: 1;
+          margin-bottom: 100px;
         }
 
         .decoration-green-border {
@@ -1041,13 +1042,11 @@ export default function Hero() {
             top: -35%;
           }
           .miniPoints {
-            top: -9%;
+            top: 0%;
             left: -9%;
             z-index: -1;
           }
           .logos {
-            grid-column: 1;
-            z-index: 1;
           }
         }
       `}</style>

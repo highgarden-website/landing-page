@@ -53,8 +53,10 @@ const presets = {
     line-height: 150%
     `,
   p: `
-    font-size: 20px;
+  font-size: calc(16px + (20  - 16) * (100vw - 375px) / (1920 - 375));
     line-height: 1.5em;
+    letter-spacing: -0.02em;
+
   `,
   small: `
     font-size: calc(14px + (15 - 14) * (100vw - 375px) / (1920 - 375));
