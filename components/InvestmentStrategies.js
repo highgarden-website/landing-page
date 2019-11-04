@@ -10,18 +10,21 @@ export default function InvestmentStrategies() {
         <aside className="left">
           <div className="line"></div>
           <Text h2>Estrategias de Inversión</Text>
-          <Text p>
+          <Text p style={{ fontWeight: "300" }}>
             Elegí entre nuestras 3 estrategias de <br />
             inversión en función a tus preferencias <br />y nuestro
             asesoramiento.
-            <br /> <span> </span>¿No sabés cuál elegir?
-            <br /> <br />
-            <a href="#">
-              <u>Nosotros te ayudamos</u>
-            </a>
+            <span className="cta">
+              <br /> <span> </span>¿No sabés cuál elegir?
+              <br /> <br />
+              <a href="#">
+                <u>Nosotros te ayudamos</u>
+              </a>
+            </span>
           </Text>
-          <Button contacto>Contactanos</Button>
-
+          <span className="cta">
+            <Button contacto>Contactanos</Button>
+          </span>
           <svg
             className="lateral-decoration"
             width="134"
@@ -341,14 +344,12 @@ export default function InvestmentStrategies() {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           grid-gap: 30px;
-          align-items: center;
           height: 100%;
-          margin-top: 5vh;
         }
 
         .lateral-decoration {
           position: absolute;
-          left: -70%;
+          left: -50%;
           top: 0;
         }
 
@@ -376,9 +377,22 @@ export default function InvestmentStrategies() {
             grid-template-columns: 1fr;
             margin: 2%;
           }
-
+          .left {
+            text-align: center;
+          }
+          .card {
+            margin: 0 30px;
+          }
           .right {
             grid-template-columns: 1fr;
+          }
+          .cta {
+            display: none;
+          }
+          .line {
+            width: 40px;
+            height: 3px;
+            left: 45%;
           }
         }
       `}</style>

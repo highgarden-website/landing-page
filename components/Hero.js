@@ -14,7 +14,7 @@ export default function Hero() {
     if (window.innerWidth < 1050) {
       setIsMobile(true)
       setDecorationWidth(window.innerWidth / 1.2)
-      setDecorationHeight(window.innerHeight / 1.1)
+      setDecorationHeight(window.innerWidth)
     } else {
       setIsMobile(false)
       setDecorationWidth(557)
@@ -1009,6 +1009,7 @@ export default function Hero() {
           .inner-container {
             grid-template-columns: 1fr;
             margin: 2%;
+            margin-top: 200px;
           }
 
           .cta {
@@ -1028,8 +1029,6 @@ export default function Hero() {
             letter-spacing: -0.05em;
           }
 
-          .decoration-green-border {
-          }
           .card p {
             font-size: 35px;
           }
@@ -1040,6 +1039,7 @@ export default function Hero() {
           .decoration {
             max-width: 100%;
             top: -35%;
+            display: none;
           }
           .miniPoints {
             top: 0%;

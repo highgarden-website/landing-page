@@ -22,9 +22,9 @@ export default function Panel({
         .panel {
           background-color: var(--gray-3);
           border-radius: 10px;
-          padding: calc(10px + (20 - 10) * (100vw - 375px) / (1920 - 375));
           box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.2);
-          ${center ? "text-align: center;" : ""}
+          padding: ${center ? "20px 0;" : "20px;"};
+          ${center ? "text-align: center;" : ""};
         }
 
         .panel .panel {
@@ -73,6 +73,18 @@ export default function Panel({
           .panel.responsive {
             display: flex;
             align-items: center;
+          }
+
+          .highlight:after,
+          .highlight:before {
+            left: 50%;
+            top: -10px;
+            transform: translateX(-50%);
+            z-index: -1;
+          }
+
+          .highlight:before {
+            top: -20px;
           }
         }
       `}</style>

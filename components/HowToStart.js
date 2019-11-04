@@ -266,7 +266,7 @@ export default function HowToStart() {
 <path d="M346.11 51.0002H371.642" stroke="#8991A3" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
 <path d="M367.386 55.2648L371.642 51.0001L367.386 46.7354" stroke="#8991A3" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
-<svg className="right-bars"
+<svg className="decoration-right-bars"
  width="144" height="372" viewBox="0 0 144 372" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M68.529 208.71C62.6714 211.354 59 216.586 59 222.291L59 355.711C59 367.227 73.1663 374.629 84.991 369.292L271.471 285.124C277.329 282.48 281 277.248 281 271.543V138.123C281 126.607 266.834 119.205 255.009 124.542L68.529 208.71Z" fill="#57627B" fillOpacity="0.5"/>
 <path d="M213.428 86.7167C219.312 89.3605 223 94.5931 223 100.298L223 233.718C223 245.234 208.77 252.636 196.892 247.299L9.57193 163.131C3.68793 160.487 0 155.254 0 149.55V16.1297C0 4.61386 14.2301 -2.78841 26.1081 2.54871L213.428 86.7167Z" fill="#57627B" fillOpacity="0.5"/>
@@ -296,7 +296,7 @@ export default function HowToStart() {
           align-items: center;
         }
 
-        .right-bars {
+        .decoration-right-bars {
           position: absolute;
           right: -36%;
           bottom: -280px;
@@ -313,6 +313,7 @@ export default function HowToStart() {
           position: absolute;
           bottom: -135%;
           left: -175px;
+
         }
 
         .arrows {
@@ -341,6 +342,9 @@ export default function HowToStart() {
         .cta-on {
           display:none
         }
+        .paragraf {
+          font-weight: 300;
+        }
 
         @media (max-width: 1050px) {
           .inner-container {
@@ -356,36 +360,42 @@ export default function HowToStart() {
 
           .right {
           grid-template-columns: 1fr;
-
         }
+
+
 
         svg {
           margin: 0;
         }
-
+        .decoration-right-bars {
+         display: none;
+         }
         .cta-off {
           display: none
         }
 
         .cta-on{
           display: flex;
+          margin-top:50px;
           margin: 0 auto;
         }
         .arrows {
           display: none;
         }
+        .logoPoint {
+         display: none;
+        }
+
 
         svg {
           padding-right: 20px;
         }
 
         .line{
-          text-align: center;
-
+          width: 40px;
+          height: 3px;
+          left: 44%;
         }
-
-
-
         }
 
       `}</style>

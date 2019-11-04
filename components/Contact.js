@@ -94,7 +94,7 @@ export default function Contact() {
         <div className="line"></div>
         <Text h2>Contactanos</Text>
         <div className="paragraph">
-          <Text p>
+          <Text p style={{ fontWeight: "300" }}>
             Estamos acá para que sepas cómo y dónde invertir tu dinero de la
             manera más segura.
           </Text>

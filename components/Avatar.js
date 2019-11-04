@@ -45,7 +45,6 @@ export default function Avatar({ src, name, position, link }) {
           position: absolute;
           left: -35%;
           bottom: 20%;
-          width: 85%;
         }
       `}</style>
     </figure>

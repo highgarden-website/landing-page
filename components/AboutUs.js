@@ -680,7 +680,14 @@ export default function AboutUs() {
         <aside className="left">
           <div className="line"></div>
           <Text h2>Quienes Somos</Text>
-          <Text p style={{ maxWidth: "40ch", marginBottom: "40px" }}>
+          <Text
+            p
+            style={{
+              maxWidth: "40ch",
+              marginBottom: "40px",
+              fontWeight: "300"
+            }}
+          >
             Somos una administradora dedicada a gestionar patrimonios de
             terceros, en el mediano y largo plazo, buscando minimizar riesgos y
             maximizar beneficios, protegiendo a nuestros clientes y realizando
@@ -742,10 +749,6 @@ export default function AboutUs() {
           left: 0;
           top: 0;
           background: #ffffff;
-        }
-
-        aside {
-          height: 650px;
         }
 
         .left {
