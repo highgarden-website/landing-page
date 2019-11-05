@@ -1,9 +1,12 @@
+import { useStateValue } from "../state"
 import Button from "./Button"
 import Text from "./Text"
 import Section from "./Section"
 import Panel from "./Panel"
 
 export default function InvestmentStrategies() {
+  const [{ plan }, dispatch] = useStateValue()
+
   return (
     <Section id="estrategias-de-inversion">
       <div className="inner-container">
@@ -17,7 +20,7 @@ export default function InvestmentStrategies() {
             <span className="cta">
               <br /> <span> </span>¿No sabés cuál elegir?
               <br /> <br />
-              <a href="#">
+              <a href="mailto:info@highgarden.capital">
                 <u>Nosotros te ayudamos</u>
               </a>
             </span>
@@ -132,7 +135,19 @@ export default function InvestmentStrategies() {
               </svg>
 
               <hr />
-              <Button>Elegir Fondo</Button>
+              <Button
+                action={() => {
+                  dispatch({
+                    type: "changeSelectedPlan",
+                    newPlan: { value: "hg-fixed", label: "HG fixed Income" }
+                  })
+                  document.querySelector("#contacto").scrollIntoView({
+                    behavior: "smooth"
+                  })
+                }}
+              >
+                Elegir Fondo
+              </Button>
             </Panel>
           </div>
           <div className="card">
@@ -242,7 +257,23 @@ export default function InvestmentStrategies() {
                 />
               </svg>
               <hr />
-              <Button isInverted>Elegir fondo</Button>
+              <Button
+                isInverted
+                action={() => {
+                  dispatch({
+                    type: "changeSelectedPlan",
+                    newPlan: {
+                      value: "hg-propietary",
+                      label: "HG Propietary Model"
+                    }
+                  })
+                  document.querySelector("#contacto").scrollIntoView({
+                    behavior: "smooth"
+                  })
+                }}
+              >
+                Elegir fondo
+              </Button>
             </Panel>
           </div>
           <div className="card">
@@ -323,7 +354,22 @@ export default function InvestmentStrategies() {
                 />
               </svg>
               <hr />
-              <Button>Elegir fondo</Button>
+              <Button
+                action={() => {
+                  dispatch({
+                    type: "changeSelectedPlan",
+                    newPlan: {
+                      value: "hg-propietary-hr",
+                      label: "HG Propietary Model High Return"
+                    }
+                  })
+                  document.querySelector("#contacto").scrollIntoView({
+                    behavior: "smooth"
+                  })
+                }}
+              >
+                Elegir Fondo
+              </Button>
             </Panel>
           </div>
         </aside>

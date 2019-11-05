@@ -1,6 +1,5 @@
 import Text from "./Text"
 import Logo from "./Logo"
-import Input from "./Input"
 import Button from "./Button"
 import SegmentedInput from "./SegmentedInput"
 import LinkedinLogo from "./LinkedinLogo"
@@ -16,39 +15,43 @@ export default function Footer() {
       <div className="inner">
         <footer>
           <aside className="slogan">
-            <Logo></Logo>
-            <Text h5 style={{ fontWeight: "400" }} noMargin>
+            <Logo style={{ marginTop: "0" }}></Logo>
+            <Text style={{ fontWeight: "400" }} noMargin>
               Descrubrí la mejor manera de hacer <br />
               crecer tu capital.
             </Text>
           </aside>
 
-          <aside className="footer-links">
-            <nav>
-              <Text h5>Sitemap</Text>
-              <ul className="navigations">
-                <li>
-                  <a href="#home">Inicio</a>
-                </li>
-                <li>
-                  <a href="#como-funciona">Cómo Funciona</a>
-                </li>
-                <li>
-                  <a href="#estrategias-de-inversion">
-                    Estrategias de Inversión
-                  </a>
-                </li>
-                <li>
-                  <a href="#quienes-somos">Quiénes Somos</a>
-                </li>
-              </ul>
-            </nav>
-            <div className="social">
-              <Text h5>Subscribite a nuestro newsletter</Text>
-              <SegmentedInput></SegmentedInput>
+          <aside>
+            <Text h5>Sitemap</Text>
+            <div className="inner-navigations">
+              <nav>
+                <ul>
+                  <li>
+                    <a href="#home">Inicio</a>
+                  </li>
+                  <li>
+                    <a href="#como-funciona">Cómo Funciona</a>
+                  </li>
+                </ul>
+              </nav>
+              <nav>
+                <ul>
+                  <li>
+                    <a href="#estrategias-de-inversion">
+                      Estrategias de Inversión
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#quienes-somos">Quiénes Somos</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            {/* <div className="social">
               <Text h5>Seguinos en nuestras redes sociales</Text>
               <nav>
-                <ul className="social-list">
+              <ul className="social-list">
                   <li>
                     <a href="#" className="social-link">
                       <LinkedinLogo></LinkedinLogo> Linkedin
@@ -66,13 +69,11 @@ export default function Footer() {
                   </li>
                 </ul>
               </nav>
-            </div>
+            </div> */}
           </aside>
         </footer>
         <div className="copyright">
-          <Text p large>
-            2019 Highgarden. All rights reserved
-          </Text>
+          <Text p>2019 Highgarden. All rights reserved</Text>
         </div>
       </div>
       <style jsx>{`
@@ -85,7 +86,8 @@ export default function Footer() {
 
         .social-list {
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          align-items: start;
           justify-content: space-between;
         }
 
@@ -112,9 +114,9 @@ export default function Footer() {
         footer {
           display: grid;
           width: 1250px;
-          margin: 0 auto;
-          margin-bottom: 50px;
-          grid-template-columns: 1fr 2fr;
+          margin: 60px auto 30px auto;
+          grid-template-columns: 1fr 1fr;
+          justify-items: center;
           grid-gap: 60px;
           font-family: "Gilroy";
           font-size: 20px;
@@ -127,15 +129,30 @@ export default function Footer() {
 
         .footer-links {
           display: grid;
-          grid-template-columns: 1fr 2fr;
-          grid-gap: 20px;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 100px;
+        }
+
+        .inner-navigations {
+          display: grid;
+          max-width: 500px;
+          grid-template-columns: 1fr 1fr;
         }
 
         .copyright {
           background: var(--gray-4);
           text-align: center;
           grid-column: -1/1;
-          padding: 20px 0;
+          padding: 10px 0;
+        }
+
+        @media (max-width: 1050px) {
+          footer {
+            grid-template-columns: 1fr;
+          }
+          .inner:before {
+            border-width: 50px 100vh 0 0;
+          }
         }
       `}</style>
     </section>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import ReactPageScroller from "react-page-scroller"
 import Header from "../components/Header"
 import Hero from "../components/Hero"
 import HowToStart from "../components/HowToStart"

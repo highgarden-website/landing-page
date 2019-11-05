@@ -1,10 +1,9 @@
-import Input from "./Input"
 import Button from "./Button"
 
 export default function SegmentedInput() {
   return (
     <div className="wrapper">
-      <Input label="Email"></Input>
+      <input type="text" />
       <Button small>Subscribirse</Button>
       <style jsx>{`
         .wrapper {

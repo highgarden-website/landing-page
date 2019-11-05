@@ -1,5 +1,4 @@
 import cn from "classnames"
-import ReactPageScroller from "react-page-scroller"
 
 const goToSection = () => {
   document.querySelector("#contacto").scrollIntoView({
@@ -14,6 +13,7 @@ export default function Button({
   small,
   hidden = false,
   type = "",
+  action = false,
   contacto = false
 }) {
   return contacto ? (
@@ -56,7 +56,11 @@ export default function Button({
       `}</style>
     </button>
   ) : (
-    <button type={type} className={cn({ inverted: isInverted })}>
+    <button
+      type={type}
+      onClick={action ? action : () => {}}
+      className={cn({ inverted: isInverted })}
+    >
       {children}
       <style jsx>{`
         button {

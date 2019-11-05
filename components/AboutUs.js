@@ -700,12 +700,12 @@ export default function AboutUs() {
           <Avatar
             name="Matias Ezequiel Materia"
             position="Cofounder"
-            link="https://linkedin"
+            src="/static/img/Matias.png"
           ></Avatar>
           <Avatar
             name="Fernando Javier Toledano"
             position="Cofounder"
-            link="https://linkedin"
+            src="/static/img/Fernando.png"
           ></Avatar>
         </aside>
       </Section>
@@ -764,7 +764,7 @@ export default function AboutUs() {
         }
 
         .right :global(figure:not(:first-child)) {
-          transform: translate(-10%, 23%);
+          transform: translate(15%, 75%);
         }
       `}</style>
     </div>

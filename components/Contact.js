@@ -1,89 +1,143 @@
 import { useEffect, useState } from "react"
-import { Formik } from "formik"
+import useForm from "react-hook-form"
 import Select from "react-select"
+import { useStateValue } from "../state"
 import Text from "./Text"
 import Section from "./Section"
-import Input from "./Input"
-import TextArea from "./TextArea"
 import Button from "./Button"
-import SelectCustom from "./SelectCustom"
 
 let contactEndpoint =
   "https://script.google.com/macros/s/AKfycbzzw38S4tTv-Th1DoZkFSlnQXc04Bo0OAPo5I0Xx9T0xoxhKUrA/exec"
 
+const styleSelect = {
+  control: (styles, { isDisabled, isFocused, isSelected }) => {
+    return {
+      ...styles,
+      fontFamily: "Gilroy",
+      borderColor: "var(--gray-5)",
+      fontSize: "18px",
+      lineHeight: "35px",
+      backgroundColor: "var(--gray-5)",
+      border: "none",
+      outline: "none",
+      maxHeight: "48px",
+      boxShadow: isFocused ? "inset 0 0 0 2px var(--green)" : "none",
+      ":hover": {
+        ...styles[":hover"],
+        boxSizing: "borderBox",
+        borderRadius: "5px",
+        boxShadow: "inset 0 0 0 2px var(--green)"
+      }
+    }
+  },
+  input: styles => ({ ...styles, color: "#fff" }),
+  indicatorSeparator: styles => ({ ...styles, display: "none" }),
+  menuList: styles => ({ ...styles, backgroundColor: "var(--gray-5)" }),
+  singleValue: styles => ({ ...styles, color: "#fff" }),
+  valueContainer: styles => ({ ...styles, height: "48px" }),
+  option: (styles, { isDisabled, isFocused, isSelected }) => {
+    return {
+      ...styles,
+      backgroundColor: isDisabled
+        ? "var(--gray-5)"
+        : isFocused
+        ? "var(--gray-3)"
+        : "var(--gray-5)",
+
+      cursor: isDisabled ? "not-allowed" : "pointer",
+
+      ":active": {
+        ...styles[":active"],
+        backgroundColor: !isDisabled && "var(--gray-3)"
+      }
+    }
+  }
+}
+const options = [
+  { value: "hg-fixed", label: "HG fixed Income" },
+  { value: "hg-propietary", label: "HG Propietary Model" },
+  { value: "hg-propietary-hr", label: "HG Propietary Model High Return" }
+]
+
 export function Form() {
+  const [{ plan }, dispatch] = useStateValue()
+
+  const { register, handleSubmit, setValue } = useForm({
+    defaultValues: {
+      selectedPlan: plan
+    }
+  })
+
+  const [values, setSelectedPlan] = useState({
+    selectedPlan: plan
+  })
+
+  const onSubmit = data => {
+    fetch(contactEndpoint, {
+      method: "POST",
+      mode: "no-cors",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }).then(() => {})
+  }
+
+  const handlePlanChange = selectedPlan => {
+    dispatch({
+      type: "changeSelectedPlan",
+      newPlan: selectedPlan
+    })
+  }
+
+  useEffect(() => {
+    if (plan) {
+      setValue("plan", plan.label)
+      setSelectedPlan(plan)
+    }
+    register({ name: "plan" })
+  }, [plan])
+
   return (
-    <Formik
-      initialValues={{ name: "", email: "", message: "", strategy: "" }}
-      onSubmit={(values, { setSubmitting, resetForm }) => {
-        console.log(values)
-        // fetch(contactEndpoint, {
-        //   method: "POST",
-        //   mode: "no-cors",
-        //   body: JSON.stringify(values),
-        //   headers: {
-        //     "Content-Type": "application/json"
-        //   }
-        // }).then(() => {
-        //   setSubmitting(false)
-        //   resetForm()
-        // })
-      }}
-    >
-      {({
-        values,
-        errors,
-        touched,
-        handleChange,
-        handleBlur,
-        handleSubmit,
-        isSubmitting
-      }) => (
-        <>
-          <Input
-            type="text"
-            label="Nombre"
-            name="name"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.name}
-          ></Input>
-          <Input
-            type="email"
-            label="E-Mail"
-            name="email"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.email}
-          ></Input>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="input-wrapper">
+        <input ref={register({ required: true })} name="name" type="text" />
+        <label htmlFor="name">Nombre</label>
+      </div>
 
-          <SelectCustom
-            label="Estrategias de inversion"
-            name="strategy"
-            changeEvent={handleChange}
-            blurEvent={handleBlur}
-            value={values.strategy}
-          ></SelectCustom>
+      <div className="input-wrapper">
+        <input ref={register({ required: true })} name="email" type="email" />
+        <label htmlFor="email">E-Mail</label>
+      </div>
 
-          <TextArea
-            label="Mensaje (Opcional)"
-            name="message"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.message}
-          />
+      <div className="input-wrapper">
+        <Select
+          name="strategy"
+          placeholder={
+            <div style={{ color: "rgba(255, 255, 255, 0.7)" }}>
+              Elegi entre los 3 tipos de inversion
+            </div>
+          }
+          isSearchable={false}
+          classNamePrefix="select"
+          value={plan ? plan : ""}
+          options={options}
+          onChange={handlePlanChange}
+          options={options}
+          styles={styleSelect}
+        />
+        <label htmlFor="strategy">Estrategias de Inversi?n</label>
+      </div>
 
-          <button
-            type="submit"
-            style={{ position: "relative", zIndex: "100" }}
-            onClick={handleSubmit}
-            disabled={isSubmitting}
-          >
-            Enviar
-          </button>
-        </>
-      )}
-    </Formik>
+      <div className="input-wrapper">
+        <textarea ref={register({ required: true })} name="message" />
+        <label htmlFor="message">Mensaje (Opcional)</label>
+      </div>
+
+      <button type="submit" style={{ position: "relative", zIndex: "100" }}>
+        Enviar
+      </button>
+    </form>
   )
 }
 

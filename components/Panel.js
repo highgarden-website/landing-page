@@ -23,7 +23,8 @@ export default function Panel({
           background-color: var(--gray-3);
           border-radius: 10px;
           box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.2);
-          padding: ${center ? "20px 0;" : "20px;"};
+          user-select: none;
+          padding: ${center ? "35px 0 20px 0;" : "20px;"};
           ${center ? "text-align: center;" : ""};
         }
 

@@ -7,11 +7,10 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "formik": "^2.0.3",
     "next": "^9.1.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-page-scroller": "^1.5.1",
+    "react-hook-form": "^3.26.5",
     "react-select": "^3.0.8"
   }
 }

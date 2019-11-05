@@ -12,16 +12,17 @@ export default function Avatar({ src, name, position, link }) {
         <Text noMargin>{name}</Text> -
         <Text noMargin style={{ fontWeight: "200" }}>
           {position}
-        </Text>{" "}
-        -{" "}
-        <a href={link}>
-          <LinkedinLogo></LinkedinLogo>
-        </a>
+        </Text>
+        {link && (
+          <a href={link}>
+            <LinkedinLogo></LinkedinLogo>
+          </a>
+        )}
       </figcaption>
       <style jsx>{`
         img {
-          max-width: 400px;
-          max-height: 400px;
+          max-width: 300px;
+          max-height: 300px;
           border-radius: 50%;
           overflow: hidden;
           object-fit: cover;
@@ -40,11 +41,13 @@ export default function Avatar({ src, name, position, link }) {
           justify-content: space-between;
           background-color: var(--gray-3);
           border-radius: 10px;
-          padding: 25px 20px;
+          padding: 15px 20px;
           box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.2);
           position: absolute;
-          left: -35%;
-          bottom: 20%;
+          width: 135%;
+          left: 50%;
+          bottom: 10%;
+          transform: translateX(-50%);
         }
       `}</style>
     </figure>

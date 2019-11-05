@@ -1,6 +1,11 @@
-export default function Logo({ scrolled }) {
+export default function Logo({ scrolled, style }) {
   return (
-    <svg viewBox="0 0 250 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      viewBox="0 0 250 59"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style={style}
+    >
       <path
         d="M1.44543 43.3536C0.556906 42.8889 1.06893e-06 41.9692 1.0251e-06 40.9664L0 17.5149C-8.84796e-08 15.4907 2.14884 14.1896 3.9425 15.1277L32.2291 29.9221C33.1177 30.3868 33.6746 31.3066 33.6746 32.3093V55.7609C33.6746 57.7851 31.5257 59.0862 29.7321 58.1481L1.44543 43.3536Z"
         fill="#41DAB8"
