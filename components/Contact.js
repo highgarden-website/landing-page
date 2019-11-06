@@ -61,8 +61,8 @@ const options = [
 
 export function Form() {
   const [{ plan }, dispatch] = useStateValue()
-
-  const { register, handleSubmit, setValue } = useForm({
+  const [buttonMessage, setbuttonMessage] = useState("Enviar")
+  const { register, handleSubmit, setValue, reset } = useForm({
     defaultValues: {
       selectedPlan: plan
     }
@@ -73,6 +73,7 @@ export function Form() {
   })
 
   const onSubmit = data => {
+    setbuttonMessage("Enviando...")
     fetch(contactEndpoint, {
       method: "POST",
       mode: "no-cors",
@@ -80,7 +81,13 @@ export function Form() {
       headers: {
         "Content-Type": "application/json"
       }
-    }).then(() => {})
+    }).then(() => {
+      setTimeout(() => {
+        setbuttonMessage("Enviar")
+      }, 3000)
+      reset()
+      setbuttonMessage("Enviado!")
+    })
   }
 
   const handlePlanChange = selectedPlan => {
@@ -126,7 +133,7 @@ export function Form() {
           options={options}
           styles={styleSelect}
         />
-        <label htmlFor="strategy">Estrategias de Inversi?n</label>
+        <label htmlFor="strategy">Estrategias de Inversión</label>
       </div>
 
       <div className="input-wrapper">
@@ -135,7 +142,7 @@ export function Form() {
       </div>
 
       <button type="submit" style={{ position: "relative", zIndex: "100" }}>
-        Enviar
+        {buttonMessage}
       </button>
     </form>
   )
