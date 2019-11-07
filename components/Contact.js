@@ -53,13 +53,14 @@ const styleSelect = {
     }
   }
 }
+
 const options = [
   { value: "hg-fixed", label: "HG fixed Income" },
   { value: "hg-propietary", label: "HG Propietary Model" },
   { value: "hg-propietary-hr", label: "HG Propietary Model High Return" }
 ]
 
-export function Form() {
+function Form() {
   const [{ plan }, dispatch] = useStateValue()
   const [buttonMessage, setbuttonMessage] = useState("Enviar")
   const { register, handleSubmit, setValue, reset } = useForm({
