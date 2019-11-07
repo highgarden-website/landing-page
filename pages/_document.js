@@ -9,8 +9,8 @@ export default class HighgardenDoc extends Document {
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta name="viewport" content="width=device-width,minimum-scale=1" />
-          <meta name="robots" content="noindex,nofollow" />
-          <meta name="googlebot" content="noindex,nofollow" />
+          <meta name="robots" content="index,follow" />
+          <meta name="googlebot" content="index,follow" />
           <meta name="google" content="notranslate" />
           <meta
             name="keywords"
@@ -33,31 +33,31 @@ export default class HighgardenDoc extends Document {
           <meta name="ICBM" content="-38, -57.55" />
           <meta name="geo.position" content="-38;-57.55" />
           <meta name="geo.region" content="AR[01]" />
-          <link rel="manifest" href="./static/site.webmanifest" />
+          <link rel="manifest" href="/static/site.webmanifest" />
           <meta
             name="msapplication-config"
-            content="./static/browserconfig.xml"
+            content="/static/browserconfig.xml"
           />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="./static/apple-touch-icon.png"
+            href="/static/apple-touch-icon.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="./static/favicon-32x32.png"
+            href="/static/favicon-32x32.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="./static/favicon-16x16.png"
+            href="/static/favicon-16x16.png"
           />
           <link
             rel="mask-icon"
-            href="./static/safari-pinned-tab.svg"
+            href="/static/safari-pinned-tab.svg"
             color="#000"
           />
           <meta property="og:locale" content="es_AR" />
@@ -75,7 +75,7 @@ export default class HighgardenDoc extends Document {
             property="og:site_name"
             content="Descubrí la mejor manera de hacer crecer tu capital | highgarden.capital"
           />
-          <meta property="og:image" content="./static/og-image.png" />
+          <meta property="og:image" content="/static/og-image.png" />
           <meta
             property="og:image:secure_url"
             content="https://highgarden.capital/static/og-image.png"
@@ -94,7 +94,7 @@ export default class HighgardenDoc extends Document {
             name="twitter:image"
             content="https://highgarden.capital/static/og-image.png"
           />
-          <link rel="stylesheet" href="./static/global.css" />
+          <link rel="stylesheet" href="/static/global.css" />
           <link rel="stylesheet" href="https://cdn.plyr.io/3.5.2/plyr.css" />
         </Head>
 
