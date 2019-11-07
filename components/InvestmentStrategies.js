@@ -391,6 +391,7 @@ export default function InvestmentStrategies() {
           grid-template-columns: repeat(3, 1fr);
           grid-gap: 30px;
           height: 100%;
+          margin-top: 15%;
         }
 
         .lateral-decoration {
@@ -431,6 +432,7 @@ export default function InvestmentStrategies() {
           }
           .right {
             grid-template-columns: 1fr;
+            margin-top: 0;
           }
           .cta {
             display: none;

@@ -610,12 +610,17 @@ export default function Contact() {
             .cta {
               display: none;
             }
+
             .line {
+              left: 20px;
               width: 40px;
               height: 3px;
-              le
             }
 
+            .right,
+            .left {
+              padding: 0 20px;
+            }
             .decoration-arrows {
               display: none;
             }

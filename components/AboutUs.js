@@ -766,6 +766,33 @@ export default function AboutUs() {
         .right :global(figure:not(:first-child)) {
           transform: translate(15%, 75%);
         }
+
+        @media (max-width: 1050px) {
+          .outer-wrapper {
+            padding: 100px 0;
+            margin: 0 20px;
+          }
+
+          .decoration-dots-large {
+            display: none;
+          }
+
+          .decoration-line {
+            display: none;
+          }
+
+          .right {
+            flex-direction: column;
+          }
+
+          .right :global(figure:first-child) {
+            transform: translate(0%, 0%);
+          }
+
+          .right :global(figure:not(:first-child)) {
+            transform: translate(0%, 0%);
+          }
+        }
       `}</style>
     </div>
   )

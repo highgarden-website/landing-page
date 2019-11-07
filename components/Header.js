@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import Logo from "./Logo"
+import MobileMenu from "./MobileMenu"
 import Button from "./Button"
 
 export default function Header() {
@@ -19,7 +20,7 @@ export default function Header() {
     <div className="wrapper">
       <header>
         <Logo scrolled={scrolled}></Logo>
-        <nav>
+        <nav className="desktop-menu">
           <ul>
             <li>
               <a href="#home">Inicio</a>
@@ -40,6 +41,7 @@ export default function Header() {
             </li>
           </ul>
         </nav>
+        <MobileMenu scrolled={scrolled}></MobileMenu>
       </header>
       <style jsx>{`
         .wrapper {
@@ -81,9 +83,16 @@ export default function Header() {
           font-size: calc(18px + (20 - 18) * (100vw - 1024px) / (1920 - 1024));
         }
 
-        @media (max-width: 1050px) {
-          .header {
-            grid-template-columns: 1fr;
+        @media (max-width: 850px) {
+          .wrapper {
+            max-width: 100%;
+            width: 100%;
+          }
+          header {
+            max-width: 100%;
+          }
+          .desktop-menu {
+            display: none;
           }
         }
       `}</style>

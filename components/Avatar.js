@@ -49,6 +49,28 @@ export default function Avatar({ src, name, position, link }) {
           bottom: 10%;
           transform: translateX(-50%);
         }
+
+        @media (max-width: 1050px) {
+          img {
+            max-width: 200px;
+            max-height: 200px;
+          }
+
+          figure {
+            justify-content: center;
+            padding: 50px 0;
+          }
+
+          figcaption {
+            flex-direction: column;
+            padding: 10px;
+            position: absolute;
+            width: 200px;
+            left: 50%;
+            bottom: 0%;
+            transform: translateX(-50%);
+          }
+        }
       `}</style>
     </figure>
   )

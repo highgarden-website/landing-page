@@ -63,6 +63,13 @@ export default function Logo({ scrolled, style }) {
           transition: margin 400ms ease;
           ${scrolled ? "margin: 1.3rem 0;" : "margin: 2.5rem 0;"};
         }
+
+        @media (max-width: 850px) {
+          svg {
+            max-width: 150px;
+            margin-left: 20px;
+          }
+        }
       `}</style>
     </svg>
   )
