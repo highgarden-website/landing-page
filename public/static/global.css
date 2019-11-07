@@ -204,3 +204,10 @@ button:hover {
   color: var(--green);
   background: var(--gray-3);
 }
+
+@media (max-width: 850px) {
+  .button,
+  button {
+    width: 100%;
+  }
+}

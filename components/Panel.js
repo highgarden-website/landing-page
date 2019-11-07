@@ -87,6 +87,10 @@ export default function Panel({
           .highlight:before {
             top: -20px;
           }
+
+          .panel :global(button:last-child) {
+            max-width: 80%;
+          }
         }
       `}</style>
     </div>

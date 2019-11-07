@@ -37,7 +37,7 @@ export default function Button({
           background: var(--green);
           border-radius: 5px;
           transition: box-shadow 300ms ease;
-          ${secondary && "background: var(--yellow);"}
+          ${secondary ? "background: var(--yellow);" : ""}
         }
 
         button:hover {
