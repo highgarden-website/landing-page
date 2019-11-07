@@ -46,15 +46,15 @@ const presets = {
     letter-spacing: -.020625rem;
   `,
   h5: `
-    font-size: calc(15px + (25  - 15) * (100vw - 375px) / (1920 - 375));
+    font-size: calc(16px + (25  - 16) * (100vw - 375px) / (1920 - 375));
     margin: 0;
     margin-bottom: 0.5em;
     letter-spacing: -0.05em;
     line-height: 150%
     `,
   p: `
-  font-size: calc(16px + (20  - 16) * (100vw - 375px) / (1920 - 375));
-    line-height: 1.5em;
+  font-size: calc(18px + (21  - 18) * (100vw - 375px) / (1920 - 375));
+    line-height: 1.7em;
     letter-spacing: -0.02em;
 
   `,
@@ -158,7 +158,7 @@ const Text = ({
 }) => {
   const Styler =
     components[
-      [h1, h2, h3, h4, h5, p, small, description, span].indexOf(true)
+    [h1, h2, h3, h4, h5, p, small, description, span].indexOf(true)
     ] || P
 
   return (

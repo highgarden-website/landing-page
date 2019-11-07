@@ -7,7 +7,7 @@ import Section from "./Section"
 import Header from "./Header"
 import LogosGrid from "./LogosGrid"
 
-export default function Hero() {
+export default function Hero () {
   const [isMobile, setIsMobile] = useState()
   const [modalIsOpen, setModalIsOpen] = useState()
   const [decorationWidth, setDecorationWidth] = useState()
@@ -51,7 +51,7 @@ export default function Hero() {
             <Text
               p
               style={{
-                fontWeight: "300"
+                fontWeight: "400"
               }}
             >
               Basados en la transparencia, la seguridad, y pensando en el
@@ -647,11 +647,11 @@ export default function Hero() {
           <div className="card">
             <p>+200</p>
             <Text
-              h5
+              p
               style={{
-                maxWidth: "19ch",
+                maxWidth: "25ch",
                 margin: "0 auto",
-                fontWeight: "500"
+                fontWeight: "400"
               }}
             >
               Oportunidades de inversión disponibles. Vos elegís según tu perfil
@@ -932,7 +932,7 @@ export default function Hero() {
 
       <style jsx>{`
         .paragraph {
-          max-width: 360px;
+          max-width: 50ch;
           margin-bottom: 50px;
         }
         .inner-container {
@@ -993,13 +993,13 @@ export default function Hero() {
           justify-content: center;
           background-image: url("/static/img/thumb.png");
           background-size: cover;
-          width: calc(285px + (555 - 285) * (100vw - 375px) / (1920 - 375));
-          height: calc(160px + (313 - 160) * (100vw - 375px) / (1920 - 375));
+          width: calc(320px + (640 - 320) * (100vw - 375px) / (1920 - 375));
+          height: calc(180px + (360 - 180) * (100vw - 375px) / (1920 - 375));
           border-radius: 10px;
           position: absolute;
           left: -60px;
           top: 30px;
-          z-index: 1;
+          z-index: 10;
         }
 
         .logos {
@@ -1046,15 +1046,16 @@ export default function Hero() {
 
           .video {
             position: absolute;
-            top: 25%;
-            left: 5%;
+            top: 10%;
+            left: 7%;
           }
+
           .card {
             left: 0;
             top: 60%;
-
-            width: 265px;
+            width: 320px;
             letter-spacing: -0.05em;
+            padding: 20px;
           }
 
           .card p {

@@ -4,7 +4,7 @@ import Avatar from "./Avatar"
 import Section from "./Section"
 import Panel from "./Panel"
 
-export default function AboutUs() {
+export default function AboutUs () {
   return (
     <div className="outer-wrapper">
       <svg
@@ -683,9 +683,9 @@ export default function AboutUs() {
           <Text
             p
             style={{
-              maxWidth: "40ch",
+              maxWidth: "35ch",
               marginBottom: "40px",
-              fontWeight: "300"
+              fontWeight: "400"
             }}
           >
             Somos una administradora dedicada a gestionar patrimonios de
@@ -779,6 +779,17 @@ export default function AboutUs() {
 
           .decoration-line {
             display: none;
+          }
+
+          .line {
+              position:relative;
+              width: 40px;
+              height: 3px;
+              margin: 0 auto;
+            }
+
+          .left {
+            text-align: center;
           }
 
           .right {

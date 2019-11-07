@@ -6,7 +6,7 @@ import Text from "./Text"
 import Section from "./Section"
 import Button from "./Button"
 
-function Form() {
+function Form () {
   let contactEndpoint =
     "https://script.google.com/macros/s/AKfycbzzw38S4tTv-Th1DoZkFSlnQXc04Bo0OAPo5I0Xx9T0xoxhKUrA/exec"
   const styleSelect = {
@@ -41,8 +41,8 @@ function Form() {
         backgroundColor: isDisabled
           ? "var(--gray-5)"
           : isFocused
-          ? "var(--gray-3)"
-          : "var(--gray-5)",
+            ? "var(--gray-3)"
+            : "var(--gray-5)",
 
         cursor: isDisabled ? "not-allowed" : "pointer",
 
@@ -147,14 +147,14 @@ function Form() {
   )
 }
 
-export default function Contact() {
+export default function Contact () {
   return (
     <Section id="contacto" columns="2" tight>
       <aside className="left">
         <div className="line"></div>
         <Text h2>Contactanos</Text>
         <div className="paragraph">
-          <Text p style={{ fontWeight: "300" }}>
+          <Text p style={{ fontWeight: "400" }}>
             Estamos acá para que sepas cómo y dónde invertir tu dinero de la
             manera más segura.
           </Text>
@@ -611,15 +611,21 @@ export default function Contact() {
             }
 
             .line {
-              left: 20px;
+              position:relative;
               width: 40px;
               height: 3px;
+              margin: 0 auto;
+            }
+
+            .left{
+              text-align:center;
             }
 
             .right,
             .left {
               padding: 0 20px;
             }
+
             .decoration-arrows {
               display: none;
             }

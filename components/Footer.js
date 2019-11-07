@@ -6,7 +6,7 @@ import LinkedinLogo from "./LinkedinLogo"
 import FacebookLogo from "./FacebookLogo"
 import TwitterLogo from "./TwitterLogo"
 
-export default function Footer() {
+export default function Footer () {
   return (
     <section>
       <div className="inner">
@@ -110,7 +110,7 @@ export default function Footer() {
         footer {
           display: grid;
           width: 1250px;
-          margin: 60px auto 30px auto;
+          margin: 60px auto 100px auto;
           grid-template-columns: 1fr 1fr;
           justify-items: center;
           grid-gap: 60px;
@@ -146,11 +146,18 @@ export default function Footer() {
           footer {
             grid-template-columns: 1fr;
             text-align: center;
+            margin-bottom: 30px;
+
           }
 
           footer aside {
             width: 300px;
           }
+
+          .inner {
+          margin-top: 50px;
+
+        }
 
           .inner:before {
             border-width: 20px 100vh 0 0;

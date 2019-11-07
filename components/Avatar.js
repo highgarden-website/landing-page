@@ -1,7 +1,7 @@
 import Text from "./Text"
 import LinkedinLogo from "./LinkedinLogo"
 
-export default function Avatar({ src, name, position, link }) {
+export default function Avatar ({ src, name, position, link }) {
   return (
     <figure>
       <img
@@ -65,7 +65,7 @@ export default function Avatar({ src, name, position, link }) {
             flex-direction: column;
             padding: 10px;
             position: absolute;
-            width: 200px;
+            width: 80%;
             left: 50%;
             bottom: 0%;
             transform: translateX(-50%);

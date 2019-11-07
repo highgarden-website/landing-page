@@ -7,7 +7,7 @@ import QuironLogo from "./QuironLogo"
 import UsalLogo from "./UsalLogo"
 import NapoliLogo from "./NapoliLogo"
 
-export default function LogosGrid() {
+export default function LogosGrid () {
   return (
     <div className="wrapper">
       <div className="mariva">
@@ -75,6 +75,7 @@ export default function LogosGrid() {
           .wrapper {
             display: grid;
             grid-template-areas: "lynx bdv" "mariva santander" "ucema quiron " "napoli usal";
+            transform:scale(0.85);
           }
         }
       `}</style>
