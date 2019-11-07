@@ -37,7 +37,7 @@ export default function Hero() {
       <div className="inner-container">
         <aside className="left">
           <Text h1 noMargin>
-            Invertir profesionalmente
+            Invertí Profesionalmente
           </Text>
           <div className="first-paragraph">
             <Text h3 style={{ maxWidth: "22ch", fontWeight: "500" }}>
@@ -1020,6 +1020,10 @@ export default function Hero() {
             margin: 2%;
             margin-top: 150px;
             padding-top: 0;
+          }
+
+          .left {
+            text-align: center;
           }
 
           .decoration-boot {

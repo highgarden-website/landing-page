@@ -161,6 +161,7 @@ export default function Footer() {
           }
 
           .catchphrase {
+            text-align: center;
             transform: translateY(50%);
           }
 

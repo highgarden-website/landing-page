@@ -25,7 +25,7 @@ const wrapModifiers = (
 
 const presets = {
   h1: `
-    font-size: calc(32px + (62  - 32) * (100vw - 375px) / (1920 - 375));
+    font-size: calc(42px + (62  - 42) * (100vw - 375px) / (1920 - 375));
     line-height: 100%;
     letter-spacing: -0.02em;
     `,
