@@ -6,61 +6,60 @@ import Text from "./Text"
 import Section from "./Section"
 import Button from "./Button"
 
-let contactEndpoint =
-  "https://script.google.com/macros/s/AKfycbzzw38S4tTv-Th1DoZkFSlnQXc04Bo0OAPo5I0Xx9T0xoxhKUrA/exec"
-
-const styleSelect = {
-  control: (styles, { isDisabled, isFocused, isSelected }) => {
-    return {
-      ...styles,
-      fontFamily: "Gilroy",
-      borderColor: "var(--gray-5)",
-      fontSize: "18px",
-      lineHeight: "35px",
-      backgroundColor: "var(--gray-5)",
-      border: "none",
-      outline: "none",
-      maxHeight: "48px",
-      boxShadow: isFocused ? "inset 0 0 0 2px var(--green)" : "none",
-      ":hover": {
-        ...styles[":hover"],
-        boxSizing: "borderBox",
-        borderRadius: "5px",
-        boxShadow: "inset 0 0 0 2px var(--green)"
+function Form() {
+  let contactEndpoint =
+    "https://script.google.com/macros/s/AKfycbzzw38S4tTv-Th1DoZkFSlnQXc04Bo0OAPo5I0Xx9T0xoxhKUrA/exec"
+  const styleSelect = {
+    control: (styles, { isDisabled, isFocused, isSelected }) => {
+      return {
+        ...styles,
+        fontFamily: "Gilroy",
+        borderColor: "var(--gray-5)",
+        fontSize: "18px",
+        lineHeight: "35px",
+        backgroundColor: "var(--gray-5)",
+        border: "none",
+        outline: "none",
+        maxHeight: "48px",
+        boxShadow: isFocused ? "inset 0 0 0 2px var(--green)" : "none",
+        ":hover": {
+          ...styles[":hover"],
+          boxSizing: "borderBox",
+          borderRadius: "5px",
+          boxShadow: "inset 0 0 0 2px var(--green)"
+        }
       }
-    }
-  },
-  input: styles => ({ ...styles, color: "#fff" }),
-  indicatorSeparator: styles => ({ ...styles, display: "none" }),
-  menuList: styles => ({ ...styles, backgroundColor: "var(--gray-5)" }),
-  singleValue: styles => ({ ...styles, color: "#fff" }),
-  valueContainer: styles => ({ ...styles, height: "48px" }),
-  option: (styles, { isDisabled, isFocused, isSelected }) => {
-    return {
-      ...styles,
-      backgroundColor: isDisabled
-        ? "var(--gray-5)"
-        : isFocused
-        ? "var(--gray-3)"
-        : "var(--gray-5)",
+    },
+    input: styles => ({ ...styles, color: "#fff" }),
+    indicatorSeparator: styles => ({ ...styles, display: "none" }),
+    menuList: styles => ({ ...styles, backgroundColor: "var(--gray-5)" }),
+    singleValue: styles => ({ ...styles, color: "#fff" }),
+    valueContainer: styles => ({ ...styles, height: "48px" }),
+    option: (styles, { isDisabled, isFocused, isSelected }) => {
+      return {
+        ...styles,
+        backgroundColor: isDisabled
+          ? "var(--gray-5)"
+          : isFocused
+          ? "var(--gray-3)"
+          : "var(--gray-5)",
 
-      cursor: isDisabled ? "not-allowed" : "pointer",
+        cursor: isDisabled ? "not-allowed" : "pointer",
 
-      ":active": {
-        ...styles[":active"],
-        backgroundColor: !isDisabled && "var(--gray-3)"
+        ":active": {
+          ...styles[":active"],
+          backgroundColor: !isDisabled && "var(--gray-3)"
+        }
       }
     }
   }
-}
 
-const options = [
-  { value: "hg-fixed", label: "HG fixed Income" },
-  { value: "hg-propietary", label: "HG Propietary Model" },
-  { value: "hg-propietary-hr", label: "HG Propietary Model High Return" }
-]
+  const options = [
+    { value: "hg-fixed", label: "HG fixed Income" },
+    { value: "hg-propietary", label: "HG Propietary Model" },
+    { value: "hg-propietary-hr", label: "HG Propietary Model High Return" }
+  ]
 
-function Form() {
   const [{ plan }, dispatch] = useStateValue()
   const [buttonMessage, setbuttonMessage] = useState("Enviar")
   const { register, handleSubmit, setValue, reset } = useForm({
@@ -68,7 +67,6 @@ function Form() {
       selectedPlan: plan
     }
   })
-
   const [values, setSelectedPlan] = useState({
     selectedPlan: plan
   })
