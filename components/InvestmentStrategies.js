@@ -4,21 +4,24 @@ import Text from "./Text"
 import Section from "./Section"
 import Panel from "./Panel"
 
-export default function InvestmentStrategies () {
+export default function InvestmentStrategies() {
   const [{ plan }, dispatch] = useStateValue()
 
   return (
     <Section id="estrategias-de-inversion">
       <div className="inner-container">
         <aside className="left">
-          <div className="line"></div>
-          <Text h2>Estrategias de Inversión</Text>
+          <div className="line" />
+          <span className="heading">
+            <Text h2>Estrategias de Inversión</Text>
+          </span>
           <Text p style={{ fontWeight: "400" }}>
             Elegí entre nuestras 3 estrategias de <br />
             inversión en función a tus preferencias <br />y nuestro
             asesoramiento.
             <span className="cta">
-              <br /> <span> </span><b>¿No sabés cuál elegir?</b>
+              <br /> <span> </span>
+              <b>¿No sabés cuál elegir?</b>
               <br /> <br />
               <a href="mailto:info@highgarden.capital">
                 <u>Nosotros te ayudamos</u>
@@ -376,6 +379,10 @@ export default function InvestmentStrategies () {
       </div>
 
       <style jsx>{`
+        .heading {
+          display: block;
+          max-width: 30ch;
+        }
         .inner-container {
           display: grid;
           grid-template-columns: 1fr 1.5fr;
@@ -434,7 +441,7 @@ export default function InvestmentStrategies () {
             margin-top: -50px;
             margin-bottom: 50px;
             grid-gap: 5%;
-            transform:scale(0.9)
+            transform: scale(0.9);
           }
           .cta {
             display: none;

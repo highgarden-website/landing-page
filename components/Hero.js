@@ -7,7 +7,7 @@ import Section from "./Section"
 import Header from "./Header"
 import LogosGrid from "./LogosGrid"
 
-export default function Hero () {
+export default function Hero() {
   const [isMobile, setIsMobile] = useState()
   const [modalIsOpen, setModalIsOpen] = useState()
   const [decorationWidth, setDecorationWidth] = useState()
@@ -36,7 +36,7 @@ export default function Hero () {
   }, [decorationHeight, decorationWidth])
 
   return (
-    <Section id="home">
+    <Section id="home" main>
       <div className="inner-container">
         <aside className="left">
           <Text h1 noMargin>
@@ -644,21 +644,6 @@ export default function Hero () {
             />
           </svg>
 
-          <div className="card">
-            <p>+200</p>
-            <Text
-              p
-              style={{
-                maxWidth: "25ch",
-                margin: "0 auto",
-                fontWeight: "400"
-              }}
-            >
-              Oportunidades de inversión disponibles. Vos elegís según tu perfil
-              de inversor.
-            </Text>
-          </div>
-
           <svg
             className="points"
             width="210"
@@ -953,7 +938,7 @@ export default function Hero () {
         .decoration {
           position: absolute;
           left: -28%;
-          top: 0;
+          top: -100px;
         }
 
         .miniPoints {
@@ -966,40 +951,26 @@ export default function Hero () {
           bottom: -450px;
           left: 760px;
         }
-        .card {
-          background: var(--gray-3);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-          border-radius: 10px;
-          width: 350px;
-          text-align: center;
-          position: absolute;
-          top: 250px;
-          left: 240px;
-          padding: 10px;
-          z-index: 1;
-        }
-
-        .card p {
-          letter-spacing: -0.02em;
-          font-size: 70px;
-          color: var(--green);
-          margin: 0 auto;
-          font-weight: 700;
-        }
 
         .video {
           display: flex;
           align-items: center;
           justify-content: center;
-          background-image: url("/static/img/thumb.png");
+          background: url("/static/img/thumb.png");
           background-size: cover;
           width: calc(320px + (640 - 320) * (100vw - 375px) / (1920 - 375));
           height: calc(180px + (360 - 180) * (100vw - 375px) / (1920 - 375));
           border-radius: 10px;
           position: absolute;
           left: -60px;
-          top: 30px;
+          top: 15px;
           z-index: 10;
+          transition: all 200ms ease;
+        }
+
+        .video:hover {
+          cursor: pointer;
+          box-shadow: inset 0 0 0 2000px rgba(65, 218, 184, 0.3);
         }
 
         .logos {
@@ -1050,17 +1021,6 @@ export default function Hero () {
             left: 7%;
           }
 
-          .card {
-            left: 0;
-            top: 60%;
-            width: 320px;
-            letter-spacing: -0.05em;
-            padding: 20px;
-          }
-
-          .card p {
-            font-size: 35px;
-          }
           .paragraph {
             display: none;
           }

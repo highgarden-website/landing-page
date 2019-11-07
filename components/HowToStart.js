@@ -312,7 +312,7 @@ export default function HowToStart () {
 
         .logoPoint {
           position: absolute;
-          bottom: -135%;
+          bottom: -55%;
           left: -175px;
 
         }
@@ -320,7 +320,7 @@ export default function HowToStart () {
         .arrows {
           position: absolute;
           left: 22%;
-          bottom:-5%;
+          bottom: 0;
         }
 
         svg {

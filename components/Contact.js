@@ -6,7 +6,7 @@ import Text from "./Text"
 import Section from "./Section"
 import Button from "./Button"
 
-function Form () {
+function Form() {
   let contactEndpoint =
     "https://script.google.com/macros/s/AKfycbzzw38S4tTv-Th1DoZkFSlnQXc04Bo0OAPo5I0Xx9T0xoxhKUrA/exec"
   const styleSelect = {
@@ -41,8 +41,8 @@ function Form () {
         backgroundColor: isDisabled
           ? "var(--gray-5)"
           : isFocused
-            ? "var(--gray-3)"
-            : "var(--gray-5)",
+          ? "var(--gray-3)"
+          : "var(--gray-5)",
 
         cursor: isDisabled ? "not-allowed" : "pointer",
 
@@ -147,9 +147,9 @@ function Form () {
   )
 }
 
-export default function Contact () {
+export default function Contact() {
   return (
-    <Section id="contacto" columns="2" tight>
+    <Section id="contacto" columns="2" tight last>
       <aside className="left">
         <div className="line"></div>
         <Text h2>Contactanos</Text>
@@ -611,14 +611,14 @@ export default function Contact () {
             }
 
             .line {
-              position:relative;
+              position: relative;
               width: 40px;
               height: 3px;
               margin: 0 auto;
             }
 
-            .left{
-              text-align:center;
+            .left {
+              text-align: center;
             }
 
             .right,

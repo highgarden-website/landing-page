@@ -3,12 +3,19 @@ export default function Section({
   children,
   columns = 1,
   noMargin,
+  fullHeight = false,
+  main = false,
+  last = false,
   tight = false
 }) {
   const columnsInt = parseInt(columns, 10)
 
   return (
-    <section className="section" id={id}>
+    <section
+      className="section"
+      id={id}
+      style={last ? { marginBottom: "50px" } : {}}
+    >
       {children}
       <style jsx>{`
         .section {
@@ -23,9 +30,9 @@ export default function Section({
           max-width: ${tight
             ? "var(--inner-width-small)"
             : "var(--inner-width)"};
-          margin: 0 auto;
-          height: 100vh;
+          margin: ${main ? "0 auto" : "250px auto"};
           align-items: center;
+          ${fullHeight ? "height: 100vh;" : ""};
         }
 
         .section + .section {

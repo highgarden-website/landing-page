@@ -4,7 +4,7 @@ import Avatar from "./Avatar"
 import Section from "./Section"
 import Panel from "./Panel"
 
-export default function AboutUs () {
+export default function AboutUs() {
   return (
     <div className="outer-wrapper">
       <svg
@@ -676,7 +676,7 @@ export default function AboutUs () {
         />
       </svg>
 
-      <Section id="quienes-somos" columns="2">
+      <Section id="quienes-somos" columns="2" fullHeight>
         <aside className="left">
           <div className="line"></div>
           <Text h2>Quienes Somos</Text>
@@ -722,7 +722,7 @@ export default function AboutUs () {
         }
 
         .decoration-dots-large {
-          top: 33%;
+          top: 0;
           right: 25%;
         }
 
@@ -782,11 +782,11 @@ export default function AboutUs () {
           }
 
           .line {
-              position:relative;
-              width: 40px;
-              height: 3px;
-              margin: 0 auto;
-            }
+            position: relative;
+            width: 40px;
+            height: 3px;
+            margin: 0 auto;
+          }
 
           .left {
             text-align: center;

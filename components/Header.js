@@ -47,6 +47,7 @@ export default function Header() {
         .wrapper {
           position: fixed;
           width: 100vw;
+          top: 0;
           max-width: 100%;
           z-index: 1000;
           transition: background 300ms ease;
