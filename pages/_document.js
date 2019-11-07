@@ -95,6 +95,7 @@ export default class HighgardenDoc extends Document {
             content="https://highgarden.capital/static/og-image.png"
           />
           <link rel="stylesheet" href="./static/global.css" />
+          <link rel="stylesheet" href="https://cdn.plyr.io/3.5.2/plyr.css" />
         </Head>
 
         <body>

@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react"
+import Header from "../components/Header"
+import Hero from "../components/Hero"
+import HowToStart from "../components/HowToStart"
+import InvestmentStrategies from "../components/InvestmentStrategies"
+import AboutUs from "../components/AboutUs"
+import Contact from "../components/Contact"
+import Footer from "../components/Footer"
 
 const Home = () => {
-  const [date, setDate] = useState(null)
-
-  useEffect(() => {}, [])
-
   return (
     <main>
-      <h1>Basic deployment</h1>
-      <style jsx>{`
-        main {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 100vh;
-          width: 100vw;
-        }
-      `}</style>
+      <Header />
+      <Hero />
+      <HowToStart />
+      <InvestmentStrategies />
+      <AboutUs />
+      <Contact />
+      <Footer />
     </main>
   )
 }
