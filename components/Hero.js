@@ -938,7 +938,7 @@ export default function Hero() {
         .inner-container {
           display: grid;
           grid-template-columns: 1.5fr 1fr;
-          padding-top: 140px;
+          padding-top: 200px;
         }
 
         .left {
