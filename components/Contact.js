@@ -548,8 +548,9 @@ export default function Contact() {
             strokeLinejoin="round"
           />
         </svg>
-
-        <Text h3>Dejanos tus datos y nos comunicaremos a la brevedad.</Text>
+        <span className="cta">
+          <Text h3>Dejanos tus datos y nos comunicaremos a la brevedad.</Text>
+        </span>
         <Form />
       </aside>
       <style jsx>
@@ -572,7 +573,6 @@ export default function Contact() {
           }
           .left {
             position: relative;
-            height: 70%;
           }
 
           .right {
@@ -601,6 +601,24 @@ export default function Contact() {
             position: absolute;
             bottom: -37%;
             left: -60%;
+          }
+
+          @media (max-width: 1050px) {
+            .paragraph {
+              display: none;
+            }
+            .cta {
+              display: none;
+            }
+            .line {
+              width: 40px;
+              height: 3px;
+              le
+            }
+
+            .decoration-arrows {
+              display: none;
+            }
           }
         `}
       </style>

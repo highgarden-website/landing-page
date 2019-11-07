@@ -12,10 +12,10 @@ export default function HowToStart() {
           <Text h2>Cómo Iniciar</Text>
           <div className="paragraf">
           <Text p>
-            Te ayudamos y asistimos para abrir tu <br />
-            cuenta nominativa en el exterior en <br /> dólares a la cual solo
-            podras acceder <br />
-            vos, tanto para girar fondos como <br />
+            Te ayudamos y asistimos para abrir tu
+            cuenta nominativa en el exterior en dólares a la cual solo
+            podras acceder
+            vos, tanto para girar fondos como
             para retirarlos.
           </Text>
           </div>
@@ -273,6 +273,8 @@ export default function HowToStart() {
 </svg>
 
 
+
+
         </aside>
       </div>
       <style jsx>{`
@@ -344,6 +346,7 @@ export default function HowToStart() {
         }
         .paragraf {
           font-weight: 300;
+          max-width: 34ch;
         }
 
         @media (max-width: 1050px) {
@@ -362,7 +365,10 @@ export default function HowToStart() {
           grid-template-columns: 1fr;
         }
 
+        .paragraf {
 
+          max-width: 29ch;
+        }
 
         svg {
           margin: 0;

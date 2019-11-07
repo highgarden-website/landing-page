@@ -39,9 +39,11 @@ export default function Hero() {
           <Text h1 noMargin>
             Invertir profesionalmente
           </Text>
-          <Text h3 style={{ maxWidth: "22ch" }}>
-            Descrubrí la mejor manera de hacer crecer tu capital.
-          </Text>
+          <div className="first-paragraph">
+            <Text h3 style={{ maxWidth: "22ch", fontWeight: "500" }}>
+              Descrubrí la mejor manera de hacer crecer tu capital.
+            </Text>
+          </div>
           <div className="paragraph">
             <Text
               p
@@ -920,6 +922,62 @@ export default function Hero() {
         </aside>
         <span className="logos">
           <LogosGrid></LogosGrid>
+          <svg
+            className="decoration-boot"
+            width="95"
+            height="95"
+            viewBox="0 0 95 95"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g filter="url(#filter0_d)">
+              <circle cx="47.5" cy="42.5" r="32.5" fill="#FFF67F" />
+            </g>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M57.6562 49.5312H46.7187L40.4687 54.2187V49.5312H37.3437C36.4808 49.5312 35.7812 48.8317 35.7812 47.9687V32.3437C35.7812 31.4808 36.4808 30.7812 37.3437 30.7812H57.6562C58.5192 30.7812 59.2187 31.4808 59.2187 32.3437V47.9687C59.2187 48.8317 58.5192 49.5312 57.6562 49.5312Z"
+              stroke="#464E62"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <defs>
+              <filter
+                id="filter0_d"
+                x="0"
+                y="0"
+                width="95"
+                height="95"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                />
+                <feOffset dy="5" />
+                <feGaussianBlur stdDeviation="7.5" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect1_dropShadow"
+                  result="shape"
+                />
+              </filter>
+            </defs>
+          </svg>
         </span>
       </div>
 
@@ -931,6 +989,7 @@ export default function Hero() {
         .inner-container {
           display: grid;
           grid-template-columns: 1.5fr 1fr;
+          padding-top: 140px;
         }
 
         .left {
@@ -1005,11 +1064,23 @@ export default function Hero() {
           margin: 0 auto;
         }
 
+        .decoration-boot {
+          position: absolute;
+          right: -10%;
+          bottom: 13%;
+        }
+
         @media (max-width: 1050px) {
           .inner-container {
             grid-template-columns: 1fr;
             margin: 2%;
-            margin-top: 200px;
+            margin-top: 150px;
+            padding-top: 0;
+          }
+
+          .decoration-boot {
+            right: 0;
+            bottom: 40%;
           }
 
           .cta {
@@ -1018,12 +1089,12 @@ export default function Hero() {
 
           .video {
             position: absolute;
-            top: 34%;
+            top: 25%;
             left: 5%;
           }
           .card {
             left: 0;
-            top: 53%;
+            top: 60%;
 
             width: 265px;
             letter-spacing: -0.05em;
@@ -1046,7 +1117,14 @@ export default function Hero() {
             left: -9%;
             z-index: -1;
           }
-          .logos {
+          .first-paragraph {
+            max-width: 30ch;
+            margin: 0 auto;
+          }
+          .decoration-green-border {
+            display: block;
+            margin-left: 30px;
+            margin-right: 30px;
           }
         }
       `}</style>

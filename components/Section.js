@@ -28,10 +28,6 @@ export default function Section({
           align-items: center;
         }
 
-        .section:first-of-type {
-          padding-top: 131px;
-        }
-
         .section + .section {
           padding-top: 0;
         }
