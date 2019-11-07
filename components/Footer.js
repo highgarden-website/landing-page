@@ -9,13 +9,10 @@ import TwitterLogo from "./TwitterLogo"
 export default function Footer() {
   return (
     <section>
-      <span className="catchphrase">
-        <Text h1>Invertí Profesionalmente.</Text>
-      </span>
       <div className="inner">
         <footer>
           <aside className="slogan">
-            <Logo style={{ marginTop: "0" }} style={{ marginLeft: "0" }}></Logo>
+            <Logo style={{ marginTop: "0", marginLeft: "0" }}></Logo>
             <Text style={{ fontWeight: "400" }} noMargin>
               Descrubrí la mejor manera de hacer <br />
               crecer tu capital.
@@ -81,11 +78,6 @@ export default function Footer() {
           display: flex;
           align-items: center;
           flex-direction: column;
-          height: 100vh;
-        }
-
-        .catchphrase {
-          transform: translateY(150%);
         }
 
         .social-list {
@@ -158,11 +150,6 @@ export default function Footer() {
 
           footer aside {
             width: 300px;
-          }
-
-          .catchphrase {
-            text-align: center;
-            transform: translateY(50%);
           }
 
           .inner:before {
