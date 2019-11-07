@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react"
+import Modal from "react-modal"
+import Video from "./Plyr"
 import Button from "./Button"
 import Text from "./Text"
 import Section from "./Section"
@@ -7,6 +9,7 @@ import LogosGrid from "./LogosGrid"
 
 export default function Hero() {
   const [isMobile, setIsMobile] = useState()
+  const [modalIsOpen, setModalIsOpen] = useState()
   const [decorationWidth, setDecorationWidth] = useState()
   const [decorationHeight, setDecorationHeight] = useState()
 
@@ -358,21 +361,23 @@ export default function Hero() {
             />
           </svg>
 
-          <div className="video">
-            <svg
-              className="playButton"
-              width="42"
-              height="48"
-              viewBox="0 0 42 48"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M39.453 19.6645C42.7988 21.5866 42.7988 26.4135 39.453 28.3355L7.49062 46.6969C4.1573 48.6118 2.10624e-07 46.2055 3.79502e-07 42.3614L1.99276e-06 5.63865C2.16163e-06 1.79446 4.1573 -0.611763 7.49062 1.30312L39.453 19.6645Z"
-                fill="white"
-              />
-            </svg>
-          </div>
+          <div
+            className="video"
+            onClick={() => {
+              setModalIsOpen(true)
+            }}
+          />
+          <Modal
+            isOpen={modalIsOpen}
+            onRequestClose={() => {
+              setModalIsOpen(false)
+            }}
+            className="Modal"
+            overlayClassName="Overlay"
+            ariaHideApp={false}
+          >
+            <Video />
+          </Modal>
           <svg
             className="miniPoints"
             width="100"
@@ -986,10 +991,10 @@ export default function Hero() {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #000000;
+          background-image: url("/static/img/thumb.png");
+          background-size: cover;
           width: calc(285px + (555 - 285) * (100vw - 375px) / (1920 - 375));
           height: calc(160px + (313 - 160) * (100vw - 375px) / (1920 - 375));
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
           border-radius: 10px;
           position: absolute;
           left: -60px;

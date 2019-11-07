@@ -211,3 +211,53 @@ button:hover {
     width: 100%;
   }
 }
+
+.ReactModalPortal > * {
+  opacity: 0;
+  transform: scale(0.4);
+  transform-origin: 80% 50%;
+}
+.ReactModal__Overlay {
+  transition: transform 500ms ease-in-out, opacity 700ms ease;
+  background: rgba(0, 0, 0, 0.15);
+}
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  transform: scale(1);
+}
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+  transform: scale(0);
+}
+.Modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90vw;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  padding: 0;
+  z-index: 1001;
+  transition: all 200ms ease-in-out;
+}
+
+.Modal:focus {
+  outline: none;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(5px);
+  background-color: rgba(11, 15, 29, 0.8);
+  z-index: 1000;
+}
+
+.plyr__video-embed iframe {
+  z-index: 9999;
+}
