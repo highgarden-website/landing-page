@@ -582,6 +582,7 @@ export default function Contact() {
             position: absolute;
             right: -12%;
             top: -12%;
+            opacity: 0.3;
           }
           .sendButton {
             position: absolute;
@@ -598,8 +599,9 @@ export default function Contact() {
           }
           .points {
             position: absolute;
-            bottom: -37%;
-            left: -60%;
+            bottom: -130%;
+            left: -36%;
+            opacity: 0.3;
           }
 
           @media (max-width: 1050px) {

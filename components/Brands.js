@@ -408,6 +408,7 @@ export default function Brands() {
           position: absolute;
           left: 200px;
           bottom: -40px;
+          opacity: 0.3;
         }
       `}</style>
     </div>

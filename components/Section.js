@@ -14,7 +14,7 @@ export default function Section({
     <section
       className="section"
       id={id}
-      style={last ? { marginBottom: "50px" } : {}}
+      style={last ? { paddingBottom: "50px", alignItems: "start" } : {}}
     >
       {children}
       <style jsx>{`
@@ -30,13 +30,11 @@ export default function Section({
           max-width: ${tight
             ? "var(--inner-width-small)"
             : "var(--inner-width)"};
-          margin: ${main ? "0 auto" : "250px auto"};
+          margin: 0 auto;
+          padding: ${main
+            ? "0"
+            : "calc(0px + (250  - 0) * (100vw - 375px) / (1920 - 375)) 0"};
           align-items: center;
-          ${fullHeight ? "height: 100vh;" : ""};
-        }
-
-        .section + .section {
-          padding-top: 0;
         }
 
         @media (max-width: 1050px) {

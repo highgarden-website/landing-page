@@ -680,19 +680,14 @@ export default function AboutUs() {
         <aside className="left">
           <div className="line"></div>
           <Text h2>Quienes Somos</Text>
-          <Text
-            p
-            style={{
-              maxWidth: "35ch",
-              marginBottom: "40px",
-              fontWeight: "400"
-            }}
-          >
-            Somos una administradora dedicada a gestionar patrimonios de
-            terceros, en el mediano y largo plazo, buscando minimizar riesgos y
-            maximizar beneficios, protegiendo a nuestros clientes y realizando
-            un trabajo profesional.
-          </Text>
+          <span className="paragraph">
+            <Text p>
+              Somos una administradora dedicada a gestionar patrimonios de
+              terceros, en el mediano y largo plazo, buscando minimizar riesgos
+              y maximizar beneficios, protegiendo a nuestros clientes y
+              realizando un trabajo profesional.
+            </Text>
+          </span>
           <Button contacto>Contactanos</Button>
         </aside>
 
@@ -719,6 +714,7 @@ export default function AboutUs() {
         .decoration-dots-small,
         .decoration-line {
           position: absolute;
+          opacity: 0.3;
         }
 
         .decoration-dots-large {
@@ -753,6 +749,12 @@ export default function AboutUs() {
 
         .left {
           position: relative;
+        }
+
+        .paragraph {
+          max-width: 35ch;
+          margin-bottom: 40px;
+          font-weight: 400;
         }
 
         .right {
@@ -790,6 +792,10 @@ export default function AboutUs() {
 
           .left {
             text-align: center;
+          }
+
+          .paragraph {
+            margin: 0 auto;
           }
 
           .right {

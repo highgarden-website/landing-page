@@ -6,7 +6,7 @@ const goToSection = () => {
   })
 }
 
-export default function Button ({
+export default function Button({
   isInverted,
   secondary,
   children,
@@ -30,7 +30,7 @@ export default function Button ({
           cursor: pointer;
           border: none;
           outline: none;
-          padding: ${small ? "15px 20px;" : "15px 50px;"};
+          padding: ${small ? "15px 20px;" : "15px 30px;"};
           font-family: "Gilroy";
           font-size: 20px;
           color: var(--gray-4);
@@ -41,7 +41,7 @@ export default function Button ({
         }
 
         button:hover {
-          box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.20);
+          box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
         }
 
         button.inverted {
@@ -55,13 +55,13 @@ export default function Button ({
       `}</style>
     </button>
   ) : (
-      <button
-        type={type}
-        onClick={action ? action : () => { }}
-        className={cn({ inverted: isInverted })}
-      >
-        {children}
-        <style jsx>{`
+    <button
+      type={type}
+      onClick={action ? action : () => {}}
+      className={cn({ inverted: isInverted })}
+    >
+      {children}
+      <style jsx>{`
         button {
           font-weight: 700;
           appearance: none;
@@ -88,6 +88,6 @@ export default function Button ({
           background: var(--gray-3);
         }
       `}</style>
-      </button>
-    )
+    </button>
+  )
 }

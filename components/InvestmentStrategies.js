@@ -15,19 +15,19 @@ export default function InvestmentStrategies() {
           <span className="heading">
             <Text h2>Estrategias de Inversión</Text>
           </span>
-          <Text p style={{ fontWeight: "400" }}>
-            Elegí entre nuestras 3 estrategias de <br />
-            inversión en función a tus preferencias <br />y nuestro
-            asesoramiento.
-            <span className="cta">
-              <br /> <span> </span>
-              <b>¿No sabés cuál elegir?</b>
-              <br /> <br />
-              <a href="mailto:info@highgarden.capital">
-                <u>Nosotros te ayudamos</u>
-              </a>
-            </span>
-          </Text>
+          <div className="paragraph">
+            <Text p style={{ fontWeight: "400" }}>
+              Elegí entre nuestras 3 estrategias de inversión en función a tus
+              preferencias y nuestro asesoramiento.
+              <span className="cta">
+                <span> </span>
+                <b>¿No sabés cuál elegir?</b>
+                <a href="mailto:info@highgarden.capital">
+                  <u>Nosotros te ayudamos</u>
+                </a>
+              </span>
+            </Text>
+          </div>
           <span className="cta">
             <Button contacto>Contactanos</Button>
           </span>
@@ -404,6 +404,7 @@ export default function InvestmentStrategies() {
           position: absolute;
           left: -50%;
           top: 0;
+          opacity: 0.3;
         }
 
         a {
@@ -417,6 +418,10 @@ export default function InvestmentStrategies() {
           opacity: 0.2;
         }
 
+        .paragraph {
+          max-width: 35ch;
+        }
+
         .line {
           position: absolute;
           width: 100px;
@@ -425,22 +430,26 @@ export default function InvestmentStrategies() {
           top: 0;
           background: #ffffff;
         }
+
         @media (max-width: 1050px) {
           .inner-container {
             grid-template-columns: 1fr;
             margin: 2%;
           }
+          .heading {
+            margin: 0 auto;
+          }
           .left {
             text-align: center;
           }
-          .card {
-            margin: 0 30px;
+          .paragraph {
+            max-width: 100%;
+            margin: 0 auto;
           }
+
           .right {
-            grid-template-columns: 1fr;
-            margin-top: -50px;
-            margin-bottom: 50px;
-            grid-gap: 5%;
+            margin: 0 auto;
+            grid-gap: 15px;
             transform: scale(0.9);
           }
           .cta {
@@ -450,6 +459,19 @@ export default function InvestmentStrategies() {
             width: 40px;
             height: 3px;
             left: 45%;
+          }
+        }
+
+        @media (max-width: 750px) {
+          .right {
+            grid-template-columns: 1fr;
+            margin-top: -50px;
+            margin-bottom: 50px;
+            grid-gap: 5%;
+            transform: scale(0.9);
+          }
+          .card {
+            margin: 0 30px;
           }
         }
       `}</style>

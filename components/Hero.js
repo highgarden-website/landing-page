@@ -1066,7 +1066,9 @@ export default function Hero() {
           .video {
             position: absolute;
             top: 10%;
-            left: 7%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0 auto;
           }
 
           .paragraph {

@@ -159,8 +159,10 @@ export default function MobileMenu({ scrolled = false }) {
         </nav>
       </div>
       <style jsx>{`
-        .menu.open .overlay {
+        .menu .overlay {
           background-color: var(--gray-3);
+        }
+        .menu.open .overlay {
           transform: translateX(-100%);
         }
 
@@ -168,8 +170,7 @@ export default function MobileMenu({ scrolled = false }) {
           display: flex;
           width: 100%;
           flex-direction: column;
-          justify-content: flex-end;
-          padding-bottom: 100px;
+          justify-content: center;
         }
 
         h5 {
