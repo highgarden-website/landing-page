@@ -4,13 +4,12 @@ import Select from "react-select"
 import { useStateValue } from "../state"
 import Text from "./Text"
 import Section from "./Section"
-import Button from "./Button"
 
 function Form() {
-  let contactEndpoint =
+  const contactEndpoint =
     "https://script.google.com/macros/s/AKfycbzzw38S4tTv-Th1DoZkFSlnQXc04Bo0OAPo5I0Xx9T0xoxhKUrA/exec"
   const styleSelect = {
-    control: (styles, { isDisabled, isFocused, isSelected }) => {
+    control: (styles, { isFocused }) => {
       return {
         ...styles,
         fontFamily: "Gilroy",
@@ -35,7 +34,7 @@ function Form() {
     menuList: styles => ({ ...styles, backgroundColor: "var(--gray-5)" }),
     singleValue: styles => ({ ...styles, color: "#fff" }),
     valueContainer: styles => ({ ...styles, height: "48px" }),
-    option: (styles, { isDisabled, isFocused, isSelected }) => {
+    option: (styles, { isDisabled, isFocused }) => {
       return {
         ...styles,
         backgroundColor: isDisabled
@@ -67,7 +66,7 @@ function Form() {
       selectedPlan: plan
     }
   })
-  const [values, setSelectedPlan] = useState({
+  const [selectedPlan, setSelectedPlan] = useState({
     selectedPlan: plan
   })
 
@@ -89,10 +88,10 @@ function Form() {
     })
   }
 
-  const handlePlanChange = selectedPlan => {
+  const handlePlanChange = newSelectedPlan => {
     dispatch({
       type: "changeSelectedPlan",
-      newPlan: selectedPlan
+      newPlan: newSelectedPlan
     })
   }
 
@@ -126,10 +125,9 @@ function Form() {
           }
           isSearchable={false}
           classNamePrefix="select"
-          value={plan ? plan : ""}
+          value={plan || ""}
           options={options}
           onChange={handlePlanChange}
-          options={options}
           styles={styleSelect}
         />
         <label htmlFor="strategy">Estrategias de Inversión</label>
@@ -151,7 +149,7 @@ export default function Contact() {
   return (
     <Section id="contacto" columns="2" tight last>
       <aside className="left">
-        <div className="line"></div>
+        <div className="line" />
         <Text h2>Contactanos</Text>
         <div className="paragraph">
           <Text p style={{ fontWeight: "400" }}>

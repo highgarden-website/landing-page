@@ -1,12 +1,12 @@
 import Text from "./Text"
 import LinkedinLogo from "./LinkedinLogo"
 
-export default function Avatar ({ src, name, position, link }) {
+export default function Avatar({ src, name, position, link }) {
   return (
     <figure>
       <img
         src={src || "https://thispersondoesnotexist.com/image"}
-        alt={`${name} profile picture`}
+        alt={`${name} profile`}
       />
       <figcaption>
         <Text noMargin>{name}</Text> -
@@ -15,7 +15,7 @@ export default function Avatar ({ src, name, position, link }) {
         </Text>
         {link && (
           <a href={link}>
-            <LinkedinLogo></LinkedinLogo>
+            <LinkedinLogo />
           </a>
         )}
       </figcaption>

@@ -1,7 +1,3 @@
-import Text from "../components/Text"
-import Logo from "../components/Logo"
-import Section from "../components/Section"
-
 export default function Brands() {
   return (
     <div className="wrapper">

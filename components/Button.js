@@ -12,14 +12,13 @@ export default function Button({
   children,
   small,
   hidden = false,
-  type = "",
   action = false,
   contacto = false
 }) {
   return contacto ? (
     <button
-      type={type}
-      className={cn({ inverted: isInverted, hidden: hidden })}
+      type="button"
+      className={cn({ inverted: isInverted, hidden })}
       onClick={goToSection}
     >
       {children}
@@ -56,8 +55,8 @@ export default function Button({
     </button>
   ) : (
     <button
-      type={type}
-      onClick={action ? action : () => {}}
+      type="button"
+      onClick={action || (() => {})}
       className={cn({ inverted: isInverted })}
     >
       {children}

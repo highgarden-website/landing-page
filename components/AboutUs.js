@@ -2,7 +2,6 @@ import Button from "./Button"
 import Text from "./Text"
 import Avatar from "./Avatar"
 import Section from "./Section"
-import Panel from "./Panel"
 
 export default function AboutUs() {
   return (
@@ -678,7 +677,7 @@ export default function AboutUs() {
 
       <Section id="quienes-somos" columns="2" fullHeight>
         <aside className="left">
-          <div className="line"></div>
+          <div className="line" />
           <Text h2>Quienes Somos</Text>
           <span className="paragraph">
             <Text p>
@@ -696,12 +695,12 @@ export default function AboutUs() {
             name="Matias Ezequiel Materia"
             position="Cofounder"
             src="/static/img/Matias.png"
-          ></Avatar>
+          />
           <Avatar
             name="Fernando Javier Toledano"
             position="Cofounder"
             src="/static/img/Fernando.png"
-          ></Avatar>
+          />
         </aside>
       </Section>
       <style jsx>{`
@@ -752,7 +751,8 @@ export default function AboutUs() {
         }
 
         .paragraph {
-          max-width: 35ch;
+          display: block;
+          max-width: 45ch;
           margin-bottom: 40px;
           font-weight: 400;
         }

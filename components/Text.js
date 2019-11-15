@@ -1,3 +1,4 @@
+import React from "react"
 import cn from "classnames"
 
 // Conditionally wrap a React element with another
@@ -158,7 +159,7 @@ const Text = ({
 }) => {
   const Styler =
     components[
-    [h1, h2, h3, h4, h5, p, small, description, span].indexOf(true)
+      [h1, h2, h3, h4, h5, p, small, description, span].indexOf(true)
     ] || P
 
   return (

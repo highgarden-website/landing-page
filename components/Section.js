@@ -2,8 +2,6 @@ export default function Section({
   id,
   children,
   columns = 1,
-  noMargin,
-  fullHeight = false,
   main = false,
   last = false,
   tight = false

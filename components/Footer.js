@@ -1,18 +1,13 @@
 import Text from "./Text"
 import Logo from "./Logo"
-import Button from "./Button"
-import SegmentedInput from "./SegmentedInput"
-import LinkedinLogo from "./LinkedinLogo"
-import FacebookLogo from "./FacebookLogo"
-import TwitterLogo from "./TwitterLogo"
 
-export default function Footer () {
+export default function Footer() {
   return (
     <section>
       <div className="inner">
         <footer>
           <aside className="slogan">
-            <Logo style={{ marginTop: "0", marginLeft: "0" }}></Logo>
+            <Logo style={{ marginTop: "0", marginLeft: "0" }} />
             <Text style={{ fontWeight: "400" }} noMargin>
               Descrubrí la mejor manera de hacer <br />
               crecer tu capital.
@@ -147,7 +142,6 @@ export default function Footer () {
             grid-template-columns: 1fr;
             text-align: center;
             margin-bottom: 30px;
-
           }
 
           footer aside {
@@ -155,9 +149,8 @@ export default function Footer () {
           }
 
           .inner {
-          margin-top: 50px;
-
-        }
+            margin-top: 50px;
+          }
 
           .inner:before {
             border-width: 20px 100vh 0 0;

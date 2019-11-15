@@ -6,8 +6,15 @@ export default function MobileMenu({ scrolled = false }) {
 
   return (
     <div
+      role="menu"
+      tabIndex={0}
       className={open ? "menu open" : "menu"}
       onClick={() => {
+        if (!open) {
+          toggleOpen(!open)
+        }
+      }}
+      onKeyDown={() => {
         if (!open) {
           toggleOpen(!open)
         }
@@ -45,6 +52,11 @@ export default function MobileMenu({ scrolled = false }) {
         </svg>
       ) : (
         <div
+          role="menu"
+          tabIndex={0}
+          onKeyDown={() => {
+            toggleOpen(false)
+          }}
           onClick={() => {
             toggleOpen(false)
           }}
@@ -79,6 +91,11 @@ export default function MobileMenu({ scrolled = false }) {
         <nav>
           <ul>
             <li
+              role="menuitem"
+              tabIndex={0}
+              onKeyDown={() => {
+                toggleOpen(!open)
+              }}
               onClick={() => {
                 toggleOpen(!open)
               }}
@@ -86,6 +103,11 @@ export default function MobileMenu({ scrolled = false }) {
               <a href="#home">Inicio</a>
             </li>
             <li
+              role="menuitem"
+              tabIndex={0}
+              onKeyDown={() => {
+                toggleOpen(!open)
+              }}
               onClick={() => {
                 toggleOpen(!open)
               }}
@@ -93,6 +115,11 @@ export default function MobileMenu({ scrolled = false }) {
               <a href="#como-funciona">Cómo Funciona</a>
             </li>
             <li
+              role="menuitem"
+              tabIndex={0}
+              onKeyDown={() => {
+                toggleOpen(!open)
+              }}
               onClick={() => {
                 toggleOpen(!open)
               }}
@@ -100,6 +127,11 @@ export default function MobileMenu({ scrolled = false }) {
               <a href="#estrategias-de-inversion">Estrategias de Inversión</a>
             </li>
             <li
+              role="menuitem"
+              tabIndex={0}
+              onKeyDown={() => {
+                toggleOpen(!open)
+              }}
               onClick={() => {
                 toggleOpen(!open)
               }}

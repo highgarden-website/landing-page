@@ -4,7 +4,6 @@ import Video from "./Plyr"
 import Button from "./Button"
 import Text from "./Text"
 import Section from "./Section"
-import Header from "./Header"
 import LogosGrid from "./LogosGrid"
 
 export default function Hero() {
@@ -362,10 +361,15 @@ export default function Hero() {
           </svg>
 
           <div
+            role="menu"
             className="video"
+            onKeyDown={() => {
+              setModalIsOpen(true)
+            }}
             onClick={() => {
               setModalIsOpen(true)
             }}
+            tabIndex={0}
           />
           <Modal
             isOpen={modalIsOpen}
@@ -644,21 +648,6 @@ export default function Hero() {
             />
           </svg>
 
-          <div className="card">
-            <p>+200</p>
-            <Text
-              h5
-              style={{
-                maxWidth: "19ch",
-                margin: "0 auto",
-                fontWeight: "500"
-              }}
-            >
-              Oportunidades de inversión disponibles. Vos elegís según tu perfil
-              de inversor.
-            </Text>
-          </div>
-
           <svg
             className="points"
             width="210"
@@ -926,15 +915,16 @@ export default function Hero() {
           </svg>
         </aside>
         <span className="logos">
-          <LogosGrid></LogosGrid>
+          <LogosGrid />
         </span>
       </div>
 
       <style jsx>{`
         .paragraph {
-          max-width: 50ch;
+          max-width: 55ch;
           margin-bottom: 50px;
         }
+
         .inner-container {
           display: grid;
           grid-template-columns: 1.5fr 1fr;
@@ -945,6 +935,7 @@ export default function Hero() {
           position: relative;
           z-index: 2;
         }
+
         .right {
           position: relative;
           z-index: 2;
@@ -961,31 +952,11 @@ export default function Hero() {
           top: -13%;
           left: -20%;
         }
+
         .points {
           position: absolute;
           bottom: -450px;
           left: 760px;
-        }
-
-        .card {
-          display: none;
-          background: var(--gray-3);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-          border-radius: 10px;
-          width: 350px;
-          text-align: center;
-          position: absolute;
-          top: 250px;
-          left: 240px;
-          padding: 10px;
-          z-index: 1;
-        }
-        .card p {
-          letter-spacing: -0.02em;
-          font-size: 70px;
-          color: var(--green);
-          margin: 0 auto;
-          font-weight: 700;
         }
 
         .video {
@@ -1051,18 +1022,6 @@ export default function Hero() {
             margin: 50px 0;
           }
 
-          .card {
-            display: block;
-            left: 0;
-            top: 60%;
-            width: 320px;
-            letter-spacing: -0.05em;
-            padding: 20px;
-          }
-          .card p {
-            font-size: 35px;
-          }
-
           .video {
             position: absolute;
             top: 10%;
@@ -1086,7 +1045,7 @@ export default function Hero() {
             z-index: -1;
           }
           .first-paragraph {
-            max-width: 30ch;
+            max-width: 45ch;
             margin: 0 auto;
           }
           .decoration-green-border {

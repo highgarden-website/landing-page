@@ -11,28 +11,28 @@ export default function LogosGrid() {
   return (
     <div className="wrapper">
       <div className="mariva">
-        <MarivaLogo></MarivaLogo>
+        <MarivaLogo />
       </div>
       <div className="santander">
-        <SantanderLogo></SantanderLogo>
+        <SantanderLogo />
       </div>
       <div className="lynx">
-        <LynxLogo></LynxLogo>
+        <LynxLogo />
       </div>
       <div className="bdv">
-        <BancoDeValoresLogo></BancoDeValoresLogo>
+        <BancoDeValoresLogo />
       </div>
       <div className="ucema">
-        <UcemaLogo></UcemaLogo>
+        <UcemaLogo />
       </div>
       <div className="quiron">
-        <QuironLogo></QuironLogo>
+        <QuironLogo />
       </div>
       <div className="usal">
-        <UsalLogo></UsalLogo>
+        <UsalLogo />
       </div>
       <div className="napoli">
-        <NapoliLogo></NapoliLogo>
+        <NapoliLogo />
       </div>
       <style jsx>{`
         .wrapper {

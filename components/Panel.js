@@ -11,10 +11,10 @@ export default function Panel({
   return (
     <div
       className={cn("panel", {
-        highlight: highlight,
+        highlight,
         "no-background": noBg,
         "no-shadow": noShadow,
-        responsive: responsive
+        responsive
       })}
     >
       {children}

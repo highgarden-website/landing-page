@@ -15,19 +15,18 @@ export default function InvestmentStrategies() {
           <span className="heading">
             <Text h2>Estrategias de Inversión</Text>
           </span>
-          <div className="paragraph">
+          <span className="paragraph">
             <Text p style={{ fontWeight: "400" }}>
               Elegí entre nuestras 3 estrategias de inversión en función a tus
-              preferencias y nuestro asesoramiento.
+              preferencias y nuestro asesoramiento. <br />
               <span className="cta">
-                <span> </span>
-                <b>¿No sabés cuál elegir?</b>
+                <b>¿No sabés cuál elegir?</b> <br />
                 <a href="mailto:info@highgarden.capital">
                   <u>Nosotros te ayudamos</u>
                 </a>
               </span>
             </Text>
-          </div>
+          </span>
           <span className="cta">
             <Button contacto>Contactanos</Button>
           </span>
@@ -381,7 +380,7 @@ export default function InvestmentStrategies() {
       <style jsx>{`
         .heading {
           display: block;
-          max-width: 30ch;
+          max-width: 45ch;
         }
         .inner-container {
           display: grid;
@@ -419,6 +418,7 @@ export default function InvestmentStrategies() {
         }
 
         .paragraph {
+          display: block;
           max-width: 35ch;
         }
 

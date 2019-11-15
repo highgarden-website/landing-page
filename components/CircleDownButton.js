@@ -1,7 +1,7 @@
 export default function CircleDownButton() {
   return (
     <a href="#section2">
-      <button>
+      <button type="button">
         <svg
           width="11"
           height="27"

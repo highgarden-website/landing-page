@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <div className="wrapper">
       <header>
-        <Logo scrolled={scrolled}></Logo>
+        <Logo scrolled={scrolled} />
         <nav className="desktop-menu">
           <ul>
             <li>
@@ -41,7 +41,7 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        <MobileMenu scrolled={scrolled}></MobileMenu>
+        <MobileMenu scrolled={scrolled} />
       </header>
       <style jsx>{`
         .wrapper {

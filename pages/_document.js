@@ -1,10 +1,10 @@
-import Document, { Head, Main, NextScript } from "next/document"
+import Document, { Html, Head, Main, NextScript } from "next/document"
 import React from "react"
 
 export default class HighgardenDoc extends Document {
   render() {
     return (
-      <html lang="es">
+      <Html lang="es">
         <Head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -102,7 +102,7 @@ export default class HighgardenDoc extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     )
   }
 }
