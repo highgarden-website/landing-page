@@ -70,7 +70,7 @@ export default function LogosGrid() {
           grid-area: napoli;
         }
 
-        @media (max-width: 1050px) {
+        @media (max-width: 1200px) {
           .wrapper {
             display: grid;
             grid-template-areas: "lynx bdv" "mariva santander" "ucema quiron " "napoli usal";

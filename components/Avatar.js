@@ -50,7 +50,7 @@ export default function Avatar({ src, name, position, link }) {
           transform: translateX(-50%);
         }
 
-        @media (max-width: 1050px) {
+        @media (max-width: 1200px) {
           img {
             max-width: 200px;
             max-height: 200px;

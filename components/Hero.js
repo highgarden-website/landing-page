@@ -997,7 +997,7 @@ export default function Hero() {
           bottom: 13%;
         }
 
-        @media (max-width: 1050px) {
+        @media (max-width: 1200px) {
           .inner-container {
             grid-template-columns: 1fr;
             margin: 2%;

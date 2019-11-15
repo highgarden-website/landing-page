@@ -911,7 +911,7 @@ export default function HowToStart() {
           max-width: 35ch;
         }
 
-        @media (max-width: 1050px) {
+        @media (max-width: 1200px) {
           .inner-container {
             grid-template-columns: 1fr;
             margin: 90px 0;

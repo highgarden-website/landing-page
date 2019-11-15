@@ -137,7 +137,7 @@ export default function Footer() {
           padding: 10px 0;
         }
 
-        @media (max-width: 1050px) {
+        @media (max-width: 1200px) {
           footer {
             grid-template-columns: 1fr;
             text-align: center;

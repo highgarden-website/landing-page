@@ -35,7 +35,7 @@ export default function Section({
           align-items: center;
         }
 
-        @media (max-width: 1050px) {
+        @media (max-width: 1200px) {
           .section {
             grid-template-columns: 1fr;
             height: auto;

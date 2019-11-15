@@ -766,10 +766,10 @@ export default function AboutUs() {
         }
 
         .right :global(figure:not(:first-child)) {
-          transform: translate(15%, 75%);
+          transform: translate(10%, 75%);
         }
 
-        @media (max-width: 1050px) {
+        @media (max-width: 1200px) {
           .outer-wrapper {
             padding: 100px 0;
             margin: 0 20px;

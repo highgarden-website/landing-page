@@ -70,7 +70,7 @@ export default function Panel({
           background-color: #44787c;
         }
 
-        @media (max-width: 1050px) {
+        @media (max-width: 1200px) {
           .panel.responsive {
             display: flex;
             align-items: center;

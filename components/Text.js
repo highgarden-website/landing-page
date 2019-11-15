@@ -107,7 +107,7 @@ const getComponent = defaultElement => {
               ${xsmall ? "font-size: 0.875rem;" : ""};
             }
 
-            @media (max-width: 1050px) {
+            @media (max-width: 1200px) {
               ${Component} {
                 ${xlarge ? "font-size: 2rem;" : ""};
                 ${xlarge ? "line-height: 1.31em;" : ""};

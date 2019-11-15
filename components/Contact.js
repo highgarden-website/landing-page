@@ -602,7 +602,7 @@ export default function Contact() {
             opacity: 0.3;
           }
 
-          @media (max-width: 1050px) {
+          @media (max-width: 1200px) {
             .paragraph {
               display: none;
             }
