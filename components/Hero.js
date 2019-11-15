@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
 import Modal from "react-modal"
-import Video from "./Plyr"
 import Button from "./Button"
 import Text from "./Text"
 import Section from "./Section"
@@ -380,7 +379,15 @@ export default function Hero() {
             overlayClassName="Overlay"
             ariaHideApp={false}
           >
-            <Video />
+            <div className="video-container">
+              <iframe
+                title="highgarden video"
+                className="video-inner"
+                src="//www.youtube.com/embed/SsiNQxsMxDg"
+                frameBorder="0"
+                allowFullScreen="allowfullscreen"
+              />
+            </div>
           </Modal>
           <svg
             className="miniPoints"
@@ -978,6 +985,24 @@ export default function Hero() {
         .video:hover {
           cursor: pointer;
           box-shadow: inset 0 0 0 2000px rgba(65, 218, 184, 0.3);
+        }
+
+        .video-container {
+          position: relative;
+          width: 100%;
+          height: 0;
+          padding-bottom: 56.25%;
+        }
+
+        .video-inner {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 100% !important;
+          height: auto;
+          min-height: 600px;
+          overflow: hidden;
+          transform: translateY(-50%);
         }
 
         .logos {
