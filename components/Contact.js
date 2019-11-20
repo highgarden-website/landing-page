@@ -8,6 +8,7 @@ import Section from "./Section"
 function Form() {
   const contactEndpoint =
     "https://script.google.com/macros/s/AKfycbzzw38S4tTv-Th1DoZkFSlnQXc04Bo0OAPo5I0Xx9T0xoxhKUrA/exec"
+
   const styleSelect = {
     control: (styles, { isFocused }) => {
       return {
@@ -42,9 +43,7 @@ function Form() {
           : isFocused
           ? "var(--gray-3)"
           : "var(--gray-5)",
-
         cursor: isDisabled ? "not-allowed" : "pointer",
-
         ":active": {
           ...styles[":active"],
           backgroundColor: !isDisabled && "var(--gray-3)"
