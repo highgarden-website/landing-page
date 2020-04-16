@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import useForm from "react-hook-form"
+import { useForm } from "react-hook-form"
 import Select from "react-select"
 import { useStateValue } from "../state"
 import Text from "./Text"
@@ -30,11 +30,11 @@ function Form() {
         }
       }
     },
-    input: styles => ({ ...styles, color: "#fff" }),
-    indicatorSeparator: styles => ({ ...styles, display: "none" }),
-    menuList: styles => ({ ...styles, backgroundColor: "var(--gray-5)" }),
-    singleValue: styles => ({ ...styles, color: "#fff" }),
-    valueContainer: styles => ({ ...styles, height: "48px" }),
+    input: (styles) => ({ ...styles, color: "#fff" }),
+    indicatorSeparator: (styles) => ({ ...styles, display: "none" }),
+    menuList: (styles) => ({ ...styles, backgroundColor: "var(--gray-5)" }),
+    singleValue: (styles) => ({ ...styles, color: "#fff" }),
+    valueContainer: (styles) => ({ ...styles, height: "48px" }),
     option: (styles, { isDisabled, isFocused }) => {
       return {
         ...styles,
@@ -69,7 +69,7 @@ function Form() {
     selectedPlan: plan
   })
 
-  const onSubmit = data => {
+  const onSubmit = (data) => {
     setbuttonMessage("Enviando...")
     fetch(contactEndpoint, {
       method: "POST",
@@ -87,7 +87,7 @@ function Form() {
     })
   }
 
-  const handlePlanChange = newSelectedPlan => {
+  const handlePlanChange = (newSelectedPlan) => {
     dispatch({
       type: "changeSelectedPlan",
       newPlan: newSelectedPlan

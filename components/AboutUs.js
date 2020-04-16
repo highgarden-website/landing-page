@@ -697,7 +697,7 @@ export default function AboutUs() {
             src="/static/img/Matias.png"
           />
           <Avatar
-            name="Fernando Javier Toledano"
+            name="Fernando Javier"
             position="Cofounder"
             src="/static/img/Fernando.png"
           />
