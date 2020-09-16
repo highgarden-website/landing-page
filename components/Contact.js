@@ -119,7 +119,7 @@ function Form() {
           name="strategy"
           placeholder={
             <div style={{ color: "rgba(255, 255, 255, 0.7)" }}>
-              Elegi entre los 3 tipos de inversion
+              Elegi entre los 2 tipos de inversion
             </div>
           }
           isSearchable={false}
