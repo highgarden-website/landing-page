@@ -692,7 +692,7 @@ export default function AboutUs() {
 
         <aside className="right">
           <Avatar
-            name="Matias Ezequiel Materia"
+            name="Matias Ezequiel"
             position="Cofounder"
             src="/static/img/Matias.png"
           />

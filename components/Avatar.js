@@ -44,7 +44,7 @@ export default function Avatar({ src, name, position, link }) {
           padding: 15px 20px;
           box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.2);
           position: absolute;
-          width: 135%;
+          width: 110%;
           left: 50%;
           bottom: 10%;
           transform: translateX(-50%);
