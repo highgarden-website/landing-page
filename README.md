@@ -23,4 +23,4 @@ in order to run serverless functions in the local environment
 
 ## Deployment
 
-Each Pull Request creates a new instance on `now`, each merge to `master` will be automatically deployed to `production`
+Each Pull Request creates a new instance on `now`, each merge to `master` will be automatically deployed to `production`.
